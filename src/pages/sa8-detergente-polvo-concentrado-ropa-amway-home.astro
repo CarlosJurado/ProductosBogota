@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/global/Navigation.astro";
+import WhatsApp from "../components/global/Whatsapp.astro";
+
+import Cta from "../components/servicio/Cta.astro";
+import Hero from "../components/servicio/Hero.astro";
+import SectionOne from "../components/landing/SectionOne.astro";
+import Testimonial from "../components/global/Testimonial.astro";
+import Boton from "../components/global/Boton.astro";
+import Boton1 from "../components/global/Boton1.astro";
+import Boton2 from "../components/global/Boton2.astro";
+import Footer from "../components/global/Footer.astro";
+import { AstroSeo } from "@astrolib/seo";
+import Seo from "../components/Seo.astro";
+import imagen from "../../public/sa8-detergente-polvo-concentrado-ropa-amway-home.jpg";
+
+const schema = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  name: "SA8 Detergente en Polvo Concentrado para Ropa - Productos Amway Bogota",
+  image: "https://productosbogota.com/sa8-detergente-polvo-concentrado-ropa-amway-home.jpg",
+  description: "SA8 Detergente en Polvo Concentrado para Ropa - Productos Amway Bogota",
+  brand: {
+    "@type": "Brand",
+    name: "SA8 Detergente en Polvo Concentrado para Ropa - Productos Amway Bogota",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://productosbogota.com/sa8-detergente-polvo-concentrado-ropa-amway-home/",
+    priceCurrency: "COP",
+    price: "165050",
+    priceValidUntil: "2025-02-28",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "5",
+    ratingCount: "69",
+    reviewCount: "69",
+  },
+  review: {
+    "@type": "Review",
+    name: "Francisca Martinez",
+    reviewBody:
+      "El SA8 Detergente en Polvo Concentrado para Ropa de Amway Home es el mejor que he probado.",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "5",
+    },
+    datePublished: "2024-07-01",
+    author: { "@type": "Person", name: "Francisca Martinez" },
+    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+  },
+};
+---
+
+<Seo schemaMarkup={schema} />
+<AstroSeo
+  title="SA8 Detergente en Polvo Concentrado para Ropa - Cel: 322 346 1713"
+  description="SA8 Detergente en Polvo Concentrado para Ropa - Cel: 322 346 1713 - Productos Amway Bogota"
+  canonical="https://productosbogota.com/sa8-detergente-polvo-concentrado-ropa-amway-home/"
+  openGraph={{
+    url: "https://productosbogota.com/sa8-detergente-polvo-concentrado-ropa-amway-home/",
+    title: "SA8 Detergente en Polvo Concentrado para Ropa - Cel: 322 346 17133",
+    description:
+      "SA8 Detergente en Polvo Concentrado para Ropa - Cel: 322 346 1713 - Productos Amway Bogota",
+    images: [
+      {
+        url: "https://productosbogota.com/sa8-detergente-polvo-concentrado-ropa-amway-home.jpg",
+        width: 1200,
+        height: 720,
+        alt: "SA8 Detergente en Polvo Concentrado para Ropa - Cel: 322 346 1713",
+        type: "image/jpeg",
+      },
+    ],
+    site_name: "Productos Amway Bogota",
+  }}
+/>
+<BaseLayout>
+  <Navigation
+    servicio="SA8 Detergente en Polvo Concentrado para Ropa"
+    m1="SA8 Suavizante Concentrado para Ropa"
+    l1="/sa8-suavizante-concentrado-ropa-amway-home/"
+    m2="Suero Diario de Vitamina C + HA3"
+    l2="/suero-diario-vitamina-c-ha3-amway-artistry/"
+    m3="Pursue Limpiador Desinfectante Amway"
+    l3="/pursue-limpiador-desinfectante-amway-home/"
+  />
+  <Cta
+  pagina="Productos Amway Bogota"
+  servicio="SA8 Detergente en Polvo Concentrado para Ropa"
+  imagen={imagen}
+  />
+  
+  <Hero
+  titulo="SA8 Detergente en Polvo Concentrado para Ropa"
+  descripcion="Detergente en polvo concentrado que ofrece un efectivo desempeño sobre las manchas más difíciles y conserva el brillo de las prendas blancas o de color. "
+  caracteristica1="Combinación de enzimas y otros ingredientes derivados de fuentes naturales que se disuelven fácilmente en el agua para un lavado más efectivo."
+  caracteristica2="Libre de fosfatos u otros ácidos abrasivos, lo que beneficia el cuidado de la ropa. Dermatológicamente probado."
+  caracteristica3="1 kg de SA8 Premium Detergente en Polvo Concentrado para Ropa rinde 7 envases de detergente convencional de 1 kg. "
+  />
+  
+  <Boton2/>
+  <SectionOne />
+
+  <Boton1/>
+
+  <Testimonial
+    servicio="SA8 Detergente en Polvo Concentrado para Ropa"
+    cliente1="Dayana Gomez"
+    cliente2="Francisca Martinez"
+    cliente3="Andrea Casallas"
+    servicio1="Recomiendo el SA8 Detergente en Polvo Concentrado para Ropa de Amway, muy buena calidad."
+    servicio2="El SA8 Detergente en Polvo Concentrado para Ropa de Amway Home es el mejor que he probado."
+    servicio3="Llevo mucho tiempo con el SA8 Detergente en Polvo Concentrado para Ropa de Amway y estoy muy feliz con los resultados."
+  />
+  <Boton servicio="SA8 Detergente en Polvo Concentrado para Ropa" />
+  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
+  <Footer
+    serviciof="SA8 Detergente en Polvo Concentrado para Ropa"
+    j1="Maquillaje en Polvo Exact Fit"
+    k1="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
+    j2="Daily Plus 90 Tabletas"
+    k2="/daily-plus-90-tabletas-amway-nutrilite/"
+    j3="SA8 Blanqueador para Múltiples Telas"
+    k3="/sa8-blanqueador-multiples-telas-amway-home/"
+  />
+</BaseLayout>

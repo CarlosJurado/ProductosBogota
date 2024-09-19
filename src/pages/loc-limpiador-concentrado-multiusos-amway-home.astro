@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/global/Navigation.astro";
+import WhatsApp from "../components/global/Whatsapp.astro";
+
+import Cta from "../components/servicio/Cta.astro";
+import Hero from "../components/servicio/Hero.astro";
+import SectionOne from "../components/landing/SectionOne.astro";
+import Testimonial from "../components/global/Testimonial.astro";
+import Boton from "../components/global/Boton.astro";
+import Boton1 from "../components/global/Boton1.astro";
+import Boton2 from "../components/global/Boton2.astro";
+import Footer from "../components/global/Footer.astro";
+import { AstroSeo } from "@astrolib/seo";
+import Seo from "../components/Seo.astro";
+import imagen from "../../public/loc-limpiador-concentrado-multiusos-amway-home.jpg";
+
+const schema = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  name: "L.O.C. Limpiador Concentrado Multiusos - Productos Amway Bogota",
+  image: "https://productosbogota.com/loc-limpiador-concentrado-multiusos-amway-home.jpg",
+  description: "L.O.C. Limpiador Concentrado Multiusos - Productos Amway Bogota",
+  brand: {
+    "@type": "Brand",
+    name: "L.O.C. Limpiador Concentrado Multiusos - Productos Amway Bogota",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://productosbogota.com/loc-limpiador-concentrado-multiusos-amway-home/",
+    priceCurrency: "COP",
+    price: "61050",
+    priceValidUntil: "2025-02-28",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "5",
+    ratingCount: "69",
+    reviewCount: "69",
+  },
+  review: {
+    "@type": "Review",
+    name: "Dayana Gomez",
+    reviewBody:
+      "El L.O.C. Limpiador Concentrado Multiusos de Amway Home es el mejor que he probado.",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "5",
+    },
+    datePublished: "2024-07-01",
+    author: { "@type": "Person", name: "Dayana Gomez" },
+    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+  },
+};
+---
+
+<Seo schemaMarkup={schema} />
+<AstroSeo
+  title="L.O.C. Limpiador Concentrado Multiusos - Cel: 322 346 1713"
+  description="L.O.C. Limpiador Concentrado Multiusos - Cel: 322 346 1713 - Productos Amway Bogota"
+  canonical="https://productosbogota.com/loc-limpiador-concentrado-multiusos-amway-home/"
+  openGraph={{
+    url: "https://productosbogota.com/loc-limpiador-concentrado-multiusos-amway-home/",
+    title: "L.O.C. Limpiador Concentrado Multiusos - Cel: 322 346 17133",
+    description:
+      "L.O.C. Limpiador Concentrado Multiusos - Cel: 322 346 1713 - Productos Amway Bogota",
+    images: [
+      {
+        url: "https://productosbogota.com/loc-limpiador-concentrado-multiusos-amway-home.jpg",
+        width: 1200,
+        height: 675,
+        alt: "L.O.C. Limpiador Concentrado Multiusos - Cel: 322 346 1713",
+        type: "image/jpeg",
+      },
+    ],
+    site_name: "Productos Amway Bogota",
+  }}
+/>
+<BaseLayout>
+  <Navigation
+    servicio="L.O.C. Limpiador Concentrado Multiusos"
+    m1="Omega 3 Plus 90 Cápsulas"
+    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
+    m2="Dish Drops Lavaplatos Líquido Concentrado"
+    l2="/dish-drops-lavaplatos-liquido-concentrado-amway-home/"
+    m3="Pursue Limpiador Desinfectante Amway"
+    l3="/pursue-limpiador-desinfectante-amway-home/"
+  />
+  <Cta
+  pagina="Productos Amway Bogota"
+  servicio="L.O.C. Limpiador Concentrado Multiusos"
+  imagen={imagen}
+  />
+  
+  <Hero
+  titulo="L.O.C. Limpiador Concentrado Multiusos"
+  descripcion="Apto para cualquier artículo y superficie lavable. El L.O.C. Limpiador Concentrado Multiusos con ingredientes derivados de fuentes naturales sin blanqueador, es de alto desempeño y versátil, por eso es la elección correcta, siempre. "
+  caracteristica1="1 l de L.O.C. Limpiador Concentrado Multiusos rinde 10 litros de otras marcas."
+  caracteristica2=" Fórmula concentrada que rinde hasta 18 botellas de 500 ml diluido (1:8).Funciona en todos los objetos y superficies lavables con agua, incluidas superficies de baldosas selladas, madera, vinilo, piedra, linóleo y cerámica. Corta eficazmente la suciedad, la grasa y la mugre acumulada de cualquier superficie."
+  caracteristica3="Quita manchas difíciles. No se necesita enjuagar y se retira fácilmente. Dermatológicamente probado."
+  />
+  
+  <Boton2/>
+  <SectionOne />
+
+  <Boton1/>
+
+  <Testimonial
+    servicio="L.O.C. Limpiador Concentrado Multiusos"
+    cliente1="Dayana Gomez"
+    cliente2="Francisca Martinez"
+    cliente3="Andrea Casallas"
+    servicio1="Recomiendo el L.O.C. Limpiador Concentrado Multiusos de Amway, muy buena calidad."
+    servicio2="El L.O.C. Limpiador Concentrado Multiusos de Amway Home es el mejor que he probado."
+    servicio3="Llevo mucho tiempo con el L.O.C. Limpiador Concentrado Multiusos de Amway y estoy muy feliz con los resultados."
+  />
+  <Boton servicio="L.O.C. Limpiador Concentrado Multiusos" />
+  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
+  <Footer
+    serviciof="L.O.C. Limpiador Concentrado Multiusos"
+    j1="Maquillaje en Polvo Exact Fit"
+    k1="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
+    j2="Daily Plus 90 Tabletas"
+    k2="/daily-plus-90-tabletas-amway-nutrilite/"
+    j3="SA8 Blanqueador para Múltiples Telas"
+    k3="/sa8-blanqueador-multiples-telas-amway-home/"
+  />
+</BaseLayout>

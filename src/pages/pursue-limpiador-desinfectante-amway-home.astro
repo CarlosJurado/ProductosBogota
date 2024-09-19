@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/global/Navigation.astro";
+import WhatsApp from "../components/global/Whatsapp.astro";
+
+import Cta from "../components/servicio/Cta.astro";
+import Hero from "../components/servicio/Hero.astro";
+import SectionOne from "../components/landing/SectionOne.astro";
+import Testimonial from "../components/global/Testimonial.astro";
+import Boton from "../components/global/Boton.astro";
+import Boton1 from "../components/global/Boton1.astro";
+import Boton2 from "../components/global/Boton2.astro";
+import Footer from "../components/global/Footer.astro";
+import { AstroSeo } from "@astrolib/seo";
+import Seo from "../components/Seo.astro";
+import imagen from "../../public/pursue-limpiador-desinfectante-amway-home.jpg";
+
+const schema = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  name: "Pursue Limpiador Desinfectante - Productos Amway Bogota",
+  image: "https://productosbogota.com/pursue-limpiador-desinfectante-amway-home.jpg",
+  description: "Pursue Limpiador Desinfectante - Productos Amway Bogota",
+  brand: {
+    "@type": "Brand",
+    name: "Pursue Limpiador Desinfectante - Productos Amway Bogota",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://productosbogota.com/pursue-limpiador-desinfectante-amway-home/",
+    priceCurrency: "COP",
+    price: "68900",
+    priceValidUntil: "2025-02-28",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "5",
+    ratingCount: "69",
+    reviewCount: "69",
+  },
+  review: {
+    "@type": "Review",
+    name: "Francisca Martinez",
+    reviewBody:
+      "El Limpiador Desinfectante de Amway Home es el mejor que he probado.",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "5",
+    },
+    datePublished: "2024-06-01",
+    author: { "@type": "Person", name: "Francisca Martinez" },
+    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+  },
+};
+---
+
+<Seo schemaMarkup={schema} />
+<AstroSeo
+  title="Pursue Limpiador Desinfectante Amway - Cel: 322 346 1713"
+  description="Pursue Limpiador Desinfectante - Cel: 322 346 1713 - Productos Amway Bogota"
+  canonical="https://productosbogota.com/pursue-limpiador-desinfectante-amway-home/"
+  openGraph={{
+    url: "https://productosbogota.com/pursue-limpiador-desinfectante-amway-home/",
+    title: "Pursue Limpiador Desinfectante Amway - Cel: 322 346 17133",
+    description:
+      "Pursue Limpiador Desinfectante - Cel: 322 346 1713 - Productos Amway Bogota",
+    images: [
+      {
+        url: "https://productosbogota.com/pursue-limpiador-desinfectante-amway-home.jpg",
+        width: 1200,
+        height: 720,
+        alt: "Pursue Limpiador Desinfectante Amway - Cel: 322 346 1713",
+        type: "image/jpeg",
+      },
+    ],
+    site_name: "Productos Amway Bogota",
+  }}
+/>
+<BaseLayout>
+  <Navigation
+    servicio="Pursue Limpiador Desinfectante Amway"
+    m1="Omega 3 Plus 90 Cápsulas"
+    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
+    m2="Suero Diario de Vitamina C + HA3"
+    l2="/suero-diario-vitamina-c-ha3-amway-artistry/"
+    m3="SA8 Blanqueador para Múltiples Tela"
+    l3="/sa8-blanqueador-multiples-telas-amway-home/"
+  />
+  <Cta
+  pagina="Productos Amway Bogota"
+  servicio="Pursue Limpiador Desinfectante Amway"
+  imagen={imagen}
+  />
+  
+  <Hero
+  titulo="Pursue Limpiador Desinfectante Amway"
+  descripcion="Limpiador desinfectante concentrado que extermina virus, hongos y bacterias, incluidos E. coli, salmonella y otros."
+  caracteristica1="Fórmula concentrada que rinde 18 botellas de desinfectantes convencionales de 500 ml."
+  caracteristica2="Puede ser usado para la limpieza y desinfección en utensilios empleados en la industria alimenticia."
+  caracteristica3="Elimina de manera segura los microorganismos de la cocina."
+  />
+  
+  <Boton2/>
+  <SectionOne />
+
+  <Boton1/>
+
+  <Testimonial
+    servicio="Pursue Limpiador Desinfectante Amway"
+    cliente1="Dayana Gomez"
+    cliente2="Francisca Martinez"
+    cliente3="Andrea Casallas"
+    servicio1="Recomiendo el Pursue Limpiador Desinfectante Amway de Amway, muy buena calidad."
+    servicio2="El Limpiador Desinfectante de Amway Home es el mejor que he probado."
+    servicio3="Llevo mucho tiempo con el Pursue Limpiador Desinfectante de Amway y estoy muy feliz con los resultados."
+  />
+  <Boton servicio="Pursue Limpiador Desinfectante Amway" />
+  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
+  <Footer
+    serviciof="Pursue Limpiador Desinfectante Amway"
+    j1="Maquillaje en Polvo Exact Fit"
+    k1="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
+    j2="Daily Plus 90 Tabletas"
+    k2="/daily-plus-90-tabletas-amway-nutrilite/"
+    j3="SA8 Detergente Líquido Concentrado para Ropa"
+    k3="/sa8-detergente-liquido-concentrado-ropa-amway-home/"
+  />
+</BaseLayout>

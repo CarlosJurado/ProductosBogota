@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/global/Navigation.astro";
+import WhatsApp from "../components/global/Whatsapp.astro";
+
+import Hero from "../components/landing/Hero.astro";
+import SectionOne from "../components/landing/SectionOne.astro";
+import Testimonial from "../components/global/Testimonial.astro";
+import Cta from "../components/global/Cta.astro";
+import Boton from "../components/global/Boton.astro";
+import Boton1 from "../components/global/Boton1.astro";
+import Boton2 from "../components/global/Boton2.astro";
+import Footer from "../components/global/Footer.astro";
+import { AstroSeo } from "@astrolib/seo";
+import Seo from "../components/Seo.astro";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Productos Amway Bogota",
+  image: "https://productosbogota.com/ProductosAmwayBogota.jpg",
+  "@id": "https://productosbogota.com",
+  url: "https://productosbogota.com",
+  telephone: "573223461713",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Cra 62 #164 - 40",
+    addressLocality: "Bogota",
+    postalCode: "111156",
+    addressCountry: "CO",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 4.7479476,
+    longitude: -74.0642513,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    opens: "08:00",
+    closes: "18:00",
+  },
+  sameAs: [
+    "https://facebook.com/ProductosAmwayBogota",
+    "https://instagram.com/ProductosAmwayBogota",
+  ],
+};
+---
+
+<Seo schemaMarkup={schema} />
+<AstroSeo
+  title="Productos Amway Bogota - Celular 322 346 1713"
+  description="Productos Amway Bogota- Cel: 322 346 1713 - Nutrilite - Artistry - Satinique - G&H - Amway Home"
+  canonical="https://productosbogota.com/"
+  openGraph={{
+    url: "https://productosbogota.com/",
+    title: "Productos Amway Bogota - Celular 322 346 1713",
+    description:
+      "Productos Amway Bogota- Cel: 322 346 1713 Nutrilite - Artistry - Satinique - G&H - Amway Home",
+    images: [
+      {
+        url: "https://productosbogota.com/ProductosAmwayBogota.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "Productos Amway Bogota",
+        type: "image/jpeg",
+      },
+    ],
+    site_name: "Productos Amway Bogota",
+  }}
+/>
+<BaseLayout>
+  <Navigation
+    servicio="Productos Amway Bogota"
+    m1="Pursue Limpiador Desinfectante Amway Home"
+    l1="/pursue-limpiador-desinfectante-amway-home/"
+    m2="SA8 Detergente Líquido Concentrado para Ropa"
+    l2="/sa8-detergente-liquido-concentrado-ropa-amway-home/"
+    m3="Maquillaje en Polvo Exact Fit - Natural"
+    l3="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
+  />
+  <Cta />
+  <Hero />
+
+  <Boton2/>
+  <SectionOne />
+
+  <Boton1/>
+
+  <Testimonial
+    servicio="Productos Amway Bogota"
+    cliente1="Fredy Zapata"
+    cliente2="Andrea Herrera"
+    cliente3="Francisco Mendoza"
+    servicio1="La mejor calidad en Productos de Nutrición la tiene sin duda Amway"
+    servicio2="Ahora soy empresario imdependiente gracias a Amway."
+    servicio3="La línea Hogar de Amway me permite ahorrar mucho dinero."
+  />
+  <Boton servicio="los Productos Amway y sus Beneficios" />
+  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
+  <Footer
+    serviciof="Productos Amway Bogota"
+    j1="Daily Plus 90 tabletas"
+    k1="/daily-plus-90-tabletas-amway-nutrilite/"
+    j2="Omega 3 Plus 90 Cápsulas"
+    k2="/omega-3-Plus-90-capsulas-amway-nutrilite/"
+    j3="Suero Diario de Vitamina C + HA3"
+    k3="/suero-diario-vitamina-c-ha3-amway-artistry/"
+  />
+</BaseLayout>

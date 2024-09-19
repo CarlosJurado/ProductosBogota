@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/global/Navigation.astro";
+import WhatsApp from "../components/global/Whatsapp.astro";
+
+import Cta from "../components/servicio/Cta.astro";
+import Hero from "../components/servicio/Hero.astro";
+import SectionOne from "../components/landing/SectionOne.astro";
+import Testimonial from "../components/global/Testimonial.astro";
+import Boton from "../components/global/Boton.astro";
+import Boton1 from "../components/global/Boton1.astro";
+import Boton2 from "../components/global/Boton2.astro";
+import Footer from "../components/global/Footer.astro";
+import { AstroSeo } from "@astrolib/seo";
+import Seo from "../components/Seo.astro";
+import imagen from "../../public/sa8-detergente-liquido-concentrado-ropa-amway-home.jpg";
+
+const schema = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  name: "SA8 Detergente Líquido Concentrado para Ropa - Productos Amway Bogota",
+  image: "https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home.jpg",
+  description: "SA8 Detergente Líquido Concentrado para Ropa - Productos Amway Bogota",
+  brand: {
+    "@type": "Brand",
+    name: "SA8 Detergente Líquido Concentrado para Ropa - Productos Amway Bogota",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home/",
+    priceCurrency: "COP",
+    price: "94400",
+    priceValidUntil: "2025-02-28",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "5",
+    ratingCount: "69",
+    reviewCount: "69",
+  },
+  review: {
+    "@type": "Review",
+    name: "Francisca Martinez",
+    reviewBody:
+      "El SA8 Detergente Líquido Concentrado para Ropa de Amway Home es el mejor que he probado.",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "5",
+    },
+    datePublished: "2024-07-01",
+    author: { "@type": "Person", name: "Francisca Martinez" },
+    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+  },
+};
+---
+
+<Seo schemaMarkup={schema} />
+<AstroSeo
+  title="SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 1713"
+  description="SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 1713 - Productos Amway Bogota"
+  canonical="https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home/"
+  openGraph={{
+    url: "https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home/",
+    title: "SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 17133",
+    description:
+      "SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 1713 - Productos Amway Bogota",
+    images: [
+      {
+        url: "https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 1713",
+        type: "image/jpeg",
+      },
+    ],
+    site_name: "Productos Amway Bogota",
+  }}
+/>
+<BaseLayout>
+  <Navigation
+    servicio="SA8 Detergente Líquido Concentrado para Ropa"
+    m1="Omega 3 Plus 90 Cápsulas"
+    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
+    m2="Suero Diario de Vitamina C + HA3"
+    l2="/suero-diario-vitamina-c-ha3-amway-artistry/"
+    m3="Pursue Limpiador Desinfectante Amway"
+    l3="/pursue-limpiador-desinfectante-amway-home/"
+  />
+  <Cta
+  pagina="Productos Amway Bogota"
+  servicio="SA8 Detergente Líquido Concentrado para Ropa"
+  imagen={imagen}
+  />
+  
+  <Hero
+  titulo="SA8 Detergente Líquido Concentrado para Ropa"
+  descripcion="Su fórmula quitamanchas y el delicioso aroma floral se unen para dejar tu ropa limpia y suave. La fórmula concentrada de triple acción te ayuda a usar menos detergente, y sus ingredientes no dañan tus prendas ni el planeta."
+  caracteristica1="Fórmula concentrada que rinde 5 envases de detergente líquido convencional de 1 litro."
+  caracteristica2="Se enjuaga bien a cualquier temperatura, incluso en agua fría."
+  caracteristica3="Dermatológicamente probado; no deja residuos que pueden irritar la piel sensible."
+  />
+  
+  <Boton2/>
+  <SectionOne />
+
+  <Boton1/>
+
+  <Testimonial
+    servicio="SA8 Detergente Líquido Concentrado para Ropa"
+    cliente1="Dayana Gomez"
+    cliente2="Francisca Martinez"
+    cliente3="Andrea Casallas"
+    servicio1="Recomiendo el SA8 Detergente Líquido Concentrado para Ropa de Amway, muy buena calidad."
+    servicio2="El SA8 Detergente Líquido Concentrado para Ropa de Amway Home es el mejor que he probado."
+    servicio3="Llevo mucho tiempo con el SA8 Detergente Líquido Concentrado para Ropa de Amway y estoy muy feliz con los resultados."
+  />
+  <Boton servicio="SA8 Detergente Líquido Concentrado para Ropa" />
+  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
+  <Footer
+    serviciof="SA8 Detergente Líquido Concentrado para Ropa"
+    j1="Maquillaje en Polvo Exact Fit"
+    k1="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
+    j2="Daily Plus 90 Tabletas"
+    k2="/daily-plus-90-tabletas-amway-nutrilite/"
+    j3="SA8 Blanqueador para Múltiples Telas"
+    k3="/sa8-blanqueador-multiples-telas-amway-home/"
+  />
+</BaseLayout>

@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import calidad from "../../../public/images/Calidad.png";
+import experiencia from "../../../public/images/Experiencia.png";
+import cliente from "../../../public/images/Satisfaccion-Cliente.png";
+---
+
+<section id="features">
+  <div
+    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-4 scroll-mt-12"
+  >
+    <div>
+      <div class="mx-auto max-w-7xl pt-6">
+        <div
+          class="grid gap-12 grid-cols-1 lg:space-y-0 lg:text-center md:grid-cols-3"
+        >
+          <div>
+            <div>
+              <div
+                class="items-center justify-center text-accent-500 flex h-20 w-20 lg:mx-auto"
+              >
+                <Image src={calidad} alt="Calidad Pulido de Pisos Bogota" />
+              </div><p
+                class="mt-4 text-lg font-semibold leading-6 text-black font-display tracking-tight"
+              >
+                Calidad
+              </p>
+            </div><div class="mt-4 text-gray-500 text-sm">
+              Nuestra garantía de satisfacción total y nuestro efectivo servicio al cliente nos diferencian de otras compañías de venta directa.
+            </div>
+          </div><div>
+            <div>
+              <div
+                class="items-center justify-center text-accent-500 flex h-20 w-20 lg:mx-auto"
+              >
+                <Image
+                  src={experiencia}
+                  alt="Experiencia Pulido de Pisos Bogota"
+                />
+              </div><p
+                class="mt-4 text-lg font-semibold leading-6 text-black font-display tracking-tight"
+              >
+                Trayectoria y Experiencia
+              </p>
+            </div><div class="mt-4 text-gray-500 text-sm">
+              Amway cuenta con más de 900 patentes. En los últimos siete años, hemos invertido $335 millones de dólares en las instalaciones de fabricación e investigación y desarrollo.
+            </div>
+          </div><div>
+            <div>
+              <div
+                class="items-center justify-center text-accent-500 flex h-20 w-20 lg:mx-auto"
+              >
+                <Image
+                  src={cliente}
+                  alt="Satisfaccion Cliente Pulido de Pisos Bogota"
+                />
+              </div><p
+                class="mt-4 text-lg font-semibold leading-6 text-black font-display tracking-tight"
+              >
+                Satisfacción al Cliente
+              </p>
+            </div><div class="mt-4 text-gray-500 text-sm">
+              Existimos por y para nuestros clientes y les servimos de manera
+              personalizada; con dedicación, respeto y calidad.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

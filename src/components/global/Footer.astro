@@ -1,0 +1,84 @@
+---
+const { serviciof, j1, j2, j3, k1, k2, k3 } = Astro.props;
+---
+
+<footer>
+  <div
+    class="items-center px-8 mx-auto py-12 gh:py-24 md:px-12 lg:px-16 xl:px-36 2xl:max-w-7xl"
+  >
+    <div class="grid grid-cols-2 gap-8 border-y py-12 xl:col-span-3">
+      <div class="md:grid md:grid-cols-2 md:gap-8">
+        <div>
+          <h3 class="text-base text-black font-medium tracking-tight">
+            {serviciof}
+          </h3>
+          <ul role="list" class="mt-4 space-y-1">
+            <li>
+              <a href="/" class="text-xs text-gray-400 hover:text-black">
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a href={k1} class="text-xs text-gray-400 hover:text-black">
+                {j1}
+              </a>
+            </li>
+            <li>
+              <a href={k2} class="text-xs text-gray-400 hover:text-black">
+                {j2}
+              </a>
+            </li>
+            <li>
+              <a href={k3} class="text-xs text-gray-400 hover:text-black">
+                {j3}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="md:grid md:grid-cols-2 md:gap-8">
+        <div>
+          <h3 class="text-base text-black font-medium tracking-tight">
+            Productos Amway Bogota
+          </h3>
+          <ul role="list" class="mt-4 space-y-1">
+            <li>
+              <a
+                href="/politica-privacidad/"
+                class="text-xs text-gray-400 hover:text-black"
+              >
+                Privacidad
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/ProductosAmwayBogota/"
+                class="text-xs text-gray-400 hover:text-black"
+                rel="nofollow"
+              >
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkeo.click/ProductosAmwayBogota"
+                class="text-xs text-gray-400 hover:text-black"
+              >
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:3223461713"
+                class="text-xs text-gray-400 hover:text-black"
+              >
+                Cel: 322 346 1713
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

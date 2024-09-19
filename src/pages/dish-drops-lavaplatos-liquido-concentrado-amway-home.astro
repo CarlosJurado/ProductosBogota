@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/global/Navigation.astro";
+import WhatsApp from "../components/global/Whatsapp.astro";
+
+import Cta from "../components/servicio/Cta.astro";
+import Hero from "../components/servicio/Hero.astro";
+import SectionOne from "../components/landing/SectionOne.astro";
+import Testimonial from "../components/global/Testimonial.astro";
+import Boton from "../components/global/Boton.astro";
+import Boton1 from "../components/global/Boton1.astro";
+import Boton2 from "../components/global/Boton2.astro";
+import Footer from "../components/global/Footer.astro";
+import { AstroSeo } from "@astrolib/seo";
+import Seo from "../components/Seo.astro";
+import imagen from "../../public/dish-drops-lavaplatos-liquido-concentrado-amway-home.jpg";
+
+const schema = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  name: "Dish Drops Lavaplatos Líquido Concentrado - Productos Amway Bogota",
+  image: "https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home.jpg",
+  description: "Dish Drops Lavaplatos Líquido Concentrado - Productos Amway Bogota",
+  brand: {
+    "@type": "Brand",
+    name: "Dish Drops Lavaplatos Líquido Concentrado - Productos Amway Bogota",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home/",
+    priceCurrency: "COP",
+    price: "83859",
+    priceValidUntil: "2025-02-28",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "5",
+    ratingCount: "69",
+    reviewCount: "69",
+  },
+  review: {
+    "@type": "Review",
+    name: "Dayana Gomez",
+    reviewBody:
+      "El Dish Drops Lavaplatos Líquido Concentrado de Amway Home es el mejor que he probado.",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "5",
+    },
+    datePublished: "2024-07-01",
+    author: { "@type": "Person", name: "Dayana Gomez" },
+    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+  },
+};
+---
+
+<Seo schemaMarkup={schema} />
+<AstroSeo
+  title="Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 1713"
+  description="Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 1713 - Productos Amway Bogota"
+  canonical="https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home/"
+  openGraph={{
+    url: "https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home/",
+    title: "Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 17133",
+    description:
+      "Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 1713 - Productos Amway Bogota",
+    images: [
+      {
+        url: "https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 1713",
+        type: "image/jpeg",
+      },
+    ],
+    site_name: "Productos Amway Bogota",
+  }}
+/>
+<BaseLayout>
+  <Navigation
+    servicio="Dish Drops Lavaplatos Líquido Concentrado"
+    m1="Omega 3 Plus 90 Cápsulas"
+    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
+    m2="Suero Diario de Vitamina C + HA3"
+    l2="/suero-diario-vitamina-c-ha3-amway-artistry/"
+    m3="Pursue Limpiador Desinfectante Amway"
+    l3="/pursue-limpiador-desinfectante-amway-home/"
+  />
+  <Cta
+  pagina="Productos Amway Bogota"
+  servicio="Dish Drops Lavaplatos Líquido Concentrado"
+  imagen={imagen}
+  />
+  
+  <Hero
+  titulo="Dish Drops Lavaplatos Líquido Concentrado"
+  descripcion="La fórmula de Dish Drops Lavaplatos Líquido Concentrado elimina la grasa y los residuos o manchas de alimentos dejando tu vajilla y utensilios de cocina limpios y relucientes."
+  caracteristica1="Contiene aloe vera y extracto de shiso que ayudan a evitar la resequedad de tus manos."
+  caracteristica2=" Fórmula concentrada que rinde hasta 18 botellas de 500 ml diluido (1:8)."
+  caracteristica3="Dermatológicamente probado. Contiene derivados de aceite de coco que ayuda a una limpieza efectiva en la cocina."
+  />
+  
+  <Boton2/>
+  <SectionOne />
+
+  <Boton1/>
+
+  <Testimonial
+    servicio="Dish Drops Lavaplatos Líquido Concentrado"
+    cliente1="Dayana Gomez"
+    cliente2="Francisca Martinez"
+    cliente3="Andrea Casallas"
+    servicio1="Recomiendo el Dish Drops Lavaplatos Líquido Concentrado de Amway, muy buena calidad."
+    servicio2="El Dish Drops Lavaplatos Líquido Concentrado de Amway Home es el mejor que he probado."
+    servicio3="Llevo mucho tiempo con el Dish Drops Lavaplatos Líquido Concentrado de Amway y estoy muy feliz con los resultados."
+  />
+  <Boton servicio="Dish Drops Lavaplatos Líquido Concentrado" />
+  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
+  <Footer
+    serviciof="Dish Drops Lavaplatos Líquido Concentrado"
+    j1="Maquillaje en Polvo Exact Fit"
+    k1="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
+    j2="Daily Plus 90 Tabletas"
+    k2="/daily-plus-90-tabletas-amway-nutrilite/"
+    j3="SA8 Blanqueador para Múltiples Telas"
+    k3="/sa8-blanqueador-multiples-telas-amway-home/"
+  />
+</BaseLayout>

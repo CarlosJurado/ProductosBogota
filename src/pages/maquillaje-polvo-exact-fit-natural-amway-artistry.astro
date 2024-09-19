@@ -1,0 +1,134 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/global/Navigation.astro";
+import WhatsApp from "../components/global/Whatsapp.astro";
+
+import Cta from "../components/servicio/Cta.astro";
+import Hero from "../components/servicio/Hero.astro";
+import SectionOne from "../components/landing/SectionOne.astro";
+import Testimonial from "../components/global/Testimonial.astro";
+import Boton from "../components/global/Boton.astro";
+import Boton1 from "../components/global/Boton1.astro";
+import Boton2 from "../components/global/Boton2.astro";
+import Footer from "../components/global/Footer.astro";
+import { AstroSeo } from "@astrolib/seo";
+import Seo from "../components/Seo.astro";
+import imagen from "../../public/maquillaje-polvo-exact-fit-natural-amway-artistry.jpg";
+
+const schema = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  name: "Maquillaje en Polvo Exact Fit Artistry - Productos Amway Bogota",
+  image: "https://productosbogota.com/maquillaje-polvo-exact-fit-natural-amway-artistry.jpg",
+  description: "Maquillaje en Polvo Exact Fit Artistry - Productos Amway Bogota",
+  brand: {
+    "@type": "Brand",
+    name: "Maquillaje en Polvo Exact Fit Artistry - Productos Amway Bogota",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://productosbogota.com/maquillaje-polvo-exact-fit-natural-amway-artistry/",
+    priceCurrency: "COP",
+    price: "136700",
+    priceValidUntil: "2025-02-28",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "5",
+    ratingCount: "69",
+    reviewCount: "69",
+  },
+  review: {
+    "@type": "Review",
+    name: "Andrea Casallas",
+    reviewBody:
+      "Muy buen producto, la calidad del Maquillaje en Polvo Exact Fit Artistry es la mejor.",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "5",
+    },
+    datePublished: "2024-06-01",
+    author: { "@type": "Person", name: "Andrea Casallas" },
+    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+  },
+};
+---
+
+<Seo schemaMarkup={schema} />
+<AstroSeo
+  title="Maquillaje en Polvo Exact Fit Artistry Amway - Cel: 322 346 1713"
+  description="Maquillaje en Polvo Exact Fit Artistry - Cel: 322 346 1713 - Productos Amway Bogota"
+  canonical="https://productosbogota.com/maquillaje-polvo-exact-fit-natural-amway-artistry/"
+  openGraph={{
+    url: "https://productosbogota.com/maquillaje-polvo-exact-fit-natural-amway-artistry/",
+    title: "Maquillaje en Polvo Exact Fit Artistry Amway - Cel: 322 346 17133",
+    description:
+      "Maquillaje en Polvo Exact Fit Artistry - Cel: 322 346 1713 - Productos Amway Bogota",
+    images: [
+      {
+        url: "https://productosbogota.com/maquillaje-polvo-exact-fit-natural-amway-artistry.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Maquillaje en Polvo Exact Fit Artistry Amway - Cel: 322 346 1713",
+        type: "image/jpeg",
+      },
+    ],
+    site_name: "Productos Amway Bogota",
+  }}
+/>
+<BaseLayout>
+  <Navigation
+    servicio="Maquillaje en Polvo Exact Fit"
+    m1="Omega 3 Plus 90 Cápsulas"
+    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
+    m2="Suero Diario de Vitamina C + HA3"
+    l2="/suero-diario-vitamina-c-ha3-amway-artistry/"
+    m3="SA8 Blanqueador para Múltiples Tela"
+    l3="/sa8-blanqueador-multiples-telas-amway-home/"
+  />
+  <Cta
+  pagina="Productos Amway Bogota"
+  servicio="Maquillaje en Polvo Exact Fit"
+  imagen={imagen}
+  />
+  
+  <Hero
+  titulo="Maquillaje en Polvo Exact Fit - Natural"
+  descripcion="Gracias a su fórmula, que combina perlas tahitianas y prismas ópticos, nuestra base en polvo te brinda una cobertura que perfecciona la apariencia natural de tu piel. Además, está enriquecida con minerales del Amazonas que te dan un hermoso y duradero acabado mate resistente a los efectos del calor, humedad y actividad constante."
+  caracteristica1="Ayuda a controlar y prevenir el brillo, dejando un acabado mate natural."
+  caracteristica2="Apto para todo tipo de piel, incluida la piel sensible."
+  caracteristica3="Dermatológicamente probado. No comedogénico."
+  />
+  
+  <Boton2/>
+  <SectionOne />
+
+  <Boton1/>
+
+  <Testimonial
+    servicio="Maquillaje en Polvo Exact Fit"
+    cliente1="Dayana Gomez"
+    cliente2="Francisca Martinez"
+    cliente3="Andrea Casallas"
+    servicio1="Recomiendo el Maquillaje en Polvo Exact Fit de Amway, muy buena calidad."
+    servicio2="El Maquillaje en Polvo Exact Fit de Nutrilite tiene los mejores resultados."
+    servicio3="Llevo años con el Maquillaje en Polvo Exact Fit de Amway y estoy muy feliz con los resultados."
+  />
+  <Boton servicio="Maquillaje en Polvo Exact Fit" />
+  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
+  <Footer
+    serviciof="Maquillaje en Polvo Exact Fit"
+    j1="Pursue Limpiador Desinfectante"
+    k1="/pursue-limpiador-desinfectante-amway-home/"
+    j2="Daily Plus 90 Tabletas"
+    k2="/daily-plus-90-tabletas-amway-nutrilite/"
+    j3="SA8 Detergente Líquido Concentrado para Ropa"
+    k3="/sa8-detergente-liquido-concentrado-ropa-amway-home/"
+  />
+</BaseLayout>
