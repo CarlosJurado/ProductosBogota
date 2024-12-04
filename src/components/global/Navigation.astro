@@ -1,5 +1,5 @@
 ---
-const { servicio, m1, m2, m3, l1, l2, l3 } = Astro.props;
+const { servicio, links } = Astro.props;
 ---
 
 <section class="bg-white border-b border-black/5">
@@ -11,14 +11,15 @@ const { servicio, m1, m2, m3, l1, l2, l3 } = Astro.props;
       <div class="flex flex-row items-center justify-between lg:justify-start">
         <a href="/" class="lg:pr-8 text-black inline-flex items-center gap-3">
           <img
-            src="/images/favicons/favicon-32x32.png"
+            src="/images/favicons/favicon-48x48.png"
             alt={servicio}
-            width="32"
-            height="32"
+            width="48"
+            height="48"
           />
           <span class="font-bold font-display">{servicio}</span>
         </a>
         <button
+          aria-label="Menu"
           @click="open = !open"
           class="inline-flex items-center justify-center p-2 text-gray-400 hover:text-black focus:outline-none focus:text-black lg:hidden"
           id="menu"
@@ -50,22 +51,18 @@ const { servicio, m1, m2, m3, l1, l2, l3 } = Astro.props;
         :class="{'flex': open, 'hidden': !open}"
         class="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row"
       >
-        <a
-          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400 lg:ml-auto"
-          href={l1}>{m1}</a
-        >
-
-        <a
-          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400"
-          href={l2}>{m2}</a
-        >
-
-        <a
-          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400"
-          href={l3}
-        >
-          {m3}</a
-        >
+      {links && links.length > 0 ? (
+        links.map((link) => (
+          <a
+            class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400"
+            href={link.url}
+          >
+            {link.label}
+          </a>
+        ))
+      ) : (
+        <p>No links available</p> <!-- Mensaje opcional si no hay enlaces -->
+      )}
 
         <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
           <a

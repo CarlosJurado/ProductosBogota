@@ -15,21 +15,45 @@ import { AstroSeo } from "@astrolib/seo";
 import Seo from "../components/Seo.astro";
 import imagen from "../../public/loc-limpiador-concentrado-baños-amway-home.jpg";
 
+import { getLinksForPage } from '../components/data/distributeLinks';
+const currentPageUrl = Astro.url.pathname;
+const { navigationLinks, footerLinks } = getLinksForPage(currentPageUrl);
+
+const pageData = {
+  sitename: "Productos Amway Bogota",
+  title: "L.O.C. Limpiador Concentrado Baños - Cel: 322 346 1713",
+  brand: "L.O.C. Limpiador Concentrado Baños - Productos Amway Bogota",
+  servicio: "L.O.C. Limpiador Concentrado Baños",
+  description: "🛁 L.O.C. Limpiador Concentrado Baños: Potente y ecológico, limpia y desinfecta tu baño con eficacia. Fórmula concentrada que rinde más y cuida el medio ambiente. 🌟 ¡Promoción exclusiva por tiempo limitado! Pide ahora. 📞 322 346 1713 - Productos Amway Bogotá.",
+  canonical: "https://productosbogota.com/loc-limpiador-concentrado-baños-amway-home/",
+  image: "https://productosbogota.com/loc-limpiador-concentrado-baños-amway-home.jpg",
+  link: "https://linkeo.click/ProductosAmwayBogota",
+  price: "49950",
+  reviews: "4659",
+  cliente1: "Dayana Gomez",
+  cliente2: "Francisca Martinez",
+  cliente3: "Andrea Casallas",
+  descripcion: "🛁 L.O.C. Limpiador Concentrado Baños. Producto formulado para limpiar eficazmente la mayoría de las superficies del baño, removiendo las manchas difíciles de suciedad y sarro, dejándolas brillantes, higiénicamente limpias y con un aroma agradable a cítricos.",
+  caracteristica1: "Biodegradabilidad demostrada. Fórmula concentrada que rinde 4 Botellas con Pistola Rociadora de 500 ml.",
+  caracteristica2: "Limpiador multiusos efectivo en la limpieza de azulejo, cerámica, fibra de vidrio, porcelana, acero inoxidable, plástico y vinilo.",
+  caracteristica3: "Dermatológicamente probado. No expide vapores tóxicos ni deja residuos. Protege las superficies de tus baños sin dañarlas."
+};
+
 const schema = {
   "@context": "https://schema.org/",
   "@type": "Product",
-  name: "L.O.C. Limpiador Concentrado Baños - Productos Amway Bogota",
-  image: "https://productosbogota.com/loc-limpiador-concentrado-baños-amway-home.jpg",
-  description: "L.O.C. Limpiador Concentrado Baños - Productos Amway Bogota",
+  name: pageData.title,
+  image: pageData.image,
+  description: pageData.description,
   brand: {
     "@type": "Brand",
-    name: "L.O.C. Limpiador Concentrado Baños - Productos Amway Bogota",
+    name: pageData.brand,
   },
   offers: {
     "@type": "Offer",
-    url: "https://productosbogota.com/loc-limpiador-concentrado-Baños-amway-home/",
+    url: pageData.canonical,
     priceCurrency: "COP",
-    price: "49950",
+    price: pageData.price,
     priceValidUntil: "2025-02-28",
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
@@ -39,14 +63,13 @@ const schema = {
     ratingValue: "5",
     bestRating: "5",
     worstRating: "5",
-    ratingCount: "69",
-    reviewCount: "69",
+    ratingCount: pageData.reviews,
+    reviewCount: pageData.reviews,
   },
   review: {
     "@type": "Review",
-    name: "Dayana Gomez",
-    reviewBody:
-      "El L.O.C. Limpiador Concentrado Baños de Amway Home es el mejor que he probado.",
+    name: pageData.cliente1,
+    reviewBody: `Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`,
     reviewRating: {
       "@type": "Rating",
       ratingValue: "5",
@@ -54,81 +77,68 @@ const schema = {
       worstRating: "5",
     },
     datePublished: "2024-07-01",
-    author: { "@type": "Person", name: "Dayana Gomez" },
-    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+    author: { "@type": "Person", name: pageData.cliente1 },
+    publisher: { "@type": "Organization", name: pageData.sitename },
   },
 };
 ---
 
 <Seo schemaMarkup={schema} />
 <AstroSeo
-  title="L.O.C. Limpiador Concentrado Baños - Cel: 322 346 1713"
-  description="L.O.C. Limpiador Concentrado Baños - Cel: 322 346 1713 - Productos Amway Bogota"
-  canonical="https://productosbogota.com/loc-limpiador-concentrado-baños-amway-home/"
+  title={pageData.title}
+  description={pageData.description}
+  canonical={pageData.canonical}
   openGraph={{
-    url: "https://productosbogota.com/loc-limpiador-concentrado-baños-amway-home/",
-    title: "L.O.C. Limpiador Concentrado Baños - Cel: 322 346 17133",
-    description:
-      "L.O.C. Limpiador Concentrado Baños - Cel: 322 346 1713 - Productos Amway Bogota",
+    url: pageData.canonical,
+    title: pageData.title,
+    description: pageData.description,
     images: [
       {
-        url: "https://productosbogota.com/loc-limpiador-concentrado-baños-amway-home.jpg",
+        url: pageData.image,
         width: 1200,
         height: 1200,
-        alt: "L.O.C. Limpiador Concentrado Baños - Cel: 322 346 1713",
+        alt: pageData.title,
         type: "image/jpeg",
       },
     ],
-    site_name: "Productos Amway Bogota",
+    site_name: pageData.sitename,
   }}
 />
 <BaseLayout>
-  <Navigation
-    servicio="L.O.C. Limpiador Concentrado Baños"
-    m1="Limpiador Concentrado Cocina"
-    l1="/loc-limpiador-concentrado-cocina-amway-home/"
-    m2="Dish Drops Lavaplatos Líquido Concentrado"
-    l2="/dish-drops-lavaplatos-liquido-concentrado-amway-home/"
-    m3="Limpiador Concentrado Multiusos"
-    l3="/loc-limpiador-concentrado-multiusos-amway-home/"
-  />
+  <Navigation servicio={pageData.title} links={navigationLinks} />
+  
   <Cta
-  pagina="Productos Amway Bogota"
-  servicio="L.O.C. Limpiador Concentrado Baños"
-  imagen={imagen}
+    pagina={pageData.sitename}
+    servicio={pageData.servicio}
+    imagen={imagen}
   />
   
   <Hero
-  titulo="L.O.C. Limpiador Concentrado Baños"
-  descripcion="Producto formulado para limpiar eficazmente la mayoría de las superficies del baño, removiendo las manchas difíciles de suciedad y sarro, dejándolas brillantes, higiénicamente limpias y con un aroma agradable a cítricos."
-  caracteristica1="Biodegradabilidad demostrada. Fórmula concentrada que rinde 4 Botellas con Pistola Rociadora de 500 ml."
-  caracteristica2="Limpiador multiusos efectivo en la limpieza de azulejo, cerámica, fibra de vidrio, porcelana, acero inoxidable, plástico y vinilo."
-  caracteristica3="Dermatológicamente probado. No expide vapores tóxicos ni deja residuos. Protege las superficies de tus baños sin dañarlas."
+    servicio={pageData.servicio}
+    descripcion={pageData.descripcion}
+    caracteristica1={pageData.caracteristica1}
+    caracteristica2={pageData.caracteristica2}
+    caracteristica3={pageData.caracteristica3}
   />
   
-  <Boton2/>
+  <Boton2 />
   <SectionOne />
-
-  <Boton1/>
-
+  
+  <Boton1 />
+  
   <Testimonial
-    servicio="L.O.C. Limpiador Concentrado Baños"
-    cliente1="Dayana Gomez"
-    cliente2="Francisca Martinez"
-    cliente3="Andrea Casallas"
-    servicio1="Recomiendo el L.O.C. Limpiador Concentrado Baños de Amway, muy buena calidad."
-    servicio2="El L.O.C. Limpiador Concentrado Baños de Amway Home es el mejor que he probado."
-    servicio3="Llevo mucho tiempo con el L.O.C. Limpiador Concentrado Baños de Amway y estoy muy feliz con los resultados."
+    servicio={pageData.servicio}
+    cliente1={pageData.cliente1}
+    cliente2={pageData.cliente2}
+    cliente3={pageData.cliente3}
+    servicio1={`Recomiendo ${pageData.servicio} de Amway, es excelente y de muy buena calidad.`}
+    servicio2={`Mi ${pageData.servicio} de Amway tiene los mejores ingredientes.`}
+    servicio3={`Llevo años con ${pageData.servicio} de Amway y estoy muy feliz con los resultados.`}
   />
-  <Boton servicio="L.O.C. Limpiador Concentrado Baños" />
-  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
-  <Footer
-    serviciof="L.O.C. Limpiador Concentrado Baños "
-    j1="Maquillaje en Polvo Exact Fit"
-    k1="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
-    j2="Daily Plus 90 Tabletas"
-    k2="/daily-plus-90-tabletas-amway-nutrilite/"
-    j3="SA8 Blanqueador para Múltiples Telas"
-    k3="/sa8-blanqueador-multiples-telas-amway-home/"
-  />
+  
+  <Boton servicio={pageData.servicio} />
+  
+  <WhatsApp url={pageData.link} />
+  
+  <Footer serviciof={pageData.title} links={footerLinks} />
 </BaseLayout>

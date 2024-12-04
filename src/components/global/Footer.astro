@@ -1,5 +1,5 @@
 ---
-const { serviciof, j1, j2, j3, k1, k2, k3 } = Astro.props;
+const { serviciof, links } = Astro.props;
 ---
 
 <footer>
@@ -14,25 +14,21 @@ const { serviciof, j1, j2, j3, k1, k2, k3 } = Astro.props;
           </h3>
           <ul role="list" class="mt-4 space-y-1">
             <li>
-              <a href="/" class="text-xs text-gray-400 hover:text-black">
+              <a href="/" class="text-xs text-gray-900 hover:text-black">
                 Inicio
               </a>
             </li>
-            <li>
-              <a href={k1} class="text-xs text-gray-400 hover:text-black">
-                {j1}
-              </a>
-            </li>
-            <li>
-              <a href={k2} class="text-xs text-gray-400 hover:text-black">
-                {j2}
-              </a>
-            </li>
-            <li>
-              <a href={k3} class="text-xs text-gray-400 hover:text-black">
-                {j3}
-              </a>
-            </li>
+            {links && links.length > 0 ? (
+              links.map((link) => (
+                <li>
+                  <a href={link.url} class="text-xs text-gray-900 hover:text-black">
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            ) : (
+              <li>No links available</li> 
+            )}
           </ul>
         </div>
       </div>
@@ -46,7 +42,7 @@ const { serviciof, j1, j2, j3, k1, k2, k3 } = Astro.props;
             <li>
               <a
                 href="/politica-privacidad/"
-                class="text-xs text-gray-400 hover:text-black"
+                class="text-xs text-gray-900 hover:text-black"
               >
                 Privacidad
               </a>
@@ -54,7 +50,7 @@ const { serviciof, j1, j2, j3, k1, k2, k3 } = Astro.props;
             <li>
               <a
                 href="https://www.facebook.com/ProductosAmwayBogota/"
-                class="text-xs text-gray-400 hover:text-black"
+                class="text-xs text-gray-900 hover:text-black"
                 rel="nofollow"
               >
                 Facebook
@@ -63,7 +59,7 @@ const { serviciof, j1, j2, j3, k1, k2, k3 } = Astro.props;
             <li>
               <a
                 href="https://linkeo.click/ProductosAmwayBogota"
-                class="text-xs text-gray-400 hover:text-black"
+                class="text-xs text-gray-900 hover:text-black"
               >
                 WhatsApp
               </a>
@@ -71,7 +67,7 @@ const { serviciof, j1, j2, j3, k1, k2, k3 } = Astro.props;
             <li>
               <a
                 href="tel:3223461713"
-                class="text-xs text-gray-400 hover:text-black"
+                class="text-xs text-gray-900 hover:text-black"
               >
                 Cel: 322 346 1713
               </a>

@@ -15,21 +15,45 @@ import { AstroSeo } from "@astrolib/seo";
 import Seo from "../components/Seo.astro";
 import imagen from "../../public/vitamina-c-plus-tabletas-amway-nutrilite.jpg";
 
+import { getLinksForPage } from '../components/data/distributeLinks';
+const currentPageUrl = Astro.url.pathname;
+const { navigationLinks, footerLinks } = getLinksForPage(currentPageUrl);
+
+const pageData = {
+  sitename: "Productos Amway Bogota",
+  title: "Vitamina C Plus Tabletas Nutrilite - Cel: 322 346 1713",
+  brand: "Vitamina C Plus Tabletas Nutrilite - Productos Amway Bogota",
+  servicio: "Vitamina C Plus Tabletas Nutrilite",
+  description: "💊 Tri Iron Folic Tabletas Nutrilite: Apoya tu salud con este suplemento de alta calidad que combina hierro y ácido fólico para promover la producción de glóbulos rojos y el bienestar general. Perfecto para mantenerte activo y enérgico. 🌟 ¡Oferta especial por tiempo limitado! Adquiere el tuyo hoy. 📞 322 346 1713 - Productos Amway Bogotá.",
+  canonical: "https://productosbogota.com/vitamina-c-plus-tabletas-amway-nutrilite/",
+  image: "https://productosbogota.com/vitamina-c-plus-tabletas-amway-nutrilite.jpg",
+  link: "https://linkeo.click/ProductosAmwayBogota",
+  price: "56100",
+  reviews: "63859",
+  cliente1: "Dayana Gomez",
+  cliente2: "Francisca Martinez",
+  cliente3: "Andrea Casallas",
+  descripcion:"💊 Tri Iron Folic Tabletas Nutrilite. Fórmula con ingredientes botánicos que proporciona 250mg. de vitamina C por tableta, contiene concentrado de cereza acerola, fuente importante de esta vitamina. Puesto que la vitamina C es soluble en agua, el cuerpo la elimina rápidamente sin aprovechar al máximo sus beneficios. Con nuestra tecnología de liberación prolongada esta vitamina se libera de manera gradual durante 8 horas para que tengas un mejor aprovechamiento.",
+  caracteristica1:"8 horas de liberación lenta y constante de vitamina c.",
+  caracteristica2:"Es una tableta de fácil digestión suave para el estómago.",
+  caracteristica3:"Con ingredientes de origen vegetal, no contiene lactosa, derivados de leche, azúcares simples, gluten, cafeína, y es libre de colorantes, saborizantes, preservantes artificiales e ingredientes genéticamente modificados."
+};
+
 const schema = {
   "@context": "https://schema.org/",
   "@type": "Product",
-  name: "Vitamina C Plus Tabletas Nutrilite - Productos Amway Bogota",
-  image: "https://productosbogota.com/vitamina-c-plus-tabletas-amway-nutrilite.jpg",
-  description: "Vitamina C Plus Tabletas Nutrilite - Productos Amway Bogota",
+  name: pageData.title,
+  image: pageData.image,
+  description: pageData.description,
   brand: {
     "@type": "Brand",
-    name: "Vitamina C Plus Tabletas Nutrilite - Productos Amway Bogota",
+    name: pageData.brand,
   },
   offers: {
     "@type": "Offer",
-    url: "https://productosbogota.com/vitamina-c-plus-tabletas-amway-nutrilite/",
+    url: pageData.canonical,
     priceCurrency: "COP",
-    price: "56100",
+    price: pageData.price,
     priceValidUntil: "2025-02-28",
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
@@ -39,96 +63,83 @@ const schema = {
     ratingValue: "5",
     bestRating: "5",
     worstRating: "5",
-    ratingCount: "89",
-    reviewCount: "89",
+    ratingCount: pageData.reviews,
+    reviewCount: pageData.reviews,
   },
   review: {
     "@type": "Review",
-    name: "Andrea Casallas",
-    reviewBody:
-      "Muy buen producto, la calidad del Vitamina C Plus Tabletas Nutrilite es la mejor.",
+    name: pageData.cliente2,
+    reviewBody: `Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`,
     reviewRating: {
       "@type": "Rating",
       ratingValue: "5",
       bestRating: "5",
       worstRating: "5",
     },
-    datePublished: "2024-06-01",
-    author: { "@type": "Person", name: "Andrea Casallas" },
-    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+    datePublished: "2024-07-01",
+    author: { "@type": "Person", name: pageData.cliente2 },
+    publisher: { "@type": "Organization", name: pageData.sitename },
   },
 };
 ---
 
 <Seo schemaMarkup={schema} />
 <AstroSeo
-  title="Vitamina C Plus Tabletas Nutrilite Amway - Cel: 322 346 1713"
-  description="Vitamina C Plus Tabletas Nutrilite - Cel: 322 346 1713 - Productos Amway Bogota"
-  canonical="https://productosbogota.com/vitamina-c-plus-tabletas-amway-nutrilite/"
+  title={pageData.title}
+  description={pageData.description}
+  canonical={pageData.canonical}
   openGraph={{
-    url: "https://productosbogota.com/vitamina-c-plus-tabletas-amway-nutrilite/",
-    title: "Vitamina C Plus Tabletas Nutrilite Amway - Cel: 322 346 17133",
-    description:
-      "Vitamina C Plus Tabletas Nutrilite - Cel: 322 346 1713 - Productos Amway Bogota",
+    url: pageData.canonical,
+    title: pageData.title,
+    description: pageData.description,
     images: [
       {
-        url: "https://productosbogota.com/vitamina-c-plus-tabletas-amway-nutrilite.jpg",
-        width: 1280,
-        height: 720,
-        alt: "Vitamina C Plus Tabletas Nutrilite Amway - Cel: 322 346 1713",
+        url: pageData.image,
+        width: 1200,
+        height: 1200,
+        alt: pageData.title,
         type: "image/jpeg",
       },
     ],
-    site_name: "Productos Amway Bogota",
+    site_name: pageData.sitename,
   }}
 />
 <BaseLayout>
-  <Navigation
-    servicio="Vitamina C Plus Tabletas"
-    m1="Omega 3 Plus 90 Cápsulas"
-    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
-    m2="Daily Plus 90 Tabletas"
-    l2="/vitamina-c-plus-tabletas-amway-nutrilite/"
-    m3="SA8 Blanqueador para Múltiples Tela"
-    l3="/sa8-blanqueador-multiples-telas-amway-home/"
-  />
+  <Navigation servicio={pageData.servicio} links={navigationLinks} />
+
   <Cta
-  pagina="Productos Amway Bogota"
-  servicio="Vitamina C Plus Tabletas"
-  imagen={imagen}
+    pagina={pageData.sitename}
+    servicio={pageData.servicio}
+    imagen={imagen}
   />
-  
+
   <Hero
-  titulo="Vitamina C Plus Tabletas"
-  descripcion="Fórmula con ingredientes botánicos que proporciona 250mg. de vitamina C por tableta, contiene concentrado de cereza acerola, fuente importante de esta vitamina. Puesto que la vitamina C es soluble en agua, el cuerpo la elimina rápidamente sin aprovechar al máximo sus beneficios. Con nuestra tecnología de liberación prolongada esta vitamina se libera de manera gradual durante 8 horas para que tengas un mejor aprovechamiento."
-  caracteristica1="Con ingredientes de origen vegetal, no contiene lactosa, derivados de leche, azúcares simples, gluten, cafeína, y es libre de colorantes, saborizantes, preservantes artificiales e ingredientes genéticamente modificados. "
-  caracteristica2="8 horas de liberación lenta y constante de vitamina c."
-  caracteristica3="Es una tableta de fácil digestión suave para el estómago."
+    titulo={pageData.servicio}
+    descripcion={pageData.descripcion}
+    caracteristica1={pageData.caracteristica1}
+    caracteristica2={pageData.caracteristica2}
+    caracteristica3={pageData.caracteristica3}
   />
-  
-  <Boton2/>
+
+
+  <Boton2 />
   <SectionOne />
 
-  <Boton1/>
+  <Boton1 />
 
   <Testimonial
-    servicio="Vitamina C Plus Tabletas"
-    cliente1="Darwin Ramirez"
-    cliente2="Francisco Martinez"
-    cliente3="Andrea Casallas"
-    servicio1="Recomiendo el Vitamina C Plus Tabletas de Amway, muy buena calidad."
-    servicio2="El Vitamina C Plus Tabletas de Nutrilite tiene las Vitaminas y Minerales que me recomienda mi doctor."
-    servicio3="Llevo años con el Vitamina C Plus Tabletas de Amway y estoy muy feliz con los resultados."
+    servicio={pageData.servicio}
+    cliente1={pageData.cliente1}
+    cliente2={pageData.cliente2}
+    cliente3={pageData.cliente3}
+    servicio1={`Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`}
+    servicio2={`Mi ${pageData.servicio} de Amway tiene los mejores ingredientes.`}
+    servicio3={`Llevo años con ${pageData.servicio} de Amway y estoy muy feliz con los resultados.`}
   />
-  <Boton servicio="Vitamina C Plus Tabletas" />
-  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
-  <Footer
-    serviciof="Vitamina C Plus Tabletas"
-    j1="Pursue Limpiador Desinfectante"
-    k1="/pursue-limpiador-desinfectante-amway-home/"
-    j2="Maquillaje en Polvo Exact Fit"
-    k2="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
-    j3="SA8 Detergente Líquido Concentrado para Ropa"
-    k3="/sa8-detergente-liquido-concentrado-ropa-amway-home/"
-  />
+
+  <Boton servicio={pageData.servicio} />
+
+  <WhatsApp url={pageData.link} />
+
+  <Footer serviciof={pageData.servicio} links={footerLinks} />
 </BaseLayout>

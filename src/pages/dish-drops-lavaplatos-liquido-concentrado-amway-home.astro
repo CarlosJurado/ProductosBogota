@@ -15,21 +15,46 @@ import { AstroSeo } from "@astrolib/seo";
 import Seo from "../components/Seo.astro";
 import imagen from "../../public/dish-drops-lavaplatos-liquido-concentrado-amway-home.jpg";
 
+import { getLinksForPage } from '../components/data/distributeLinks';
+const currentPageUrl = Astro.url.pathname;
+const { navigationLinks, footerLinks } = getLinksForPage(currentPageUrl);
+
+
+const pageData = {
+  sitename:"Productos Amway Bogota",
+  title: "Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 1713",
+  brand: "Dish Drops Lavaplatos Líquido Concentrado - Productos Amway Bogota",
+  servicio: "Dish Drops Lavaplatos Líquido Concentrado",
+  description: "🧼 Dish Drops Lavaplatos Líquido Concentrado: Potente fórmula concentrada para una limpieza profunda y ahorro en cada uso. 🌟 ¡Oferta especial por tiempo limitado! Compra hoy. 📞 322 346 1713 - Productos Amway Bogotá.",
+  canonical: "https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home/",
+  image: "https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home.jpg",
+  link: "https://linkeo.click/ProductosAmwayBogota",
+  price: "83859",
+  reviews:"9438",
+  cliente1:"Dayana Ramirez",
+  cliente2:"Karen Martinez",
+  cliente3:"Andrea Casallas",
+  descripcion:"🧼 Dish Drops Lavaplatos Líquido Concentrado. La fórmula de Dish Drops Lavaplatos Líquido Concentrado elimina la grasa y los residuos o manchas de alimentos dejando tu vajilla y utensilios de cocina limpios y relucientes.",
+  caracteristica1:"Contiene aloe vera y extracto de shiso que ayudan a evitar la resequedad de tus manos.",
+  caracteristica2:"Fórmula concentrada que rinde hasta 18 botellas de 500 ml diluido (1:8).",
+  caracteristica3:"Dermatológicamente probado. Contiene derivados de aceite de coco que ayuda a una limpieza efectiva en la cocina."
+};
+
 const schema = {
   "@context": "https://schema.org/",
   "@type": "Product",
-  name: "Dish Drops Lavaplatos Líquido Concentrado - Productos Amway Bogota",
-  image: "https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home.jpg",
-  description: "Dish Drops Lavaplatos Líquido Concentrado - Productos Amway Bogota",
+  name: pageData.title,
+  image: pageData.image,
+  description: pageData.description,
   brand: {
     "@type": "Brand",
-    name: "Dish Drops Lavaplatos Líquido Concentrado - Productos Amway Bogota",
+    name: pageData.brand,
   },
   offers: {
     "@type": "Offer",
-    url: "https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home/",
+    url: pageData.canonical,
     priceCurrency: "COP",
-    price: "83859",
+    price: pageData.price,
     priceValidUntil: "2025-02-28",
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
@@ -39,71 +64,64 @@ const schema = {
     ratingValue: "5",
     bestRating: "5",
     worstRating: "5",
-    ratingCount: "69",
-    reviewCount: "69",
+    ratingCount: pageData.reviews,
+    reviewCount: pageData.reviews,
   },
   review: {
     "@type": "Review",
-    name: "Dayana Gomez",
+    name: pageData.cliente1,
     reviewBody:
-      "El Dish Drops Lavaplatos Líquido Concentrado de Amway Home es el mejor que he probado.",
+      `Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`,
     reviewRating: {
       "@type": "Rating",
       ratingValue: "5",
       bestRating: "5",
       worstRating: "5",
     },
-    datePublished: "2024-07-01",
-    author: { "@type": "Person", name: "Dayana Gomez" },
-    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+    datePublished: "2024-06-01",
+    author: { "@type": "Person", name: pageData.cliente1 },
+    publisher: { "@type": "Organization", name: pageData.sitename, },
   },
 };
 ---
 
 <Seo schemaMarkup={schema} />
 <AstroSeo
-  title="Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 1713"
-  description="Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 1713 - Productos Amway Bogota"
-  canonical="https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home/"
+title={pageData.title}
+description={pageData.description}
+  canonical={pageData.canonical}
   openGraph={{
-    url: "https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home/",
-    title: "Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 17133",
-    description:
-      "Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 1713 - Productos Amway Bogota",
+    url: pageData.canonical,
+    title: pageData.title,
+    description: pageData.description,
     images: [
       {
-        url: "https://productosbogota.com/dish-drops-lavaplatos-liquido-concentrado-amway-home.jpg",
+        url: pageData.image,
         width: 1200,
-        height: 900,
-        alt: "Dish Drops Lavaplatos Líquido Concentrado - Cel: 322 346 1713",
+        height: 1200,
+        alt: pageData.title,
         type: "image/jpeg",
       },
     ],
-    site_name: "Productos Amway Bogota",
+    site_name: pageData.sitename,
   }}
 />
 <BaseLayout>
-  <Navigation
-    servicio="Dish Drops Lavaplatos Líquido Concentrado"
-    m1="Omega 3 Plus 90 Cápsulas"
-    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
-    m2="Suero Diario de Vitamina C + HA3"
-    l2="/suero-diario-vitamina-c-ha3-amway-artistry/"
-    m3="Pursue Limpiador Desinfectante Amway"
-    l3="/pursue-limpiador-desinfectante-amway-home/"
-  />
+  
+  <Navigation servicio={pageData.title} links={navigationLinks} />
+
   <Cta
-  pagina="Productos Amway Bogota"
-  servicio="Dish Drops Lavaplatos Líquido Concentrado"
+  pagina={pageData.sitename}
+  servicio={pageData.servicio}
   imagen={imagen}
   />
   
   <Hero
-  titulo="Dish Drops Lavaplatos Líquido Concentrado"
-  descripcion="La fórmula de Dish Drops Lavaplatos Líquido Concentrado elimina la grasa y los residuos o manchas de alimentos dejando tu vajilla y utensilios de cocina limpios y relucientes."
-  caracteristica1="Contiene aloe vera y extracto de shiso que ayudan a evitar la resequedad de tus manos."
-  caracteristica2=" Fórmula concentrada que rinde hasta 18 botellas de 500 ml diluido (1:8)."
-  caracteristica3="Dermatológicamente probado. Contiene derivados de aceite de coco que ayuda a una limpieza efectiva en la cocina."
+  servicio={pageData.servicio}
+  descripcion={pageData.descripcion}
+  caracteristica1={pageData.caracteristica1}
+  caracteristica2={pageData.caracteristica2}
+  caracteristica3={pageData.caracteristica3}
   />
   
   <Boton2/>
@@ -112,23 +130,21 @@ const schema = {
   <Boton1/>
 
   <Testimonial
-    servicio="Dish Drops Lavaplatos Líquido Concentrado"
-    cliente1="Dayana Gomez"
-    cliente2="Francisca Martinez"
-    cliente3="Andrea Casallas"
-    servicio1="Recomiendo el Dish Drops Lavaplatos Líquido Concentrado de Amway, muy buena calidad."
-    servicio2="El Dish Drops Lavaplatos Líquido Concentrado de Amway Home es el mejor que he probado."
-    servicio3="Llevo mucho tiempo con el Dish Drops Lavaplatos Líquido Concentrado de Amway y estoy muy feliz con los resultados."
+  servicio={pageData.servicio}
+    cliente1={pageData.cliente1}
+    cliente2={pageData.cliente2}
+    cliente3={pageData.cliente3}
+    servicio1={`Recomiendo ${pageData.servicio} de Amway, muy buena calidad.`}
+    servicio2={`Mi ${pageData.servicio} de Amway tiene los mejores ingredientes.`}
+    servicio3={`Llevo años con ${pageData.servicio} de Amway y estoy muy feliz con los resultados.`}
   />
-  <Boton servicio="Dish Drops Lavaplatos Líquido Concentrado" />
-  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
-  <Footer
-    serviciof="Dish Drops Lavaplatos Líquido Concentrado"
-    j1="Maquillaje en Polvo Exact Fit"
-    k1="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
-    j2="Daily Plus 90 Tabletas"
-    k2="/daily-plus-90-tabletas-amway-nutrilite/"
-    j3="SA8 Blanqueador para Múltiples Telas"
-    k3="/sa8-blanqueador-multiples-telas-amway-home/"
-  />
+
+
+  <Boton servicio={pageData.servicio}/>
+
+  <WhatsApp url={pageData.link} />
+  
+  <Footer serviciof={pageData.title} links={footerLinks} />
+    
+
 </BaseLayout>

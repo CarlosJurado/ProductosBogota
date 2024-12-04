@@ -15,21 +15,45 @@ import { AstroSeo } from "@astrolib/seo";
 import Seo from "../components/Seo.astro";
 import imagen from "../../public/sa8-blanqueador-multiples-telas-amway-home.jpg";
 
+import { getLinksForPage } from '../components/data/distributeLinks';
+const currentPageUrl = Astro.url.pathname;
+const { navigationLinks, footerLinks } = getLinksForPage(currentPageUrl);
+
+const pageData = {
+  sitename: "Productos Amway Bogota",
+  title: "SA8 Blanqueador para Múltiples Telas - Cel: 322 346 1713",
+  brand: "SA8 Blanqueador para Múltiples Telas - Productos Amway Bogota",
+  servicio: "SA8 Blanqueador para Múltiples Telas",
+  description: "✨ SA8 Blanqueador para Múltiples Telas: Potente Blanqueador Sin Clorox que revitaliza y mantiene la blancura de tus telas sin dañarlas. Ideal para ropa blanca y colores resistentes. 🌟 ¡Promoción exclusiva por tiempo limitado! Pide ahora. 📞 322 346 1713 - Productos Amway Bogotá.",
+  canonical: "https://productosbogota.com/sa8-blanqueador-multiples-telas-amway-home/",
+  image: "https://productosbogota.com/sa8-blanqueador-multiples-telas-amway-home.jpg",
+  link: "https://linkeo.click/ProductosAmwayBogota",
+  price: "83200",
+  reviews: "6915",
+  cliente1: "Dayana Gomez",
+  cliente2: "Francisca Martinez",
+  cliente3: "Andrea Casallas",
+  descripcion: "✨ SA8 Blanqueador para Múltiples Telas. Nuestro blanqueador elimina las manchas más difíciles como las de vino, jugo y café, dejando los blancos más blancos y los colores más brillantes. Puede usarse con seguridad en todas las lavadoras, incluso las de alta eficiencia.",
+  caracteristica1: "Fórmula concentrada a base de oxígeno activo eliminador de manchas en telas.",
+  caracteristica2: "Fórmula concentrada que rinde hasta 33 lavadas.",
+  caracteristica3: "Dermatológicamente probado; libre de cloro y fosfatos."
+};
+
 const schema = {
   "@context": "https://schema.org/",
   "@type": "Product",
-  name: "SA8 Blanqueador para Múltiples Telas - Productos Amway Bogota",
-  image: "https://productosbogota.com/sa8-blanqueador-multiples-telas-amway-home.jpg",
-  description: "SA8 Blanqueador para Múltiples Telas - Productos Amway Bogota",
+  name: pageData.title,
+  image: pageData.image,
+  description: pageData.description,
   brand: {
     "@type": "Brand",
-    name: "SA8 Blanqueador para Múltiples Telas - Productos Amway Bogota",
+    name: pageData.brand,
   },
   offers: {
     "@type": "Offer",
-    url: "https://productosbogota.com/sa8-blanqueador-multiples-telas-amway-home/",
+    url: pageData.canonical,
     priceCurrency: "COP",
-    price: "83200",
+    price: pageData.price,
     priceValidUntil: "2025-02-28",
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
@@ -39,14 +63,13 @@ const schema = {
     ratingValue: "5",
     bestRating: "5",
     worstRating: "5",
-    ratingCount: "69",
-    reviewCount: "69",
+    ratingCount: pageData.reviews,
+    reviewCount: pageData.reviews,
   },
   review: {
     "@type": "Review",
-    name: "Francisca Martinez",
-    reviewBody:
-      "El SA8 Blanqueador para Múltiples Telas de Amway Home es el mejor que he probado.",
+    name: pageData.cliente2,
+    reviewBody: `Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`,
     reviewRating: {
       "@type": "Rating",
       ratingValue: "5",
@@ -54,81 +77,68 @@ const schema = {
       worstRating: "5",
     },
     datePublished: "2024-06-01",
-    author: { "@type": "Person", name: "Francisca Martinez" },
-    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+    author: { "@type": "Person", name: pageData.cliente2 },
+    publisher: { "@type": "Organization", name: pageData.sitename },
   },
 };
 ---
 
 <Seo schemaMarkup={schema} />
 <AstroSeo
-  title="SA8 Blanqueador Múltiples Telas Amway - Cel: 322 346 1713"
-  description="SA8 Blanqueador para Múltiples Telas - Cel: 322 346 1713 - Productos Amway Bogota"
-  canonical="https://productosbogota.com/sa8-blanqueador-multiples-telas-amway-home/"
+  title={pageData.title}
+  description={pageData.description}
+  canonical={pageData.canonical}
   openGraph={{
-    url: "https://productosbogota.com/sa8-blanqueador-multiples-telas-amway-home/",
-    title: "SA8 Blanqueador para Múltiples Telas - Cel: 322 346 17133",
-    description:
-      "SA8 Blanqueador para Múltiples Telas - Cel: 322 346 1713 - Productos Amway Bogota",
+    url: pageData.canonical,
+    title: pageData.title,
+    description: pageData.description,
     images: [
       {
-        url: "https://productosbogota.com/sa8-blanqueador-multiples-telas-amway-home.jpg",
+        url: pageData.image,
         width: 1280,
         height: 720,
-        alt: "SA8 Blanqueador para Múltiples Telas - Cel: 322 346 1713",
+        alt: pageData.title,
         type: "image/jpeg",
       },
     ],
-    site_name: "Productos Amway Bogota",
+    site_name: pageData.sitename,
   }}
 />
 <BaseLayout>
-  <Navigation
-    servicio="SA8 Blanqueador para Múltiples Telas"
-    m1="Omega 3 Plus 90 Cápsulas"
-    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
-    m2="Suero Diario de Vitamina C + HA3"
-    l2="/suero-diario-vitamina-c-ha3-amway-artistry/"
-    m3="Pursue Limpiador Desinfectante Amway"
-    l3="/pursue-limpiador-desinfectante-amway-home/"
-  />
+  <Navigation servicio={pageData.servicio} links={navigationLinks} />
+
   <Cta
-  pagina="Productos Amway Bogota"
-  servicio="SA8 Blanqueador para Múltiples Telas"
-  imagen={imagen}
+    pagina={pageData.sitename}
+    servicio={pageData.servicio}
+    imagen={imagen}
   />
-  
+
   <Hero
-  titulo="SA8 Blanqueador para Múltiples Telas"
-  descripcion="Nuestro blanqueador elimina las manchas más difíciles como las de vino, jugo y café, dejando los blancos más blancos y los colores más brillantes. Puede usarse con seguridad en todas las lavadoras, incluso las de alta eficiencia."
-  caracteristica1="Fórmula concentrada a base de oxígeno activo eliminador de manchas en telas."
-  caracteristica2="Fórmula concentrada que rinde hasta 33 lavadas."
-  caracteristica3="Dermatológicamente probado; libre de cloro y fosfatos."
+    titulo={pageData.servicio}
+    descripcion={pageData.descripcion}
+    caracteristica1={pageData.caracteristica1}
+    caracteristica2={pageData.caracteristica2}
+    caracteristica3={pageData.caracteristica3}
   />
-  
-  <Boton2/>
+
+  <Boton2 />
   <SectionOne />
 
-  <Boton1/>
+  <Boton1 />
 
   <Testimonial
-    servicio="SA8 Blanqueador para Múltiples Telas"
-    cliente1="Dayana Gomez"
-    cliente2="Francisca Martinez"
-    cliente3="Andrea Casallas"
-    servicio1="Recomiendo el SA8 Blanqueador para Múltiples Telas de Amway, muy buena calidad."
-    servicio2="El SA8 Blanqueador para Múltiples Telas de Amway Home es el mejor que he probado."
-    servicio3="Llevo mucho tiempo con el SA8 Blanqueador para Múltiples Telas de Amway y estoy muy feliz con los resultados."
+    servicio={pageData.servicio}
+    cliente1={pageData.cliente1}
+    cliente2={pageData.cliente2}
+    cliente3={pageData.cliente3}
+    servicio1={`Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`}
+    servicio2={`Mi ${pageData.servicio} de Amway tiene los mejores ingredientes.`}
+    servicio3={`Llevo años con ${pageData.servicio} de Amway y estoy muy feliz con los resultados.`}
   />
-  <Boton servicio="SA8 Blanqueador para Múltiples Telas" />
-  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
-  <Footer
-    serviciof="SA8 Blanqueador para Múltiples Telas"
-    j1="Maquillaje en Polvo Exact Fit"
-    k1="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
-    j2="Daily Plus 90 Tabletas"
-    k2="/daily-plus-90-tabletas-amway-nutrilite/"
-    j3="SA8 Detergente Líquido Concentrado para Ropa"
-    k3="/sa8-detergente-liquido-concentrado-ropa-amway-home/"
-  />
+
+  <Boton servicio={pageData.servicio} />
+
+  <WhatsApp url={pageData.link} />
+
+  <Footer serviciof={pageData.servicio} links={footerLinks} />
 </BaseLayout>

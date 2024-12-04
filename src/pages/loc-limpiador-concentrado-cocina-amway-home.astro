@@ -15,21 +15,45 @@ import { AstroSeo } from "@astrolib/seo";
 import Seo from "../components/Seo.astro";
 import imagen from "../../public/loc-limpiador-concentrado-cocina-amway-home.jpg";
 
+import { getLinksForPage } from '../components/data/distributeLinks';
+const currentPageUrl = Astro.url.pathname;
+const { navigationLinks, footerLinks } = getLinksForPage(currentPageUrl);
+
+const pageData = {
+  sitename: "Productos Amway Bogota",
+  title: "L.O.C. Limpiador Concentrado Cocina - Cel: 322 346 1713",
+  brand: "L.O.C. Limpiador Concentrado Cocina - Productos Amway Bogota",
+  servicio: "L.O.C. Limpiador Concentrado Cocina",
+  description: "🧽 L.O.C. Limpiador Concentrado Cocina: Elimina grasa y suciedad con facilidad, dejando tu cocina impecable y fresca. Fórmula concentrada y biodegradable, ideal para una limpieza profunda y ecológica. 📞 Contáctanos: 322 346 1713 - Productos Amway Bogotá.",
+  canonical: "https://productosbogota.com/loc-limpiador-concentrado-cocina-amway-home/",
+  image: "https://productosbogota.com/loc-limpiador-concentrado-cocina-amway-home.jpg",
+  link: "https://linkeo.click/ProductosAmwayBogota",
+  price: "61050",
+  reviews: "69",
+  cliente1: "Dayana Gomez",
+  cliente2: "Francisca Martinez",
+  cliente3: "Andrea Casallas",
+  descripcion: "🧽 L.O.C. Limpiador Concentrado Cocina. Limpiador de superficies que elimina fácilmente residuos de grasa acumulada y aceite de cocina. Limpia tu cocina de una manera rápida, práctica y segura. Elimina efectivamente la suciedad difícil como la grasa o el aceite para cocinar, dejando las superficies higiénicamente limpias y con aroma fresco. ",
+  caracteristica1: "Eficaz limpiador para utilizarse en superficies no porosas, incluyendo barras o mostradores, refrigeradores, microondas, estufas, fregaderos o lavaplatos.",
+  caracteristica2: "Fórmula concentrada que rinde 4 Botellas con Pistola Rociadora de 500 ml.",
+  caracteristica3: "Contiene la avanzada tecnología BIOQUEST FORMULA que incluye ingredientes derivados de fuentes naturales y provee un alto desempeño."
+};
+
 const schema = {
   "@context": "https://schema.org/",
   "@type": "Product",
-  name: "L.O.C. Limpiador Concentrado Cocina - Productos Amway Bogota",
-  image: "https://productosbogota.com/loc-limpiador-concentrado-cocina-amway-home.jpg",
-  description: "L.O.C. Limpiador Concentrado Cocina - Productos Amway Bogota",
+  name: pageData.title,
+  image: pageData.image,
+  description: pageData.description,
   brand: {
     "@type": "Brand",
-    name: "L.O.C. Limpiador Concentrado Cocina - Productos Amway Bogota",
+    name: pageData.brand,
   },
   offers: {
     "@type": "Offer",
-    url: "https://productosbogota.com/loc-limpiador-concentrado-cocina-amway-home/",
+    url: pageData.canonical,
     priceCurrency: "COP",
-    price: "49950",
+    price: pageData.price,
     priceValidUntil: "2025-02-28",
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
@@ -39,14 +63,13 @@ const schema = {
     ratingValue: "5",
     bestRating: "5",
     worstRating: "5",
-    ratingCount: "69",
-    reviewCount: "69",
+    ratingCount: pageData.reviews,
+    reviewCount: pageData.reviews,
   },
   review: {
     "@type": "Review",
-    name: "Dayana Gomez",
-    reviewBody:
-      "El L.O.C. Limpiador Concentrado Cocina de Amway Home es el mejor que he probado.",
+    name: pageData.cliente1,
+    reviewBody: `Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`,
     reviewRating: {
       "@type": "Rating",
       ratingValue: "5",
@@ -54,81 +77,68 @@ const schema = {
       worstRating: "5",
     },
     datePublished: "2024-07-01",
-    author: { "@type": "Person", name: "Dayana Gomez" },
-    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+    author: { "@type": "Person", name: pageData.cliente1 },
+    publisher: { "@type": "Organization", name: pageData.sitename },
   },
 };
 ---
 
 <Seo schemaMarkup={schema} />
 <AstroSeo
-  title="L.O.C. Limpiador Concentrado Cocina - Cel: 322 346 1713"
-  description="L.O.C. Limpiador Concentrado Cocina - Cel: 322 346 1713 - Productos Amway Bogota"
-  canonical="https://productosbogota.com/loc-limpiador-concentrado-cocina-amway-home/"
+  title={pageData.title}
+  description={pageData.description}
+  canonical={pageData.canonical}
   openGraph={{
-    url: "https://productosbogota.com/loc-limpiador-concentrado-cocina-amway-home/",
-    title: "L.O.C. Limpiador Concentrado Cocina - Cel: 322 346 17133",
-    description:
-      "L.O.C. Limpiador Concentrado Cocina - Cel: 322 346 1713 - Productos Amway Bogota",
+    url: pageData.canonical,
+    title: pageData.title,
+    description: pageData.description,
     images: [
       {
-        url: "https://productosbogota.com/loc-limpiador-concentrado-cocina-amway-home.jpg",
+        url: pageData.image,
         width: 1200,
-        height: 1200,
-        alt: "L.O.C. Limpiador Concentrado Cocina - Cel: 322 346 1713",
+        height: 675,
+        alt: pageData.title,
         type: "image/jpeg",
       },
     ],
-    site_name: "Productos Amway Bogota",
+    site_name: pageData.sitename,
   }}
 />
 <BaseLayout>
-  <Navigation
-    servicio="L.O.C. Limpiador Concentrado Cocina"
-    m1="Omega 3 Plus 90 Cápsulas"
-    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
-    m2="Dish Drops Lavaplatos Líquido Concentrado"
-    l2="/dish-drops-lavaplatos-liquido-concentrado-amway-home/"
-    m3="Limpiador Concentrado Multiusos"
-    l3="/loc-limpiador-concentrado-multiusos-amway-home/"
-  />
+  <Navigation servicio={pageData.servicio} links={navigationLinks} />
+  
   <Cta
-  pagina="Productos Amway Bogota"
-  servicio="L.O.C. Limpiador Concentrado Cocina"
-  imagen={imagen}
+    pagina={pageData.sitename}
+    servicio={pageData.servicio}
+    imagen={imagen}
   />
   
   <Hero
-  titulo="L.O.C. Limpiador Concentrado Cocina"
-  descripcion="Limpia tu cocina de una manera rápida, práctica y segura. Elimina efectivamente la suciedad difícil como la grasa o el aceite para cocinar, dejando las superficies higiénicamente limpias y con aroma fresco. Eficaz limpiador para utilizarse en superficies no porosas, incluyendo barras o mostradores, refrigeradores, microondas, estufas, fregaderos o lavaplatos."
-  caracteristica1="Fórmula concentrada que rinde 4 Botellas con Pistola Rociadora de 500 ml."
-  caracteristica2="Contiene la avanzada tecnología BIOQUEST FORMULA que incluye ingredientes derivados de fuentes naturales y provee un alto desempeño."
-  caracteristica3="No expide vapores tóxicos ni deja residuos. Protege las superficies de tu cocina sin dañarlas. Dermatológicamente probado."
+    servicio={pageData.servicio}
+    descripcion={pageData.descripcion}
+    caracteristica1={pageData.caracteristica1}
+    caracteristica2={pageData.caracteristica2}
+    caracteristica3={pageData.caracteristica3}
   />
   
-  <Boton2/>
+  <Boton2 />
   <SectionOne />
-
-  <Boton1/>
-
+  
+  <Boton1 />
+  
   <Testimonial
-    servicio="L.O.C. Limpiador Concentrado Cocina"
-    cliente1="Dayana Gomez"
-    cliente2="Francisca Martinez"
-    cliente3="Andrea Casallas"
-    servicio1="Recomiendo el L.O.C. Limpiador Concentrado Cocina de Amway, muy buena calidad."
-    servicio2="El L.O.C. Limpiador Concentrado Cocina de Amway Home es el mejor que he probado."
-    servicio3="Llevo mucho tiempo con el L.O.C. Limpiador Concentrado Cocina de Amway y estoy muy feliz con los resultados."
+    servicio={pageData.servicio}
+    cliente1={pageData.cliente1}
+    cliente2={pageData.cliente2}
+    cliente3={pageData.cliente3}
+    servicio1={`Recomiendo ${pageData.servicio} de Amway, es excelente y de muy buena calidad.`}
+    servicio2={`Mi ${pageData.servicio} de Amway tiene los mejores ingredientes.`}
+    servicio3={`Llevo años con ${pageData.servicio} de Amway y estoy muy feliz con los resultados.`}
   />
-  <Boton servicio="L.O.C. Limpiador Concentrado Cocina" />
-  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
-  <Footer
-    serviciof="L.O.C. Limpiador Concentrado Cocina"
-    j1="Maquillaje en Polvo Exact Fit"
-    k1="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
-    j2="Daily Plus 90 Tabletas"
-    k2="/daily-plus-90-tabletas-amway-nutrilite/"
-    j3="SA8 Blanqueador para Múltiples Telas"
-    k3="/sa8-blanqueador-multiples-telas-amway-home/"
-  />
+  
+  <Boton servicio={pageData.servicio} />
+  
+  <WhatsApp url={pageData.link} />
+  
+  <Footer serviciof={pageData.title} links={footerLinks} />
 </BaseLayout>

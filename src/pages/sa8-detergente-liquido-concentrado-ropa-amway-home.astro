@@ -15,21 +15,45 @@ import { AstroSeo } from "@astrolib/seo";
 import Seo from "../components/Seo.astro";
 import imagen from "../../public/sa8-detergente-liquido-concentrado-ropa-amway-home.jpg";
 
+import { getLinksForPage } from '../components/data/distributeLinks';
+const currentPageUrl = Astro.url.pathname;
+const { navigationLinks, footerLinks } = getLinksForPage(currentPageUrl);
+
+const pageData = {
+  sitename: "Productos Amway Bogota",
+  title: "SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 1713",
+  brand: "SA8 Detergente Líquido Concentrado para Ropa - Productos Amway Bogota",
+  servicio: "SA8 Detergente Líquido Concentrado para Ropa",
+  description: "🧺 SA8 Detergente Líquido Concentrado para Ropa: Detergente de alta calidad que ofrece limpieza eficaz y protección para tus prendas, con un solo lavado. Ahorra y cuida tu ropa. 🌟 ¡Oferta especial por tiempo limitado! Compra hoy. 📞 322 346 1713 - Productos Amway Bogotá.",
+  canonical: "https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home/",
+  image: "https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home.jpg",
+  link: "https://linkeo.click/ProductosAmwayBogota",
+  price: "94400",
+  reviews: "7531",
+  cliente1: "Dayana Gomez",
+  cliente2: "Francisca Martinez",
+  cliente3: "Andrea Casallas",
+  descripcion: "🧺 SA8 Detergente Líquido Concentrado para Ropa. Su fórmula quitamanchas y el delicioso aroma floral se unen para dejar tu ropa limpia y suave. La fórmula concentrada de triple acción te ayuda a usar menos detergente, y sus ingredientes no dañan tus prendas ni el planeta.",
+  caracteristica1: "Fórmula concentrada que rinde 5 envases de detergente líquido convencional de 1 litro.",
+  caracteristica2: "Se enjuaga bien a cualquier temperatura, incluso en agua fría.",
+  caracteristica3: "Dermatológicamente probado; no deja residuos que pueden irritar la piel sensible."
+};
+
 const schema = {
   "@context": "https://schema.org/",
   "@type": "Product",
-  name: "SA8 Detergente Líquido Concentrado para Ropa - Productos Amway Bogota",
-  image: "https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home.jpg",
-  description: "SA8 Detergente Líquido Concentrado para Ropa - Productos Amway Bogota",
+  name: pageData.title,
+  image: pageData.image,
+  description: pageData.description,
   brand: {
     "@type": "Brand",
-    name: "SA8 Detergente Líquido Concentrado para Ropa - Productos Amway Bogota",
+    name: pageData.brand,
   },
   offers: {
     "@type": "Offer",
-    url: "https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home/",
+    url: pageData.canonical,
     priceCurrency: "COP",
-    price: "94400",
+    price: pageData.price,
     priceValidUntil: "2025-02-28",
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
@@ -39,14 +63,13 @@ const schema = {
     ratingValue: "5",
     bestRating: "5",
     worstRating: "5",
-    ratingCount: "69",
-    reviewCount: "69",
+    ratingCount: pageData.reviews,
+    reviewCount: pageData.reviews,
   },
   review: {
     "@type": "Review",
-    name: "Francisca Martinez",
-    reviewBody:
-      "El SA8 Detergente Líquido Concentrado para Ropa de Amway Home es el mejor que he probado.",
+    name: pageData.cliente2,
+    reviewBody: `Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`,
     reviewRating: {
       "@type": "Rating",
       ratingValue: "5",
@@ -54,81 +77,69 @@ const schema = {
       worstRating: "5",
     },
     datePublished: "2024-07-01",
-    author: { "@type": "Person", name: "Francisca Martinez" },
-    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+    author: { "@type": "Person", name: pageData.cliente2 },
+    publisher: { "@type": "Organization", name: pageData.sitename },
   },
 };
 ---
 
 <Seo schemaMarkup={schema} />
 <AstroSeo
-  title="SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 1713"
-  description="SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 1713 - Productos Amway Bogota"
-  canonical="https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home/"
+  title={pageData.title}
+  description={pageData.description}
+  canonical={pageData.canonical}
   openGraph={{
-    url: "https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home/",
-    title: "SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 17133",
-    description:
-      "SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 1713 - Productos Amway Bogota",
+    url: pageData.canonical,
+    title: pageData.title,
+    description: pageData.description,
     images: [
       {
-        url: "https://productosbogota.com/sa8-detergente-liquido-concentrado-ropa-amway-home.jpg",
+        url: pageData.image,
         width: 1200,
         height: 1200,
-        alt: "SA8 Detergente Líquido Concentrado para Ropa - Cel: 322 346 1713",
+        alt: pageData.title,
         type: "image/jpeg",
       },
     ],
-    site_name: "Productos Amway Bogota",
+    site_name: pageData.sitename,
   }}
 />
 <BaseLayout>
-  <Navigation
-    servicio="SA8 Detergente Líquido Concentrado para Ropa"
-    m1="Omega 3 Plus 90 Cápsulas"
-    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
-    m2="Suero Diario de Vitamina C + HA3"
-    l2="/suero-diario-vitamina-c-ha3-amway-artistry/"
-    m3="Pursue Limpiador Desinfectante Amway"
-    l3="/pursue-limpiador-desinfectante-amway-home/"
-  />
+  <Navigation servicio={pageData.servicio} links={navigationLinks} />
+
   <Cta
-  pagina="Productos Amway Bogota"
-  servicio="SA8 Detergente Líquido Concentrado para Ropa"
-  imagen={imagen}
+    pagina={pageData.sitename}
+    servicio={pageData.servicio}
+    imagen={imagen}
   />
-  
+
   <Hero
-  titulo="SA8 Detergente Líquido Concentrado para Ropa"
-  descripcion="Su fórmula quitamanchas y el delicioso aroma floral se unen para dejar tu ropa limpia y suave. La fórmula concentrada de triple acción te ayuda a usar menos detergente, y sus ingredientes no dañan tus prendas ni el planeta."
-  caracteristica1="Fórmula concentrada que rinde 5 envases de detergente líquido convencional de 1 litro."
-  caracteristica2="Se enjuaga bien a cualquier temperatura, incluso en agua fría."
-  caracteristica3="Dermatológicamente probado; no deja residuos que pueden irritar la piel sensible."
+    titulo={pageData.servicio}
+    descripcion={pageData.descripcion}
+    caracteristica1={pageData.caracteristica1}
+    caracteristica2={pageData.caracteristica2}
+    caracteristica3={pageData.caracteristica3}
   />
-  
-  <Boton2/>
+
+
+  <Boton2 />
   <SectionOne />
 
-  <Boton1/>
+  <Boton1 />
 
   <Testimonial
-    servicio="SA8 Detergente Líquido Concentrado para Ropa"
-    cliente1="Dayana Gomez"
-    cliente2="Francisca Martinez"
-    cliente3="Andrea Casallas"
-    servicio1="Recomiendo el SA8 Detergente Líquido Concentrado para Ropa de Amway, muy buena calidad."
-    servicio2="El SA8 Detergente Líquido Concentrado para Ropa de Amway Home es el mejor que he probado."
-    servicio3="Llevo mucho tiempo con el SA8 Detergente Líquido Concentrado para Ropa de Amway y estoy muy feliz con los resultados."
+    servicio={pageData.servicio}
+    cliente1={pageData.cliente1}
+    cliente2={pageData.cliente2}
+    cliente3={pageData.cliente3}
+    servicio1={`Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`}
+    servicio2={`Mi ${pageData.servicio} de Amway tiene los mejores ingredientes.`}
+    servicio3={`Llevo años con ${pageData.servicio} de Amway y estoy muy feliz con los resultados.`}
   />
-  <Boton servicio="SA8 Detergente Líquido Concentrado para Ropa" />
-  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
-  <Footer
-    serviciof="SA8 Detergente Líquido Concentrado para Ropa"
-    j1="Maquillaje en Polvo Exact Fit"
-    k1="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
-    j2="Daily Plus 90 Tabletas"
-    k2="/daily-plus-90-tabletas-amway-nutrilite/"
-    j3="SA8 Blanqueador para Múltiples Telas"
-    k3="/sa8-blanqueador-multiples-telas-amway-home/"
-  />
+
+  <Boton servicio={pageData.servicio} />
+
+  <WhatsApp url={pageData.link} />
+
+  <Footer serviciof={pageData.servicio} links={footerLinks} />
 </BaseLayout>

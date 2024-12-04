@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/global/Navigation.astro";
+import WhatsApp from "../components/global/Whatsapp.astro";
+
+import Cta from "../components/servicio/Cta.astro";
+import Hero from "../components/servicio/Hero.astro";
+import SectionOne from "../components/landing/SectionOne.astro";
+import Testimonial from "../components/global/Testimonial.astro";
+import Boton from "../components/global/Boton.astro";
+import Boton1 from "../components/global/Boton1.astro";
+import Boton2 from "../components/global/Boton2.astro";
+import Footer from "../components/global/Footer.astro";
+import { AstroSeo } from "@astrolib/seo";
+import Seo from "../components/Seo.astro";
+import imagen from "../../public/suero-reafirmante-intensive-skincare-amway-artistry.jpg";
+
+import { getLinksForPage } from '../components/data/distributeLinks';
+const currentPageUrl = Astro.url.pathname;
+const { navigationLinks, footerLinks } = getLinksForPage(currentPageUrl);
+
+const pageData = {
+  sitename: "Productos Amway Bogota",
+  title: "Suero Reafirmante Intensive Skincare Artistry - Cel: 322 346 1713",
+  brand: "Suero Reafirmante Intensive Skincare Artistry - Productos Amway Bogota",
+  servicio: "Suero Reafirmante Intensive Skincare Artistry",
+  description: "✨ Suero Reafirmante Intensive Skincare Artistry: Diseñado para revitalizar y tonificar la piel, proporcionando una mayor firmeza y una apariencia más suave y juvenil. Perfecto para quienes buscan una solución eficaz para el cuidado de la piel. 🌟 ¡Oferta especial por tiempo limitado! Pide el tuyo ahora. 📞 322 346 1713 - Productos Amway Bogotá.",
+  canonical: "https://productosbogota.com/suero-reafirmante-intensive-skincare-amway-artistry/",
+  image: "https://productosbogota.com/suero-reafirmante-intensive-skincare-amway-artistry.jpg",
+  link: "https://linkeo.click/ProductosAmwayBogota",
+  price: "572400",
+  reviews: "14437",
+  cliente1: "Dayana Gomez",
+  cliente2: "Francisca Martinez",
+  cliente3: "Andrea Casallas",
+  descripcion:"✨ Suero Reafirmante Intensive Skincare Artistry. Después de solo cuatro semanas, el aspecto de las líneas de expresión se minimiza y la piel está visiblemente más firme, flexible y revitalizada.",
+  caracteristica1:"Suero concentrado reafirmante que ayuda a incrementar la actividad del colágeno durante la noche para reconstruir el sistema de soporte natural de la piel.",
+  caracteristica2:"Este suero para la piel del rostro ayuda a disminuir la apariencia de los signos visibles de la edad, aumentando la actividad del colágeno durante la noche en un 300%.",
+  caracteristica3:"Ayuda a reconstruir el sistema de soporte de la piel para lograr mayor suavidad y flexibilidad. Reconstruye el sistema de soporte de la piel para lograr mayor suavidad y flexibilidad."
+};
+
+
+const schema = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  name: pageData.title,
+  image: pageData.image,
+  description: pageData.description,
+  brand: {
+    "@type": "Brand",
+    name: pageData.brand,
+  },
+  offers: {
+    "@type": "Offer",
+    url: pageData.canonical,
+    priceCurrency: "COP",
+    price: pageData.price,
+    priceValidUntil: "2025-02-28",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    worstRating: "5",
+    ratingCount: pageData.reviews,
+    reviewCount: pageData.reviews,
+  },
+  review: {
+    "@type": "Review",
+    name: pageData.cliente2,
+    reviewBody: `Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "5",
+    },
+    datePublished: "2024-07-01",
+    author: { "@type": "Person", name: pageData.cliente2 },
+    publisher: { "@type": "Organization", name: pageData.sitename },
+  },
+};
+---
+
+<Seo schemaMarkup={schema} />
+<AstroSeo
+  title={pageData.title}
+  description={pageData.description}
+  canonical={pageData.canonical}
+  openGraph={{
+    url: pageData.canonical,
+    title: pageData.title,
+    description: pageData.description,
+    images: [
+      {
+        url: pageData.image,
+        width: 1200,
+        height: 1200,
+        alt: pageData.title,
+        type: "image/jpeg",
+      },
+    ],
+    site_name: pageData.sitename,
+  }}
+/>
+<BaseLayout>
+  <Navigation servicio={pageData.servicio} links={navigationLinks} />
+
+  <Cta
+    pagina={pageData.sitename}
+    servicio={pageData.servicio}
+    imagen={imagen}
+  />
+
+  <Hero
+    titulo={pageData.servicio}
+    descripcion={pageData.descripcion}
+    caracteristica1={pageData.caracteristica1}
+    caracteristica2={pageData.caracteristica2}
+    caracteristica3={pageData.caracteristica3}
+  />
+
+
+  <Boton2 />
+  <SectionOne />
+
+  <Boton1 />
+
+  <Testimonial
+    servicio={pageData.servicio}
+    cliente1={pageData.cliente1}
+    cliente2={pageData.cliente2}
+    cliente3={pageData.cliente3}
+    servicio1={`Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`}
+    servicio2={`Mi ${pageData.servicio} de Amway tiene los mejores ingredientes.`}
+    servicio3={`Llevo años con ${pageData.servicio} de Amway y estoy muy feliz con los resultados.`}
+  />
+
+  <Boton servicio={pageData.servicio} />
+
+  <WhatsApp url={pageData.link} />
+
+  <Footer serviciof={pageData.servicio} links={footerLinks} />
+</BaseLayout>

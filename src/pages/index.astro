@@ -14,6 +14,10 @@ import Footer from "../components/global/Footer.astro";
 import { AstroSeo } from "@astrolib/seo";
 import Seo from "../components/Seo.astro";
 
+import { getLinksForPage } from '../components/data/distributeLinks';
+const currentPageUrl = Astro.url.pathname;
+const { navigationLinks, footerLinks } = getLinksForPage(currentPageUrl);
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -57,13 +61,12 @@ const schema = {
 <Seo schemaMarkup={schema} />
 <AstroSeo
   title="Productos Amway Bogota - Celular 322 346 1713"
-  description="Productos Amway Bogota- Cel: 322 346 1713 - Nutrilite - Artistry - Satinique - G&H - Amway Home"
+  description="🌟 Productos Amway Bogotá: Descubre la mejor selección de suplementos Nutrilite, cosméticos Artistry, cuidado capilar Satinique, y productos de higiene G&H y Amway Home. 🌿 ¡Promoción exclusiva por tiempo limitado! Llama al 📞 322 346 1713."
   canonical="https://productosbogota.com/"
   openGraph={{
     url: "https://productosbogota.com/",
     title: "Productos Amway Bogota - Celular 322 346 1713",
-    description:
-      "Productos Amway Bogota- Cel: 322 346 1713 Nutrilite - Artistry - Satinique - G&H - Amway Home",
+    description:"🌟 Productos Amway Bogotá: Descubre la mejor selección de suplementos Nutrilite, cosméticos Artistry, cuidado capilar Satinique, y productos de higiene G&H y Amway Home. 🌿 ¡Promoción exclusiva por tiempo limitado! Llama al 📞 322 346 1713.",
     images: [
       {
         url: "https://productosbogota.com/ProductosAmwayBogota.jpg",
@@ -79,12 +82,7 @@ const schema = {
 <BaseLayout>
   <Navigation
     servicio="Productos Amway Bogota"
-    m1="Pursue Limpiador Desinfectante Amway Home"
-    l1="/pursue-limpiador-desinfectante-amway-home/"
-    m2="SA8 Detergente Líquido Concentrado para Ropa"
-    l2="/sa8-detergente-liquido-concentrado-ropa-amway-home/"
-    m3="Maquillaje en Polvo Exact Fit - Natural"
-    l3="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
+    links={navigationLinks} 
   />
   <Cta />
   <Hero />
@@ -107,11 +105,6 @@ const schema = {
   <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
   <Footer
     serviciof="Productos Amway Bogota"
-    j1="Daily Plus 90 tabletas"
-    k1="/daily-plus-90-tabletas-amway-nutrilite/"
-    j2="Omega 3 Plus 90 Cápsulas"
-    k2="/omega-3-Plus-90-capsulas-amway-nutrilite/"
-    j3="Suero Diario de Vitamina C + HA3"
-    k3="/suero-diario-vitamina-c-ha3-amway-artistry/"
+    links={navigationLinks} 
   />
 </BaseLayout>

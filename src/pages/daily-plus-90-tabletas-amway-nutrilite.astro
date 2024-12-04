@@ -15,21 +15,47 @@ import { AstroSeo } from "@astrolib/seo";
 import Seo from "../components/Seo.astro";
 import imagen from "../../public/daily-plus-90-tabletas-amway-nutrilite.jpg";
 
+import { getLinksForPage } from '../components/data/distributeLinks';
+const currentPageUrl = Astro.url.pathname;
+const { navigationLinks, footerLinks } = getLinksForPage(currentPageUrl);
+
+
+const pageData = {
+  sitename:"Productos Amway Bogota",
+  title: "Daily Plus 90 Tabletas Nutrilite - Cel: 322 346 1713",
+  brand: "Daily Plus 90 Tabletas Nutrilite - Productos Amway Bogota",
+  servicio: "Daily Plus 90 Tabletas Nutrilite",
+  description: "💊 Daily Plus 90 Tabletas Nutrilite: Suplemento completo para mantener tu energía y bienestar diario. Vitaminas y minerales esenciales en cada tableta. 🌟 ¡Promoción exclusiva por tiempo limitado! Pide ahora. 📞 322 346 1713 - Productos Amway Bogotá.",
+  canonical: "https://productosbogota.com/daily-plus-90-tabletas-amway-nutrilite/",
+  image: "https://productosbogota.com/daily-plus-90-tabletas-amway-nutrilite.jpg",
+  link: "https://linkeo.click/ProductosAmwayBogota",
+  price: "129300",
+  reviews:"7386",
+  cliente1:"Dayana Ramirez",
+  cliente2:"Karen Martinez",
+  cliente3:"Andrea Casallas",
+  descripcion:"💊 Daily Plus 90 Tabletas Nutrilite. Suplemento alimenticio de uso diario que contiene 12 vitaminas, 10 minerales y concentrados de plantas que juegan un importante papel en el funcionamiento diario de nuestro cuerpo. Ideal para personas que quieran comenzar una suplementación alimenticia.",
+  caracteristica1:"Nutrilite Daily Plus aporta 12 vitaminas y 10 minerales esenciales.",
+  caracteristica2:"Fórmula con exclusivo jugo de acerola deshidratada, zanahoria morada y bayas de sauco, adicionada con luteína.",
+  caracteristica3:"No contiene saborizantes, colorantes, ni preservantes artificiales, azúcares simples, gluten ni cafeína."
+};
+
+
 const schema = {
   "@context": "https://schema.org/",
   "@type": "Product",
-  name: "Daily Plus 90 Tabletas Nutrilite - Productos Amway Bogota",
-  image: "https://productosbogota.com/daily-plus-90-tabletas-amway-nutrilite.jpg",
-  description: "Daily Plus 90 Tabletas Nutrilite - Productos Amway Bogota",
+  name: pageData.title,
+  image: pageData.image,
+  description: pageData.description,
   brand: {
     "@type": "Brand",
-    name: "Daily Plus 90 Tabletas Nutrilite - Productos Amway Bogota",
+    name: pageData.brand,
   },
   offers: {
     "@type": "Offer",
-    url: "https://productosbogota.com/daily-plus-90-tabletas-amway-nutrilite/",
+    url: pageData.canonical,
     priceCurrency: "COP",
-    price: "129300",
+    price: pageData.price,
     priceValidUntil: "2025-02-28",
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
@@ -39,14 +65,14 @@ const schema = {
     ratingValue: "5",
     bestRating: "5",
     worstRating: "5",
-    ratingCount: "89",
-    reviewCount: "89",
+    ratingCount: pageData.reviews,
+    reviewCount: pageData.reviews,
   },
   review: {
     "@type": "Review",
-    name: "Andrea Casallas",
+    name: pageData.cliente1,
     reviewBody:
-      "Muy buen producto, la calidad del Daily Plus 90 Tabletas Nutrilite es la mejor.",
+      `Muy buen producto, la calidad de ${pageData.servicio} de Amway es la mejor.`,
     reviewRating: {
       "@type": "Rating",
       ratingValue: "5",
@@ -54,56 +80,49 @@ const schema = {
       worstRating: "5",
     },
     datePublished: "2024-06-01",
-    author: { "@type": "Person", name: "Andrea Casallas" },
-    publisher: { "@type": "Organization", name: "Productos Amway Bogota" },
+    author: { "@type": "Person", name: pageData.cliente1 },
+    publisher: { "@type": "Organization", name: pageData.sitename, },
   },
 };
 ---
 
 <Seo schemaMarkup={schema} />
 <AstroSeo
-  title="Daily Plus 90 Tabletas Nutrilite Amway - Cel: 322 346 1713"
-  description="Daily Plus 90 Tabletas Nutrilite - Cel: 322 346 1713 - Productos Amway Bogota"
-  canonical="https://productosbogota.com/daily-plus-90-tabletas-amway-nutrilite/"
+title={pageData.title}
+description={pageData.description}
+  canonical={pageData.canonical}
   openGraph={{
-    url: "https://productosbogota.com/daily-plus-90-tabletas-amway-nutrilite/",
-    title: "Daily Plus 90 Tabletas Nutrilite Amway - Cel: 322 346 17133",
-    description:
-      "Daily Plus 90 Tabletas Nutrilite - Cel: 322 346 1713 - Productos Amway Bogota",
+    url: pageData.canonical,
+    title: pageData.title,
+    description: pageData.description,
     images: [
       {
-        url: "https://productosbogota.com/daily-plus-90-tabletas-amway-nutrilite.jpg",
-        width: 1205,
-        height: 730,
-        alt: "Daily Plus 90 Tabletas Nutrilite Amway - Cel: 322 346 1713",
+        url: pageData.image,
+        width: 1200,
+        height: 1200,
+        alt: pageData.title,
         type: "image/jpeg",
       },
     ],
-    site_name: "Productos Amway Bogota",
+    site_name: pageData.sitename,
   }}
 />
 <BaseLayout>
-  <Navigation
-    servicio="Daily Plus 90 Tabletas"
-    m1="Omega 3 Plus 90 Cápsulas"
-    l1="/omega-3-Plus-90-capsulas-amway-nutrilite/"
-    m2="Suero Diario de Vitamina C + HA3"
-    l2="/suero-diario-vitamina-c-ha3-amway-artistry/"
-    m3="SA8 Blanqueador para Múltiples Tela"
-    l3="/sa8-blanqueador-multiples-telas-amway-home/"
-  />
+  
+  <Navigation servicio={pageData.title} links={navigationLinks} />
+
   <Cta
-  pagina="Productos Amway Bogota"
-  servicio="Daily Plus 90 Tabletas"
+  pagina={pageData.sitename}
+  servicio={pageData.servicio}
   imagen={imagen}
   />
   
   <Hero
-  titulo="Daily Plus 90 Tabletas"
-  descripcion="Suplemento alimenticio de uso diario que contiene 12 vitaminas, 10 minerales y concentrados de plantas que juegan un importante papel en el funcionamiento diario de nuestro cuerpo. Ideal para personas que quieran comenzar una suplementación alimenticia."
-  caracteristica1="Nutrilite Daily Plus aporta 12 vitaminas y 10 minerales esenciales."
-  caracteristica2="Fórmula con exclusivo jugo de acerola deshidratada, zanahoria morada y bayas de sauco, adicionada con luteína."
-  caracteristica3="No contiene saborizantes, colorantes, ni preservantes artificiales, azúcares simples, gluten ni cafeína."
+  servicio={pageData.servicio}
+  descripcion={pageData.descripcion}
+  caracteristica1={pageData.caracteristica1}
+  caracteristica2={pageData.caracteristica2}
+  caracteristica3={pageData.caracteristica3}
   />
   
   <Boton2/>
@@ -112,23 +131,21 @@ const schema = {
   <Boton1/>
 
   <Testimonial
-    servicio="Daily Plus 90 Tabletas"
-    cliente1="Darwin Ramirez"
-    cliente2="Francisco Martinez"
-    cliente3="Andrea Casallas"
-    servicio1="Recomiendo el Daily Plus 90 Tabletas de Amway, muy buena calidad."
-    servicio2="El Daily Plus 90 Tabletas de Nutrilite tiene las Vitaminas y Minerales que me recomienda mi doctor."
-    servicio3="Llevo años con el Daily Plus 90 Tabletas de Amway y estoy muy feliz con los resultados."
+  servicio={pageData.servicio}
+    cliente1={pageData.cliente1}
+    cliente2={pageData.cliente2}
+    cliente3={pageData.cliente3}
+    servicio1={`Recomiendo ${pageData.servicio} de Amway, muy buena calidad.`}
+    servicio2={`Mi ${pageData.servicio} de Amway tiene los mejores ingredientes.`}
+    servicio3={`Llevo años con ${pageData.servicio} de Amway y estoy muy feliz con los resultados.`}
   />
-  <Boton servicio="Daily Plus 90 Tabletas" />
-  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
-  <Footer
-    serviciof="Daily Plus 90 Tabletas"
-    j1="Pursue Limpiador Desinfectante"
-    k1="/pursue-limpiador-desinfectante-amway-home/"
-    j2="Maquillaje en Polvo Exact Fit"
-    k2="/maquillaje-polvo-exact-fit-natural-amway-artistry/"
-    j3="SA8 Detergente Líquido Concentrado para Ropa"
-    k3="/sa8-detergente-liquido-concentrado-ropa-amway-home/"
-  />
+
+
+  <Boton servicio={pageData.servicio}/>
+
+  <WhatsApp url={pageData.link} />
+  
+  <Footer serviciof={pageData.title} links={footerLinks} />
+    
+
 </BaseLayout>
