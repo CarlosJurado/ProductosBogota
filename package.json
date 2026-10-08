@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "astro": "astro"
+    "astro": "astro",
+    "ship": "node scripts/ship.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.4.1",
