@@ -1,0 +1,26 @@
+{
+  "slug": "refrescante-bucal-spray-amway-glister",
+  "name": "Refrescante Bucal en Spray Glister",
+  "brand": "glister",
+  "category": "higiene-bucal",
+  "price": 23850,
+  "currency": "COP",
+  "image": "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltc14942575b58cfe4/67eba7befe34600ed412f666/124111_01.jpg",
+  "description": "Spray bucal de bolsillo Glister que neutraliza el mal aliento y deja una sensación de frescura inmediata con sabor a menta. Sin azúcar ni alcohol, ideal para después de comer, el café o el cigarrillo.",
+  "benefits": [
+    "Frescura inmediata con sabor a menta, sin azúcar ni alcohol.",
+    "Formato compacto de 14 ml que cabe en el bolsillo o la cartera.",
+    "Rinde cientos de aplicaciones."
+  ],
+  "usage": "Rociar 1 a 2 veces directamente en la boca cuando se necesite refrescar el aliento.",
+  "sku": "124111SP",
+  "amwayId": "124111",
+  "presentation": "14 ml",
+  "tagline": "Aliento fresco al instante, en cualquier lugar",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltc14942575b58cfe4/67eba7befe34600ed412f666/124111_01.jpg"
+  ],
+  "status": "disponible",
+  "lastPriceCheck": "2026-10-08",
+  "featured": false
+}

@@ -36,6 +36,7 @@ export default defineConfig({
     }),
   ],
   vite: {
+    // @ts-expect-error: tipos de Vite duplicados entre tailwindcss y astro; no afecta al build
     plugins: [tailwindcss()],
     build: { cssMinify: true },
   },

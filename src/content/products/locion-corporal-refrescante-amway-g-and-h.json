@@ -1,0 +1,26 @@
+{
+  "slug": "locion-corporal-refrescante-amway-g&h",
+  "name": "Loción Corporal Refrescante G&H",
+  "brand": "g-h",
+  "category": "cuerpo",
+  "price": 69800,
+  "currency": "COP",
+  "image": "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt2059f3eb8e2db64d/67eba7edd1debb9419bdd20a/125893_01.jpg",
+  "description": "Loción corporal G&H de rápida absorción que hidrata la piel durante todo el día con una sensación fresca y ligera. Fórmula con ingredientes botánicos, sin parabenos, dermatológicamente probada y con fragancia suave.",
+  "benefits": [
+    "Hidratación de larga duración con textura ligera y no grasa.",
+    "Ingredientes botánicos, sin parabenos; apta para piel sensible.",
+    "Presentación de 400 ml con dosificador, rendidora para toda la familia."
+  ],
+  "usage": "Aplicar sobre la piel limpia y seca después del baño, con un suave masaje hasta su absorción. Usar a diario.",
+  "sku": "125893SP",
+  "amwayId": "125893",
+  "presentation": "400 ml",
+  "tagline": "Hidratación ligera y fresca para todo el cuerpo",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt2059f3eb8e2db64d/67eba7edd1debb9419bdd20a/125893_01.jpg"
+  ],
+  "status": "disponible",
+  "lastPriceCheck": "2026-10-08",
+  "featured": false
+}

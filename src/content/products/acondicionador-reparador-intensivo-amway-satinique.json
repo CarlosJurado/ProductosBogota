@@ -1,0 +1,24 @@
+{
+  "slug": "acondicionador-reparador-intensivo-amway-satinique",
+  "name": "Acondicionador Reparador Intensivo Satinique",
+  "brand": "satinique",
+  "category": "cabello",
+  "price": 50250,
+  "currency": "COP",
+  "image": "/ProductosAmwayBogota.jpg",
+  "description": "Acondicionador Satinique de reparación intensiva que desenreda, suaviza y sella la cutícula del cabello dañado. Con tecnología Enerjuve y agentes acondicionadores que devuelven elasticidad y brillo sin dejar el cabello pesado.",
+  "benefits": [
+    "Repara y fortalece el cabello dañado por calor, tintura o químicos.",
+    "Desenreda y reduce el frizz dejando el cabello suave y manejable.",
+    "Fórmula ligera que no apelmaza ni deja residuos."
+  ],
+  "usage": "Después del shampoo, aplicar de medios a puntas, dejar actuar 1 a 2 minutos y enjuagar.",
+  "sku": "126454SP",
+  "amwayId": "126454",
+  "presentation": "280 ml",
+  "tagline": "Nutrición profunda para cabello dañado y quebradizo",
+  "gallery": [],
+  "status": "disponible",
+  "lastPriceCheck": "2026-10-08",
+  "featured": false
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "pasta-dental-ninos-fluoruro-amway-glister",
+  "name": "Pasta Dental para Niños con Fluoruro Glister",
+  "brand": "glister",
+  "category": "higiene-bucal",
+  "price": 19950,
+  "currency": "COP",
+  "image": "/ProductosAmwayBogota.jpg",
+  "description": "Pasta dental Glister formulada para niños, con flúor en la concentración adecuada para proteger los dientes de leche y permanentes contra las caries. Sabor suave y agradable que motiva el cepillado diario. Libre de colorantes artificiales.",
+  "benefits": [
+    "Fluoruro que fortalece el esmalte y ayuda a prevenir las caries.",
+    "Sabor suave y espuma controlada, ideal para que los niños aprendan a cepillarse.",
+    "Fórmula sin colorantes artificiales ni azúcar."
+  ],
+  "usage": "Niños de 2 a 6 años: una cantidad del tamaño de una arveja, cepillar 2 veces al día bajo supervisión de un adulto y evitar tragar.",
+  "sku": "120519SP",
+  "amwayId": "120519",
+  "presentation": "85 g",
+  "tagline": "Protección contra caries con sabor suave para los más pequeños",
+  "gallery": [],
+  "status": "disponible",
+  "lastPriceCheck": "2026-10-08",
+  "featured": false
+}

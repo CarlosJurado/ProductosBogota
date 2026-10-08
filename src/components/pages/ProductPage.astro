@@ -24,10 +24,10 @@ const title = data.name.length > 44 ? `${data.name}: precio ${price}` : `${data.
 const description = productMeta(product, bName, price);
 const img = productImage(data.image);
 const og = img ? await getImage({ src: img, width: 1200, height: 1200, format: 'jpeg' }) : null;
-const ogUrl = og ? og.src : SITE.ogImage;
+const ogUrl = og ? og.src : data.image.startsWith('http') ? data.image : SITE.ogImage;
 const rel = related(product, products, 4);
 const localGal = localGallery(data.slug);
-const remoteGal = localGal.length ? [] : data.gallery.filter((u) => !/_0?1[._]|PDP-|_CO\.png$/.test(u.split('/').pop() ?? '')).slice(0, 3);
+const remoteGal = localGal.length ? [] : data.gallery.filter((u) => u !== data.image && !/_0?1[._]|PDP-|_CO\.png$/.test(u.split('/').pop() ?? '')).slice(0, 3);
 const available = data.status !== 'consultar';
 const intro = data.tagline ?? data.description.split(/(?<=\.)\s/)[0];
 const catName = CATEGORY_NAMES[data.category] ?? data.category;
@@ -69,7 +69,7 @@ const schema = [
         {img ? (
           <Image src={img} alt={`${data.name} de ${bName}, producto Amway disponible en Bogotá`} width={900} height={900} format="webp" quality={82} loading="eager" fetchpriority="high" class="aspect-square w-full object-cover" />
         ) : (
-          <img src={data.image} alt={data.name} width="900" height="900" class="aspect-square w-full object-cover" />
+          <img src={data.image} alt={data.name} width="900" height="900" referrerpolicy="no-referrer" fetchpriority="high" class="aspect-square w-full object-cover" />
         )}
         <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink shadow-sm backdrop-blur">Original Amway</span>
       </div>

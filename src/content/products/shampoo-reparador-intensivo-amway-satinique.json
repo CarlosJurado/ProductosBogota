@@ -1,0 +1,24 @@
+{
+  "slug": "shampoo-reparador-intensivo-amway-satinique",
+  "name": "Shampoo Reparador Intensivo Satinique",
+  "brand": "satinique",
+  "category": "cabello",
+  "price": 50250,
+  "currency": "COP",
+  "image": "/ProductosAmwayBogota.jpg",
+  "description": "Shampoo Satinique para cabello dañado, seco o tratado químicamente. Con tecnología Enerjuve, un complejo con creatina y lípidos que fortalece la fibra capilar desde el interior, limpia suavemente y ayuda a reparar las puntas abiertas y la rotura.",
+  "benefits": [
+    "Tecnología Enerjuve con creatina que repara y fortalece la fibra capilar.",
+    "Limpieza suave apta para cabello teñido, con keratina o alisado.",
+    "Reduce la rotura y las puntas abiertas con el uso continuo."
+  ],
+  "usage": "Aplicar sobre el cabello húmedo, masajear el cuero cabelludo y enjuagar. Completar con el Acondicionador Reparador Intensivo.",
+  "sku": "126452SP",
+  "amwayId": "126452",
+  "presentation": "280 ml",
+  "tagline": "Repara el cabello dañado por tintura, calor y químicos",
+  "gallery": [],
+  "status": "disponible",
+  "lastPriceCheck": "2026-10-08",
+  "featured": false
+}

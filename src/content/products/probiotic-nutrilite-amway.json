@@ -1,0 +1,26 @@
+{
+  "slug": "probiotic-nutrilite-amway",
+  "name": "Probiotic Nutrilite",
+  "brand": "nutrilite",
+  "category": "suplementos",
+  "price": 260000,
+  "currency": "COP",
+  "image": "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltd9c9a12f90f569a8/69bc0d3a8f39f661ea2e80f7/120571_01.jpg",
+  "description": "Nutrilite Probiotic es un suplemento dietario en sobres individuales con cepas probióticas que ayudan a mantener el equilibrio de la microbiota intestinal y favorecen la digestión. Formato en polvo sin sabor que se disuelve en agua o se mezcla con alimentos fríos.",
+  "benefits": [
+    "Cepas probióticas que apoyan la salud digestiva y el equilibrio de la flora intestinal.",
+    "Sobres individuales de 1,5 g, prácticos para llevar y sin refrigeración.",
+    "Sin sabor: se mezcla con agua, jugo o alimentos fríos sin alterar su textura."
+  ],
+  "usage": "Tomar 1 sobre al día. Disolver el contenido en un vaso de agua o mezclar con un alimento frío y consumir de inmediato.",
+  "sku": "120571CO",
+  "amwayId": "120571",
+  "presentation": "30 sobres de 1,5 g",
+  "tagline": "Probióticos para el equilibrio de tu flora intestinal",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltd9c9a12f90f569a8/69bc0d3a8f39f661ea2e80f7/120571_01.jpg"
+  ],
+  "status": "disponible",
+  "lastPriceCheck": "2026-10-08",
+  "featured": false
+}

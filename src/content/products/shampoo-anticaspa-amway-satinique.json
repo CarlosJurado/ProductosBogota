@@ -1,0 +1,24 @@
+{
+  "slug": "shampoo-anticaspa-amway-satinique",
+  "name": "Shampoo Anticaspa Satinique",
+  "brand": "satinique",
+  "category": "cabello",
+  "price": 50250,
+  "currency": "COP",
+  "image": "/ProductosAmwayBogota.jpg",
+  "description": "Shampoo anticaspa Satinique que ayuda a eliminar la descamación visible y a aliviar la picazón del cuero cabelludo desde el primer lavado, mientras limpia y fortalece el cabello con tecnología Enerjuve. Uso diario apto para toda la familia.",
+  "benefits": [
+    "Ayuda a reducir la caspa visible y la picazón del cuero cabelludo.",
+    "Limpieza efectiva que respeta el equilibrio del cuero cabelludo.",
+    "Con Enerjuve para un cabello más fuerte con el uso continuo."
+  ],
+  "usage": "Aplicar sobre el cabello húmedo, masajear suavemente el cuero cabelludo, dejar actuar 1 minuto y enjuagar. Usar con regularidad.",
+  "sku": "126463SP",
+  "amwayId": "126463",
+  "presentation": "280 ml",
+  "tagline": "Controla la caspa y calma el cuero cabelludo",
+  "gallery": [],
+  "status": "disponible",
+  "lastPriceCheck": "2026-10-08",
+  "featured": false
+}
