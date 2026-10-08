@@ -3,7 +3,7 @@
   "name": "Fibra en Polvo Nutrilite",
   "brand": "nutrilite",
   "category": "alimentos-y-bebidas",
-  "price": 114000,
+  "price": 120400,
   "currency": "COP",
   "image": "/fibra-polvo-amway-nutrilite.jpg",
   "description": "Práctica forma de aportar fibra a tu día. Mezcla única de 3 fuentes de fibra soluble: maltodextrina, raíz de chicoria y goma guar. Práctica presentación en sobres individuales que aporta 4 gramos de fibra.",
@@ -12,5 +12,18 @@
     "No contiene lactosa, derivados de leche, azucares simples, gluten, cafeína, y es libre de colorantes, saborizantes, preservantes artificiales.",
     "Producto apto para vegetarianos. Al ser soluble, es fácil de incorporar en tu alimentación diaria sin modificar la textura de tus alimentos."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "102736CO",
+  "amwayId": "102736",
+  "presentation": "30 sobres de 4.5 g",
+  "tagline": "Práctica forma de aportar fibra soluble a tu día",
+  "officialDescription": "Fácil de incorporar en tu alimentación diaria sin modificar la textura ni el color de tus alimentos. Polvo fácil de disolver y sin sabor. Su presentación en sobres individuales permite que la lleves a donde quieras. No contiene lactosa, derivados de leche ni azúcares. Libre de colorantes, saborizantes y preservantes artificiales. Producto apto para vegetarianos. Disolver en un vaso con agua o jugo.",
+  "usage": "1 sobre x día",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt23fd5f2f11d65860/69d51fd89ad6e4f6dafaad26/102736_01.png",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blte0188351c36449a7/67ecf946020e2974dc69e5fa/102736_03.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt92e03e2ac3809bfc/6a31d16c988400000899ed4c/102736_02.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

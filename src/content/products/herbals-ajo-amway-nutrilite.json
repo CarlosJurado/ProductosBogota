@@ -3,7 +3,7 @@
   "name": "Herbals Ajo Nutrilite",
   "brand": "nutrilite",
   "category": "suplementos",
-  "price": 89600,
+  "price": 94650,
   "currency": "COP",
   "image": "/herbals-ajo-amway-nutrilite.jpg",
   "description": "Las cualidades del ajo en una tableta adicionada con extracto de hierbabuena, que contrarresta el sabor y el olor característicos de este vegetal. Una exclusiva fórmula de NUTRILITE que ofrece sólo lo mejor del ajo.",
@@ -12,5 +12,18 @@
     "No posee efectos desagradables de aroma y sabor gracias a que contiene menta y hierbabuena para suavizar el aliento.",
     "Estas tabletas se obtienen a partir del ajo cultivado en las altas montañas de California y Oregón, bajos altos estándares de calidad. Contiene alicina y quercetina de manera natural."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "100566CO",
+  "amwayId": "100566",
+  "presentation": "120 tabletas",
+  "tagline": "Las propiedades del ajo sin olor y con un agradable sabor",
+  "officialDescription": "Las cualidades del ajo en una tableta adicionada con extracto de hierbabuena, que contrarresta el sabor y el olor característicos de este vegetal. Una exclusiva fórmula de NUTRILITE™ que ofrece sólo lo mejor del ajo.",
+  "usage": "2 tabletas x día",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltf922188865482f3f/67e4c50f043faa5545d0340c/100566_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt2ef80875815d276a/67ecf93d63666d855aae961f/100566_03.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt9503324c0c374610/67ecf8bc46c6e931088406fa/100566_02.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

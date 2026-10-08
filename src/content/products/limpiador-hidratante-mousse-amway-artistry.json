@@ -3,7 +3,7 @@
   "name": "Limpiador Hidratante en Mousse",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 126000,
+  "price": 131650,
   "currency": "COP",
   "image": "/limpiador-hidratante-mousse-amway-artistry.jpg",
   "description": "Artistry. Purifica eliminando la suciedad, dejando la piel hidratada y suave. El Limpiador Hidratante en Mousse Artistry Skin Nutrition es una espuma que actúa rápida y fácilmente para eliminar la suciedad, los residuos, los restos de maquillaje, exceso de grasa y otras impurezas de la piel. Al enjuagarlo deja la piel agradablemente hidratada, suave y limpia.",
@@ -12,5 +12,13 @@
     "Aminoácidos son agentes limpiadores suaves que eliminan delicadamente las impurezas como la suciedad y la contaminación. Mezcla patentada que relaja la piel para reducir la irritación.",
     "Ayuda a mantener y proteger la Barrera Microbiana y la Barrera de Humedad de la piel. Formulado para ayudar a mantener la piel en su nivel de pH balanceado. Ayuda a eliminar descamación y crea una sensación de hidratación."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123793V",
+  "amwayId": "123793",
+  "presentation": "145 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt03cef21b75ac2be8/67ecfa94bc235e68c0b5fd87/123793_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

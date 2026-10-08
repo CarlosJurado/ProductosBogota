@@ -3,7 +3,7 @@
   "name": "Phytopowder Sabor Naranja",
   "brand": "nutrilite",
   "category": "alimentos-y-bebidas",
-  "price": 165200,
+  "price": 172650,
   "currency": "COP",
   "image": "/phytopowder-sabor-naranja-amway-nutrilite.jpg",
   "description": "Nutrilite. Hidrátate con una deliciosa bebida baja en calorías sabor naranja. Es una mezcla en polvo para preparar una bebida con electrolitos, vitaminas y fitonutrientes, diseñada para ser añadida al agua.",
@@ -12,5 +12,18 @@
     "Contiene potasio, cloruro y sodio, importantes electrolitos que facilitan la absorción de líquidos y contribuyen a una hidratación más completa.",
     "Con el exclusivo extracto de jugo de naranja roja, rico en fitonutrientes y antioxidantes que combaten el estrés oxidativo durante la actividad física."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "118891CO",
+  "amwayId": "118891",
+  "presentation": "Envase con 360 g",
+  "tagline": "Contiene 50 mg de Red Orange Complex",
+  "officialDescription": "Toda la familia puede disfrutar su delicioso sabor. No contiene lactosa, derivados de leche, ni gluten. Libre de colorantes, saborizantes y preservantes artificiales. Producto apto para vegetarianos.",
+  "usage": "Niños mayores de 4 años y adultos. Agrega una cucharada (8 g) en 250 ml de agua, luego adiciona hielo al gusto",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltcb9c3192a91708c9/67e4c54e5167123036acd951/118891_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt7d91975d6f16c32d/67ecf8f5c39248ddbe71d2e6/118891_02.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt0891a55fb77a530e/680ba04ba61e01402dda65e2/118891.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

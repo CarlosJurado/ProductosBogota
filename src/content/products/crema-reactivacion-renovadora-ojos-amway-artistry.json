@@ -3,7 +3,7 @@
   "name": "Crema de Reactivación Renovadora para Ojos Artistry",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 210200,
+  "price": 219650,
   "currency": "COP",
   "image": "/crema-reactivacion-renovadora-ojos-amway-artistry.jpg",
   "description": "Crema de Reactivación que reafirma y levanta y con el uso frecuente, tonifica visiblemente la piel alrededor del área de los ojos además ayuda a reducir la apariencia de líneas finas y signos visibles de la edad (líneas de expresión, pérdida de firmeza, resequedad, ojeras). Ofrece protección antioxidante gracias a que contiene granada cultivada de la marca Nutrilite™.",
@@ -12,5 +12,13 @@
     "NATURALEZA - Contiene Extracto de Avena de origen natural que ayuda a reafirmar la delicada zona alrededor de los ojos.",
     "CIENCIA - Contiene péptidos, la mezcla de péptidos ayuda a reducir la retención de líquidos que se forman debajo de los ojos. Dermatológicamente probado. No comedogénico. Registrado ante La Sociedad Vegana."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123784V",
+  "amwayId": "123784",
+  "presentation": "15 g",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt68465912c5672367/67ecfa432d1c5ad7abebfa5d/123784_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

@@ -3,7 +3,7 @@
   "name": "Artistry Studio Limpiador + Exfoliante",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 72900,
+  "price": 76200,
   "currency": "COP",
   "image": "/artistry-studio-limpiador-exfoliante-amway.jpg",
   "description": "ZEN + ENERGY: Ingrediente Zen que relaja: Con aloe vera y sábila que con sus propiedades refresca y revitaliza la piel. Ingrediente Energía que revitaliza: Potencia el resplandor de la piel con partículas de bamboo al limpiar y exfoliar impurezas del rostro.",
@@ -12,5 +12,13 @@
     "Refresca, revitaliza y deja un aspecto brillante y radiante en tu rostro limpio.",
     "Ayuda a mejorar el tono desigual de la piel dejando una textura suave."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "124812V",
+  "amwayId": "124812",
+  "presentation": "125 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt9e877de7d311419d/67ecfc41f1c7a93df8b3c362/124812_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

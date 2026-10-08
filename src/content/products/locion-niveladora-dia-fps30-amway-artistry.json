@@ -3,7 +3,7 @@
   "name": "Loción Niveladora de Día FPS30 Artistry",
   "brand": "artistry",
   "category": "proteccion-solar",
-  "price": 172100,
+  "price": 179850,
   "currency": "COP",
   "image": "/locion-niveladora-dia-fps30-amway-artistry.jpg",
   "description": "Loción ligera que se absorbe rápidamente, dejando un aspecto matte suave y sin brillo. Humecta durante 24 horas para reponer y fortificar la barrera de hidratación de la piel. Con FPS30 de amplio espectro, que protege contra los daños solares de los rayos UVA y UVB y protección 'full light' (luz azul) y contra la contaminación.",
@@ -12,5 +12,13 @@
     "NATURALEZA- Ulmaria extracto de hierbas para ayudar a mantener el equilibrio de la piel grasa. Con granada conocida como un potente antioxidante, y permite que esta fórmula proteja contra el daño oxidativo de los radicales libres que pueden provocar un aspecto poco cuidado de la piel.",
     "CIENCIA- Carnosina péptido que proporciona protección contra la luz azul y la luz infrarroja que dañan la piel. Contiene nuestro Phyto-powered Prevent Complex. Una mezcla de cultivos Nutrilite, cereza acerola, margarita australiana y zarzamora, el cual refuerza el sistema de defensa natural de la piel en un 350%, ayudando a prevenir y retrasar la aparición de los primeros signos visibles de la edad."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123799V",
+  "amwayId": "123799",
+  "presentation": "50 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltd89a8625f57ae7e8/67ecfb146cf78bf28d422146/123799_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

@@ -3,7 +3,7 @@
   "name": "Omega 3 Plus 90 Cápsulas",
   "brand": "nutrilite",
   "category": "suplementos",
-  "price": 136700,
+  "price": 142850,
   "currency": "COP",
   "image": "/omega-3-plus-90-tabletas-amway-nutrilite.jpg",
   "description": "Nutrilite. Fórmula balanceada que aporta 300 mg de EPA y 300 mg de DHA en dos cápsulas, los cuales son ácidos grasos esenciales que no pueden ser producidos por nuestro cuerpo y debemos obtenerlos de nuestra dieta.",
@@ -12,5 +12,10 @@
     "Aceites grasos que cumplen con los estándares más rigurosos de la industria.",
     "Cápsula fácil de ingerir. Sin sabor ni olor a pescado."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "A8914CO",
+  "amwayId": "A8914",
+  "presentation": "90 cápsulas",
+  "lastPriceCheck": "2026-10-08"
 }

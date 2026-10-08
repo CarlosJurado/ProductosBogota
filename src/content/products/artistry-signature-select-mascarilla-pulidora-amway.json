@@ -3,7 +3,7 @@
   "name": "Artistry Signature Select Mascarilla Pulidora",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 221800,
+  "price": 190550,
   "currency": "COP",
   "image": "/artistry-signature-select-mascarilla-pulidora-amway.jpg",
   "description": "Renueva instantáneamente la piel con Artistry Signature Select Mascarilla Pulidora. Su fórmula ayuda a que la piel se regenere más rápido y a eliminar células muertas e impurezas, y así, lucir una piel lisa, suave y más luminosa.",
@@ -12,5 +12,18 @@
     "Instantáneamente deja la piel con una sensación de tersura y suavidad. Ligera fragancia que combina notas frescas de grosella negra, cítricos rojos y flores verdes.",
     "Textura de exfoliante de azúcar con un tinte púrpura. Dermatológicamente probada."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "122339V",
+  "amwayId": "122339",
+  "presentation": "100 g",
+  "tagline": "Mejora la apariencia de tu piel dejándola más suave y tersa",
+  "officialDescription": "Con cristales naturales de azúcar que exfolian suavemente la piel y extracto de grosella negra Nutrilite™ que ayuda a aumentar la protección antioxidante. Con ligera fragancia que combina notas de grosella negra, cítricos rojos y flores verdes. Dermatológicamente probada. Las personas que la probaron afirmaron que deja la piel con una sensación de tersura y suavidad.",
+  "usage": "Aplicar con los dedos secos sobre piel limpia y húmeda. Evita el área de ojos y labios. Masajea suavemente de 1 a 2 minutos. Deja actuar durante 7 minutos",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt069dde798b7ca5c4/67ecf9e75a47dd5ab64dce76/122339_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt11e74991e9fbd9be/67ecf9eb63666d0083ae962d/122339_02.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltb293add9f11df245/680d24c7c98d9b1a9e3c668c/122339.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

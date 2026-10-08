@@ -3,7 +3,7 @@
   "name": "Acondicionador Hidratación y Suavidad Satinique",
   "brand": "satinique",
   "category": "cabello",
-  "price": 52850,
+  "price": 50250,
   "currency": "COP",
   "image": "/acondicionador-hidratacion-suavidad-amway-satinique.jpg",
   "description": "‍ Acondicionador Hidratación y Suavidad Satinique. Este acondicionador devuelve el brillo y la suavidad al cabello seco e incontrolable, y lo hace lucir saludable y hermoso. Formulado con el Complejo Enerjuve patentado para restaurar el cabello, dándole un acabado suave y flexible.",
@@ -12,5 +12,10 @@
     "El Complejo Enerjuve patentado transforma los mechones opacos, secos e incontrolables en un cabello hermoso, flexible y brillante.",
     "Ayuda a rejuvenecer el cabello y lo deja hasta seis veces más suave. Ayuda a restaurar la humectación vital después de solo un uso."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "126451SP",
+  "amwayId": "126451",
+  "presentation": "280 ml",
+  "lastPriceCheck": "2026-10-08"
 }

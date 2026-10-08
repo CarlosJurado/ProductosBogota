@@ -3,7 +3,7 @@
   "name": "Barra de Jabón Nutritiva G&H",
   "brand": "g-h",
   "category": "cuerpo",
-  "price": 49050,
+  "price": 51250,
   "currency": "COP",
   "image": "/barra-jabon-nutritiva-amway-g&h.jpg",
   "description": "El jabón en barra para dividirse en 3 partes con ceramida derivada del aceite de oliva y aceite de chía blanca limpia suavemente mientras mejora la tez de la piel. Fórmula biodegradable.",
@@ -12,5 +12,13 @@
     "Deja tu piel limpia e hidratada después de usarlo. Intensificado con aceite de chía blanca uno de los superalimentos más ricos de la naturaleza, sus fitonutrientes intensifican y protegen visiblemente la belleza de la piel.",
     "Fórmula biodegradable vegana registrada en la Sociedad Vegana. Con ceramidas derivadas del aceite de oliva que ayuda a mantener la barrera de humedad de la piel."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "125913SP",
+  "amwayId": "125913",
+  "presentation": "250 g (9 oz.)",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltb7e9bed20b55ae17/6a1095356125c62e34ca6795/125913_01_copy.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

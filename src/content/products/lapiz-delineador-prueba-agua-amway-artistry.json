@@ -3,7 +3,7 @@
   "name": "Lápiz Delineador a Prueba de Agua Artistry",
   "brand": "artistry",
   "category": "maquillaje",
-  "price": 80000,
+  "price": 85400,
   "currency": "COP",
   "image": "/lapiz-delineador-prueba-agua-amway-artistry.jpg",
   "description": "Color de alta intensidad y alto impacto hasta por 10 horas. La fórmula sin negro de carbono es a prueba de agua, manchas y transferencias.",
@@ -12,5 +12,13 @@
     "Gracias a los pigmentos negros de origen natural y basados en minerales la fórmula brinda un color intenso. Suave con la piel de alrededor de los ojos.",
     "Lo diseñamos con un perfil delgado para una aplicación precisa. Al gíralo hacia arriba revelas la punta delgada de 2 mm."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "126744D",
+  "amwayId": "126744",
+  "presentation": "0,1 g",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt807ee28872bc1b10/67ecfd180ac21c7375d78eb9/126744_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

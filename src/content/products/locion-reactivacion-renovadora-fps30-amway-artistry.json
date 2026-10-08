@@ -3,7 +3,7 @@
   "name": "Loción Reactivación Renovadora FPS30",
   "brand": "artistry",
   "category": "proteccion-solar",
-  "price": 295800,
+  "price": 309100,
   "currency": "COP",
   "image": "/locion-reactivacion-renovadora-fps30-amway-artistry.jpg",
   "description": "Artistry. Loción de textura ligera. Reduce las líneas de expresión, el tono desigual de la piel, poros dilatados y protege contra agresores modernos como: luz visible de espectro completo (luz infrarroja y UV/azul), luz ambiental interior y exterior. Proporciona una hidratación por 24 horas.",
@@ -12,5 +12,13 @@
     "NATURALEZA - Contiene manteca de karité, un ingrediente humectante para suavizar y alisar la piel.",
     "CIENCIA - Contiene carnosina, un péptido que brinda protección contra la luz azul y la luz infrarroja que dañan la piel."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123857V",
+  "amwayId": "123857",
+  "presentation": "50 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt07b3b0b999c2cf91/67ecfb40583e0b3280947242/123857_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

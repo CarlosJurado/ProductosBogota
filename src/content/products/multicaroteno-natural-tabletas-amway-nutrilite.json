@@ -3,7 +3,7 @@
   "name": "Multicaroteno Natural Tabletas",
   "brand": "nutrilite",
   "category": "suplementos",
-  "price": 94850,
+  "price": 100200,
   "currency": "COP",
   "image": "/multicaroteno-natural-tabletas-amway-nutrilite.jpg",
   "description": "Nutrilite. Exclusiva fórmula con combinación de nutrientes como alfa y betacarotenos, luteína y zeaxantina que no son producidos por tu cuerpo. Ideal para quienes quieren aumentar el consumo de estos nutrientes de frutas y vegetales de la gama de color amarillo y naranja.",
@@ -12,5 +12,18 @@
     "El multicaroteno proviene de un rango natural de carotenoides cercano a la mezcla natural encontrada en frutas y verduras comparado con el betacaroteno aislado.",
     "Nutrilite Multicaroteno contiene vitamina A, la cual juega un papel fundamental en la visión, en el mantenimiento y regeneración de los huesos y dientes, en la reproducción y en el sistema inmunológico."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "109536CO",
+  "amwayId": "109536",
+  "presentation": "90 cápsulas",
+  "tagline": "Con carotenoides naturales, una fuente de vitamina A",
+  "officialDescription": "La mezcla del Suplemento Dietario a Base de Aceites Vegetales y Carotenos, en cápsulas, brinda alfa y beta carotenos, luteína y zeaxantina. Los alfa y beta carotenos son precursores de la vitamina A y actúan como nutrientes en el cuerpo. Libre de colorantes, saborizantes y preservantes artificiales.",
+  "usage": "1 cápsula x día",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltd085e4cb048136f0/69d5205599f372cbf15da97f/109536_CO.png",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltd5ab18efabfd6c5a/67ecf94de4cb3c837047f596/109536_03.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltdf2d34276e1d389a/6a31cfc73463c700083f4937/109536_02.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

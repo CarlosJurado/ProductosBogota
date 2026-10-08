@@ -3,7 +3,7 @@
   "name": "Artistry Signature Select Mascarilla Reafirmante",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 221800,
+  "price": 231800,
   "currency": "COP",
   "image": "/artistry-signature-select-mascarilla-reafirmante-amway.jpg",
   "description": "La fórmula de esta mascarilla facial reafirma tu piel y ayuda a atenuar la aparición de los signos avanzados de la edad. Hace que tu piel se vea y se sienta más firme, más tersa y revitalizada.",
@@ -12,5 +12,13 @@
     "Con extracto de granada proveniente de Nutrilite, que ayuda a aumentar la protección antioxidante y a renovar la piel con signos visibles de la edad.",
     "Ligera fragancia que combina frescas notas cítricas de flores rojas, verdes y amaderadas. Dermatológicamente probada."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "122341V",
+  "amwayId": "122341",
+  "presentation": "125 g",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt2334b8f1fb19b50e/67ecf9fab2bc2676e5aa16b0/122341_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

@@ -3,7 +3,7 @@
   "name": "Vitamina D Tabletas Nutrilite",
   "brand": "nutrilite",
   "category": "suplementos",
-  "price": 118200,
+  "price": 124800,
   "currency": "COP",
   "image": "/vitamina-d-tabletas-amway-nutrilite.jpg",
   "description": "1 tableta de vitamina D proporciona 1000 UI necesarias para el buen desempeño del organismo. Además contiene champiñones que es una fuente botánica rica en vitamina D.",
@@ -12,5 +12,18 @@
     "La Vitamina D Nutrilite™ le brinda a tus huesos y articulaciones (y a todo lo demás) una dosis suplementaria de 2,000 UI de vitamina D de plantas, incluidos champiñones (una de las fuentes botánicas de vitamina D más concentradas de la naturaleza).",
     "Cada tableta brinda la vitamina D equivalente a 16 tazas de leche fortificada para ayudar a apoyar la salud ósea y el sistema inmunológico."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "118761CO",
+  "amwayId": "118761",
+  "presentation": "90 tabletas",
+  "tagline": "Ayuda a mantener el funcionamiento de huesos y músculos en condiciones normales",
+  "officialDescription": "La mayoría de nosotros no recibe la suficiente luz solar que nos proporciona la vitamina D que nuestro cuerpo necesita. La vitamina D ayuda al organismo a utilizar el calcio y el fósforo. El Suplemento Dietario con Champiñones y Vitamina D es una excelente fuente de Vitamina D, contiene 1.000 UI (25 μg) de vitamina D y champiñones, una de las fuentes botánicas más ricas en vitamina D.",
+  "usage": "1 tableta x día",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt04fb65988ab42907/67e4c549f96feb707705a5b0/118761_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt1495941b0598c87c/67ecf96e5aabf787264cdc45/118761_03.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltf5c6604bcc02c439/680b86d8b5716c0a0e363454/118761_02.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

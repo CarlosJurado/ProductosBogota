@@ -3,7 +3,7 @@
   "name": "Tri Iron Folic Tabletas Nutrilite",
   "brand": "nutrilite",
   "category": "suplementos",
-  "price": 55850,
+  "price": 58350,
   "currency": "COP",
   "image": "/tri-iron-folic-tabletas-amway-nutrilite.jpg",
   "description": "Una combinación de 3 nutrientes esenciales: ácido fólico, 3 fuentes de hierro y vitamina C. Además, el Tri-Iron Folic contiene concentrado de espinaca Nutrilite, una importante fuente de fitonutrientes.",
@@ -12,5 +12,18 @@
     "El ácido fólico es esencial para el crecimiento y división de las células.",
     "La vitamina C mejora la absorción del hierro. Este producto contiene 30 mg de vitamina C."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "102046CO",
+  "amwayId": "102046",
+  "presentation": "90 tabletas",
+  "tagline": "Hierro + Ácido Fólico + Vitamina C en una sola tableta",
+  "officialDescription": "Contiene una combinación única de tres fuentes de hierro: quelato de hierro bisciglinato, fumarato ferroso y mostaza, unas de las fuentes naturales más ricas en este mineral. Adicionalmente contiene ácido fólico y vitamina C, para que complementes tu ingesta diaria de estos importantes nutrientes. Libre de colorantes, saborizantes y preservantes artificiales.",
+  "usage": "1 tableta x día",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt9bc3ad61993f14f1/69d52225619fdd06f1b2a9c9/102046_01.png",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltf241197ff5b78df7/67ecf942e8e08e48dfb08a00/102046_03.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt555f7c961a9a116b/6a31cce63463c700083f4920/102046_02.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

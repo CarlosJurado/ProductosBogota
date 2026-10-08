@@ -3,7 +3,7 @@
   "name": "Complejo B Dual Release Tabletas Nutrilite",
   "brand": "nutrilite",
   "category": "suplementos",
-  "price": 128000,
+  "price": 85000,
   "currency": "COP",
   "image": "/complejo-b-dual-release-tabletas-amway-nutrilite.jpg",
   "description": "Cuenta con tecnología de liberación prolongada que proporciona una rápida y completa liberación en el estómago de vitaminas B2 y B12. Posteriormente, las vitaminas B1,B3, B5, B6, B7 y B9 se liberan de forma gradual, lenta y constantemente, permitiendo que se absorban eficientemente.",
@@ -13,5 +13,18 @@
     "Libre de gluten, no genéticamente modificado, sin colorantes, saborizantes ni conservadores agregados."
   ],
   "featured": false,
-  "canonicalTo": "b-complex-dual-release-tabletas-amway-nutrilite"
+  "canonicalTo": "b-complex-dual-release-tabletas-amway-nutrilite",
+  "status": "disponible",
+  "sku": "110170CO",
+  "amwayId": "110170",
+  "presentation": "60 tabletas",
+  "tagline": "8 vitaminas del complejo B",
+  "officialDescription": "Tecnología de liberación inmediata de vitaminas B2 y B12 y una tecnología de liberación prolongada para las vitaminas B1, B3, B5, B6, B7 y B9 las cuales se liberan de forma gradual. Ayuda a obtener la energía. Contiene Espirulina. Sin sabores artificiales, colorantes ni conservantes adicionados.",
+  "usage": "1 tableta x día",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt56e1ba76a1e9cfd6/69d520ce3630f62d6afdc4b6/110170_01.png",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt78a24789865879cb/67ecf9550e9e5252eced55d8/110170_03.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt4aa783e343bb2f87/6a31cf7a31c5c900081dec9a/110170_02.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

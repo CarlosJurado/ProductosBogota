@@ -7,7 +7,7 @@ import TrustBar from '../../components/sections/TrustBar.astro';
 import HowToBuy from '../../components/sections/HowToBuy.astro';
 import FAQ from '../../components/sections/FAQ.astro';
 import { related, brandName, productMeta, productUrl, type Product } from '../../utils/products';
-import { productImage } from '../../utils/images';
+import { productImage, localGallery } from '../../utils/images';
 import { BRANDS, CATEGORY_NAMES, type BrandSlug } from '../../data/brands';
 import { SITE, formatCOP, waLink } from '../../data/site';
 import { productSchema, breadcrumbSchema, faqSchema } from '../../utils/schema';
@@ -26,6 +26,10 @@ const img = productImage(data.image);
 const og = img ? await getImage({ src: img, width: 1200, height: 1200, format: 'jpeg' }) : null;
 const ogUrl = og ? og.src : SITE.ogImage;
 const rel = related(product, products, 4);
+const localGal = localGallery(data.slug);
+const remoteGal = localGal.length ? [] : data.gallery.filter((u) => !/_0?1[._]|PDP-|_CO\.png$/.test(u.split('/').pop() ?? '')).slice(0, 3);
+const available = data.status !== 'consultar';
+const intro = data.tagline ?? data.description.split(/(?<=\.)\s/)[0];
 const catName = CATEGORY_NAMES[data.category] ?? data.category;
 const wa = waLink(`Hola, quiero pedir ${data.name} (${price}). ¿Está disponible para entrega en Bogotá?`);
 
@@ -69,6 +73,20 @@ const schema = [
         )}
         <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink shadow-sm backdrop-blur">Original Amway</span>
       </div>
+      {(localGal.length > 0 || remoteGal.length > 0) && (
+        <ul class="mt-3 grid grid-cols-3 gap-3" aria-label="Más imágenes del producto">
+          {localGal.slice(0, 3).map((g, i) => (
+            <li class="overflow-hidden rounded-2xl border border-line bg-surface">
+              <Image src={g} alt={`${data.name}: imagen ${i + 2}`} width={320} height={320} format="webp" quality={75} loading="lazy" class="aspect-square w-full object-cover" />
+            </li>
+          ))}
+          {remoteGal.map((u, i) => (
+            <li class="overflow-hidden rounded-2xl border border-line bg-surface">
+              <img src={u} alt={`${data.name}: imagen ${i + 2}`} width="320" height="320" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('li').remove()" class="aspect-square w-full object-cover" />
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
 
     <div class="animate-fade-up-2 flex flex-col">
@@ -76,21 +94,27 @@ const schema = [
         <a href={brand ? `/${brand.slug}/` : '/'} class="hover:text-ink">{bName}</a> · {catName}
       </p>
       <h1 class="mt-2 text-3xl font-extrabold leading-tight sm:text-4xl">{data.name}</h1>
-      <p class="mt-4 text-lg text-ink-soft">{data.description.split(/(?<=\.)\s/)[0]}</p>
+      <p class="mt-4 text-lg text-ink-soft">{intro}</p>
 
       <div class="mt-6 rounded-2xl border border-line bg-surface p-5">
         <div class="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p class="text-xs font-medium text-muted">Precio de lista Amway Colombia</p>
             <p class="font-display text-4xl font-extrabold text-ink">{price}</p>
-            <p class="mt-1 text-xs text-muted">IVA incluido · Clientes registrados obtienen descuento</p>
+            <p class="mt-1 text-xs text-muted">IVA incluido{data.presentation ? ` · ${data.presentation}` : ''} · Clientes registrados obtienen descuento</p>
           </div>
-          <p class="inline-flex items-center gap-1.5 rounded-full bg-cta-50 px-3 py-1 text-xs font-semibold text-cta-700">
-            <span class="h-2 w-2 rounded-full bg-cta"></span> Disponible en Bogotá
-          </p>
+          {available ? (
+            <p class="inline-flex items-center gap-1.5 rounded-full bg-cta-50 px-3 py-1 text-xs font-semibold text-cta-700">
+              <span class="h-2 w-2 rounded-full bg-cta"></span> Disponible en Bogotá
+            </p>
+          ) : (
+            <p class="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1 text-xs font-semibold text-ink-soft">
+              <span class="h-2 w-2 rounded-full bg-gold"></span> Consultar disponibilidad
+            </p>
+          )}
         </div>
         <div class="mt-5 grid gap-3 sm:grid-cols-2">
-          <a href={wa} target="_blank" rel="noopener" class="btn-cta h-12 text-base">Pedir por WhatsApp</a>
+          <a href={wa} target="_blank" rel="noopener" class="btn-cta h-12 text-base">{available ? 'Pedir por WhatsApp' : 'Consultar por WhatsApp'}</a>
           <a href={`tel:${SITE.phoneE164}`} class="btn-outline h-12 text-base">Llamar {SITE.phoneDisplay}</a>
         </div>
         <p class="mt-3 text-center text-xs text-muted">Entrega a domicilio en Bogotá en 1–2 días hábiles · Envío nacional</p>
@@ -113,6 +137,7 @@ const schema = [
       <h2 class="text-2xl font-extrabold">Descripción de {data.name}</h2>
       <div class="prose-product mt-4 space-y-4">
         {paragraphs.map((par) => <p>{par}</p>)}
+        {data.officialDescription && <p>{data.officialDescription}</p>}
       </div>
 
       <h2 class="mt-12 text-2xl font-extrabold">Beneficios</h2>
@@ -130,7 +155,11 @@ const schema = [
       {data.usage && (
         <>
           <h2 class="mt-12 text-2xl font-extrabold">Modo de uso</h2>
-          <p class="mt-4 text-ink-soft leading-relaxed">{data.usage}</p>
+          <ol class="mt-4 space-y-2">
+            {data.usage.split(/\.\s+(?=[A-ZÁÉÍÓÚÑ0-9])/).filter(Boolean).map((step, i) => (
+              <li class="flex gap-3 text-ink-soft"><span class="font-display text-sm font-extrabold text-primary">{String(i + 1).padStart(2, '0')}</span><span>{step.replace(/\.$/, '')}.</span></li>
+            ))}
+          </ol>
         </>
       )}
     </div>
@@ -142,6 +171,8 @@ const schema = [
           <div class="flex justify-between py-2.5"><dt class="text-muted">Marca</dt><dd class="font-semibold">{bName}</dd></div>
           <div class="flex justify-between py-2.5"><dt class="text-muted">Categoría</dt><dd class="font-semibold">{catName}</dd></div>
           <div class="flex justify-between py-2.5"><dt class="text-muted">Precio</dt><dd class="font-semibold">{price}</dd></div>
+          {data.presentation && <div class="flex justify-between py-2.5"><dt class="text-muted">Presentación</dt><dd class="font-semibold">{data.presentation}</dd></div>}
+          {data.sku && <div class="flex justify-between py-2.5"><dt class="text-muted">Código Amway</dt><dd class="font-semibold">{data.sku}</dd></div>}
           <div class="flex justify-between py-2.5"><dt class="text-muted">Fabricante</dt><dd class="font-semibold">Amway</dd></div>
           <div class="flex justify-between py-2.5"><dt class="text-muted">Entrega</dt><dd class="font-semibold">Bogotá y Colombia</dd></div>
         </dl>

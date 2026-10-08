@@ -3,7 +3,7 @@
   "name": "Iluminador para los Ojos + Suero Refrescante Artistry",
   "brand": "artistry",
   "category": "maquillaje",
-  "price": 97900,
+  "price": 102300,
   "currency": "COP",
   "image": "/iluminador-ojos-suero-refrescante-amway-artistry.jpg",
   "description": "ZEN + ENERGY - Ingrediente Zen que relaja: Contiene aguacate que hidrata y calma la superficie de la piel manteniendo una apariencia luminosa y suave. Ingrediente Energía que revitaliza: Con electrolitos y cafeína que refresca la piel y ayuda a reducirla hinchazón de la piel del contorno de los ojos",
@@ -12,5 +12,13 @@
     "Ayuda a reducir la hinchazón del contorno de los ojos, además el roll on fresco es fácil de usar y brinda un estímulo revitalizante instantáneo.",
     "Ayuda a controlar la retención de líquidos de la mirada y transforma la apariencia cansada a una mirada energizada. Puedes utilizarlo en los pómulos, en el arco de cupido y en la nariz para un efecto de realce radiante."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "125964V",
+  "amwayId": "125964",
+  "presentation": "15 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt85b97e8bdf69631b/67ecfc93f1c7a9449ab3c378/125964_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

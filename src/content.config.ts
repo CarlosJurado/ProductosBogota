@@ -15,6 +15,14 @@ const products = defineCollection({
     benefits: z.array(z.string()).min(1).max(6),
     usage: z.string().optional(),
     sku: z.string().optional(),
+    amwayId: z.string().optional(),
+    presentation: z.string().optional(),
+    tagline: z.string().optional(),
+    officialDescription: z.string().optional(),
+    /** Remote gallery URLs (amway.com.co). `npm run images` downloads them to src/assets/products/gallery/ */
+    gallery: z.array(z.string().url()).default([]),
+    status: z.enum(['disponible', 'consultar']).default('disponible'),
+    lastPriceCheck: z.string().optional(),
     featured: z.boolean().default(false),
     /** Slug of the canonical product when this page is a duplicate */
     canonicalTo: z.string().optional(),

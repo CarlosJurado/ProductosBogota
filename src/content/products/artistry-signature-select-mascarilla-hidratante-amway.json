@@ -3,7 +3,7 @@
   "name": "Artistry Signature Select Mascarilla Hidratante",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 202850,
+  "price": 212000,
   "currency": "COP",
   "image": "/artistry-signature-select-mascarilla-hidratante-amway.jpg",
   "description": "Artistry Signature Select™ Mascarilla Hidratante. Nutre e hidrata la piel diariamente con Artistry Signature Select Mascarilla Hidratante. La fórmula de esta mascarilla facial conserva la humectación creando una barrera en la piel que ayuda a protegerla de los agresores ambientales.",
@@ -12,5 +12,13 @@
     "Una ligera fragancia que combina frescas notas de té verde, cítricos, almizcle y flores.",
     "Una mezcla homogénea con el color característico del té verde."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "122343V",
+  "amwayId": "122343",
+  "presentation": "100 g",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blta307b4b4d874d2cb/67ecfa0ea947f86090d3e388/122343_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

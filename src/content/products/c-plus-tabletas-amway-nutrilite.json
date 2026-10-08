@@ -3,7 +3,7 @@
   "name": "C Plus Tabletas Nutrilite",
   "brand": "nutrilite",
   "category": "suplementos",
-  "price": 56100,
+  "price": 58650,
   "currency": "COP",
   "image": "/c-plus-tabletas-amway-nutrilite.jpg",
   "description": "Fórmula con ingredientes botánicos que proporciona 250mg. de vitamina C por tableta, contiene concentrado de cereza acerola, fuente importante de esta vitamina. Puesto que la vitamina C es soluble en agua, el cuerpo la elimina rápidamente sin aprovechar al máximo sus beneficios. Con nuestra tecnología de liberación prolongada esta vitamina se libera de manera gradual durante 8 horas para que tengas un mejor aprovechamiento.",
@@ -12,5 +12,18 @@
     "Es una tableta de fácil digestión suave para el estómago.",
     "Con ingredientes de origen vegetal, no contiene lactosa, derivados de leche, azúcares simples, gluten, cafeína, y es libre de colorantes, saborizantes, preservantes artificiales e ingredientes genéticamente modificados."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "109741CO",
+  "amwayId": "109741",
+  "presentation": "60 tabletas",
+  "tagline": "Liberación prolongada de vitamina C",
+  "officialDescription": "Contiene concentrado de Cereza Acerola, una de las frutas más ricas en vitamina C. Además, está enriquecido con concentrados de toronja (pomelo), mandarina y limón, en una fórmula que permite la liberación prolongada de la vitamina C en el organismo. La vitamina C es un nutriente esencial que requiere ser consumido diariamente como parte de una alimentación saludable.",
+  "usage": "1 tableta x día",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt7a026ce767418dfc/6aa326d53eabd04182443aba/PDP-1080x1080px-109741.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt698b3bb79414995e/67ecf951c392489d9671d2f8/109741_03.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt80d4e3980a9001bb/6aa2e8302707c542d232c0fc/109741_02_tabla_nutricional.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

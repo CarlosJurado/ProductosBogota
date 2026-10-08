@@ -12,5 +12,18 @@
     "Ayuda al cuidado de la ropa y prolonga la vida de las prendas de color, ya que acondiciona las fibras minimizando el desgaste.",
     "Reduce la estática. Fórmula concentrada que rinde 3 envases de suavizante convencional de 1 litro."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "110403S",
+  "amwayId": "110403",
+  "presentation": "400 ml",
+  "tagline": "Elimina las manchas más difíciles que los detergentes por sí solos no pueden retirar",
+  "officialDescription": "Presentación en Aerosol que rinde 700 aplicaciones, remueve la suciedad sin frotar ni remojar, en tan solo unos minutos y a cualquier temperatura. Inofensivo para todos los tejidos lavables blancos o de colores. Elimina toda clase de manchas, incluyendo aceite, grasa y tinta. No contiene clorofluorocarbonados (CFCs), por lo que no daña la capa de ozono. Fórmula suave, dermatológicamente probada.",
+  "usage": "Sostén a 15 o 20 cm de distancia. Rocía directamente sobre la mancha. Deja que actúe por 1 minuto. No es necesario frotar o remojar",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt3df116de8da55102/67eba6c9987ec65d695c60a3/110403_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltb8972871ad6b04b0/67eba6cd7db77201331e7cb0/110403_02.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltc09b7ce2922ec9eb/6810397469863d65f8732b16/110403.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

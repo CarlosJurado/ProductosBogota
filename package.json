@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "check": "astro check",
     "astro": "astro",
-    "ship": "node scripts/ship.mjs"
+    "ship": "node scripts/ship.mjs",
+    "images": "node scripts/fetch-gallery.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.4.1",

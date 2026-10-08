@@ -88,7 +88,8 @@ export function productSchema(p: CollectionEntry<'products'>['data'], brandName:
     description: p.description,
     brand: { '@type': 'Brand', name: brandName },
     manufacturer: { '@type': 'Organization', name: 'Amway' },
-    ...(p.sku ? { sku: p.sku } : {}),
+    ...(p.sku ? { sku: p.sku, mpn: p.sku } : {}),
+    ...(p.gallery?.length ? { image: [`${SITE.url}${p.image}`, ...p.gallery] } : {}),
     category: p.category,
     offers: {
       '@type': 'Offer',
@@ -96,7 +97,7 @@ export function productSchema(p: CollectionEntry<'products'>['data'], brandName:
       priceCurrency: 'COP',
       price: p.price,
       priceValidUntil: priceValidUntil(),
-      availability: 'https://schema.org/InStock',
+      availability: p.status === 'consultar' ? 'https://schema.org/LimitedAvailability' : 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
       seller: { '@id': ORG_ID },
       areaServed: { '@type': 'Country', name: 'Colombia' },

@@ -3,7 +3,7 @@
   "name": "Tónico Hidratante y Suavizante Artistry Skin",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 97000,
+  "price": 101350,
   "currency": "COP",
   "image": "/tonico-hidratante-suavizante-amway-artistry.jpg",
   "description": "Tónico que ayuda a eliminar las impurezas y cualquier residuo que el limpiador haya dejado, refrescando la piel y dejándola más preparada y receptiva para recibir los cuidados posteriores.",
@@ -12,5 +12,13 @@
     "Liposoma de Chía Blanca retiene la humedad, ayuda a sellar la propia humedad de la piel y a prevenir la pérdida de la misma. El tónico ayuda a controlar el microbioma de su piel, ayuda previniendo que se salga de control.",
     "CIENCIA- Prebióticos, extracto de gel de chía blanca que equilibra el microbioma y ayuda a la función de la barrera de humectación de la piel."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123795V",
+  "amwayId": "123795",
+  "presentation": "200 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt3e8486d1de3f7824/67ecfac154055dcc0883afae/123795_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

@@ -3,7 +3,7 @@
   "name": "Crema para Manos Nutritiva G&H",
   "brand": "g-h",
   "category": "cuerpo",
-  "price": 54500,
+  "price": 56350,
   "currency": "COP",
   "image": "/crema-manos-nutritiva-amway-g&h.jpg",
   "description": "La crema de manos intensiva con agua de complejo de bambú, ceramida derivada del aceite de oliva, aceite de chía blanca y una alta concentración de manteca de karité nutre y alivia instantáneamente las manos secas y ásperas, proporcionando también una capa protectora de humectación en la superficie de la piel.",
@@ -12,5 +12,10 @@
     "Aumento instantáneo/inmediato del 127% en la hidratación de la piel. Con agua bambú y glicerina de origen vegetal que ayuda a hidratar la piel. No probado en animales. Adecuado para todo tipo de piel. Probado contra reacciones alérgicas.",
     "Fragancia de larga duración con notas de té verde, durazno, manzanilla y mandarina. Intensificado con aceite de chía blanca uno de los superalimentos más ricos de la naturaleza, sus fitonutrientes intensifican y protegen visiblemente la belleza de la piel."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "125902SP",
+  "amwayId": "125902",
+  "presentation": "75 ml",
+  "lastPriceCheck": "2026-10-08"
 }

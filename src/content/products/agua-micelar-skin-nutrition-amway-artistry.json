@@ -3,7 +3,7 @@
   "name": "Agua Micelar Skin Nutrition Artistry",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 128000,
+  "price": 133750,
   "currency": "COP",
   "image": "/agua-micelar-skin-nutrition-amway-artistry.jpg",
   "description": "El Agua Micelar sin fragancia ayuda a remover inmediatamente todo tipo de maquillaje, incluidos los de larga duración y a prueba de agua. Al ser tan eficaz, actúa sin frotar excesivamente la piel, lo que ayuda a evitar la irritación. Funciona con todo tipo de maquillaje de ojos, labios y rostro. No deja residuos oleosos, incluso acondiciona tus pestañas. La fórmula no requiere enjuague.",
@@ -12,5 +12,13 @@
     "El extracto de Sandia ayuda a proteger la piel de los daños causados por los radicales libres.",
     "Las Micelas son moléculas similares a un imán que ayuda a atraer y eliminar las impurezas."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123791V",
+  "amwayId": "123791",
+  "presentation": "200 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltee27c00aceb1f072/67ecfa708d6c0cfffc7dea38/123791_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

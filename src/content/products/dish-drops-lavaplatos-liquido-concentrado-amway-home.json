@@ -12,5 +12,18 @@
     "Fórmula concentrada que rinde hasta 18 botellas de 500 ml diluido (1:8).",
     "Dermatológicamente probado. Contiene derivados de aceite de coco que ayuda a una limpieza efectiva en la cocina."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "110488S",
+  "amwayId": "110488",
+  "presentation": "1 Litro",
+  "tagline": "Una sola gota elimina la grasa y los residuos o manchas de alimentos de tu vajilla",
+  "officialDescription": "1 litro rinde hasta 20 botellas rociadoras de 500 ml en una dilución 1:9. Remueve manchas difíciles, grasa y comida pegada en todo tipo de vajillas, ya sean de cristal, porcelana, porcelana china, plata, cubiertos, ollas, sartenes, entre otros. No deja residuos y es fácil de enjuagar. Suave con la piel, sin dañarla. Biodegradable, concentrado y dermatológicamente probado. Sin cloro, fosfatos y otros ácidos abrasivos.",
+  "usage": "Diluye una parte del producto en 1, 4 o hasta 9 partes de agua según la necesidad. Mezclar completamente",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt7c95b707d7d26bf5/67eba6e341546b775a4a6540/110488_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt2e3852d6118a5d44/67eba6e7a8afb5daea24a1a8/110488_02.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt341fb62fb4908fa9/681042283b56c27985174abb/110488.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

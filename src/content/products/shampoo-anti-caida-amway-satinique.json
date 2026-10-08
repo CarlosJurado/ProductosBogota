@@ -3,7 +3,7 @@
   "name": "Shampoo Anti Caída Satinique",
   "brand": "satinique",
   "category": "cabello",
-  "price": 52850,
+  "price": 50250,
   "currency": "COP",
   "image": "/shampoo-anti-caida-amway-satinique.jpg",
   "description": "‍ Shampoo Anti Caída Satinique. Un shampoo que ayuda a revitalizar y estimular el cuero cabelludo para promover el crecimiento capilar y reducir la pérdida de cabello debida al quiebre. Además contiene compuestos botánicos como ginseng, extracto de Eclipta Alba y extracto de hoja de mora.",
@@ -12,5 +12,10 @@
     "Libre de sulfatos. Ayuda a revitalizar y estimular el cuero cabelludo con el masaje para ayudar a que el cabello se vea más grueso y tenga más cuerpo. El extracto de Eclipta Alba favorece el crecimiento normal del cabello.",
     "El ginseng ayuda a exfoliar el cuero cabelludo para permitir que otros tratamientos se absorban efectivamente. El extracto de hoja de mora es conocido por sus propiedades antioxidantes y por favorecer el crecimiento del cabello."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "126457SP",
+  "amwayId": "126457",
+  "presentation": "280 ml",
+  "lastPriceCheck": "2026-10-08"
 }

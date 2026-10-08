@@ -12,5 +12,13 @@
     "NATURALEZA - Contiene Romero, un extracto proveniente de una planta, el cual ayuda a fortalecer la barrera de la piel para una hidratación duradera. Ayuda a reparar el daño visible existente y optimiza los niveles de hidratación para una piel más suave y tersa.",
     "CIENCIA - Contiene Ácido Hialurónico, una molécula que retiene la humedad para ayudar a suavizar las líneas finas de expresión y los signos visibles de la edad. Dermatológicamente probado. No comedogénico. Registrado ante La Sociedad Vegana."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123785V",
+  "amwayId": "123785",
+  "presentation": "50 g",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt4679341e8f12e805/67ecfa5926e7d9104911c53f/123785_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }
