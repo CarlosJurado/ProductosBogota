@@ -3,7 +3,7 @@
   "name": "Artistry Signature Select Mascarilla Purificante",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 182385,
+  "price": 190550,
   "currency": "COP",
   "image": "/artistry-signature-select-mascarilla-purificante-amway.jpg",
   "description": "Limpia la piel y disminuye la apariencia de brillo con Artistry Signature Select Mascarilla Purificante. Esta fórmula de limpieza profunda inmediatamente absorbe el exceso de oleosidad para purificar los poros. La piel luce y se siente más limpia y fresca.",
@@ -12,5 +12,13 @@
     "Fragancia ligera que combina notas cítricas de toronja/pomelo, naranja y limón con almizcle amaderado. Avena que ayuda a relajar la piel.",
     "Textura densa de arcilla francesa con un tinte amarillo brillante. Dermatológicamente probada."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "122342V",
+  "amwayId": "122342",
+  "presentation": "100 g",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt073a2eb864b84a60/67ecfa045a47dd50b04dce7e/122342_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

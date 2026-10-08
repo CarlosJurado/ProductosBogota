@@ -3,7 +3,7 @@
   "name": "Shampoo Hidratación y Suavidad Satinique",
   "brand": "satinique",
   "category": "cabello",
-  "price": 52850,
+  "price": 50250,
   "currency": "COP",
   "image": "/shampoo-hidratacion-suavidad-amway-satinique.jpg",
   "description": "Este sistema de shampoo y acondicionador ofrece una limpieza delicada y un acondicionamiento suave para proteger, fortalecer y reparar el cabello, mientras ayuda a mantener el color e intensificar el brillo. El cabello se siente suave y sedoso.",
@@ -12,5 +12,10 @@
     "Fórmula libre de sulfatos, lo cual ayuda a proteger el color contra el desvanecimiento. Ayuda a fortalecer el cabello hasta 9 veces. Reduce la decoloración, ayudando a mantener el color hasta 45 lavadas.",
     "Cuenta con el exclusivo Complejo Enerjuve que ayuda a restaurar el estado natural del cabello y su apariencia saludable. Mantiene el color original por más tiempo. Ayuda a reparar el cabello y a prevenir las puntas abiertas."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "126449SP",
+  "amwayId": "126449",
+  "presentation": "280 ml",
+  "lastPriceCheck": "2026-10-08"
 }

@@ -12,5 +12,17 @@
     "Ayuda al cuidado de la ropa y prolonga la vida de las prendas de color, ya que acondiciona las fibras minimizando el desgaste.",
     "Reduce la estática. Fórmula concentrada que rinde 3 envases de suavizante convencional de 1 litro."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "110480S",
+  "amwayId": "110480",
+  "presentation": "1 Litro",
+  "tagline": "Suaviza naturalmente, reduce la estática y deja la ropa suave y con olor fresco",
+  "officialDescription": "Rinde 100 lavadas en cargas de 6kg. Acondiciona las fibras minimizando el desgaste. Restaura la suavidad de la ropa, toallas y telas blancas. Reduce las arrugas en las telas, para un planchado más fácil. Se enjuaga en cualquier temperatura, incluso en agua fría. No deja residuos que puedan irritar la piel sensible. Seguro para todo tipo de telas lavables. Biodegradable, sin fosfatos. Dermatológicamente probado.",
+  "usage": "Agrega 1 tapa (20 ml) en tu dispensador de suavizante o durante el enjuague final",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltd480813d45cce1c8/67eba6d350d7530f632ea5cb/110480_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt24ba6d1c0d4d3cdd/68103ac7e16f96363a156881/110480.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

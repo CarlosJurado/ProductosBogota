@@ -3,7 +3,7 @@
   "name": "Crema Hidratante Artistry Skin Nutrition",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 189200,
+  "price": 197700,
   "currency": "COP",
   "image": "/crema-hidratante-artistry-skin-nutrition-amway.jpg",
   "description": "Crema de Reactivación que reafirma y levanta y con el uso frecuente, tonifica visiblemente la piel alrededor del área de los ojos además ayuda a reducir la apariencia de líneas finas y signos visibles de la edad (líneas de expresión, pérdida de firmeza, resequedad, ojeras). Ofrece protección antioxidante gracias a que contiene granada cultivada de la marca Nutrilite™.",
@@ -12,5 +12,13 @@
     "NATURALEZA- Agave azul, extracto de planta suculenta que ayuda a reforzar los niveles naturales de hidratación de la piel. Con granada conocida como un potente antioxidante, y permite que esta fórmula proteja contra el daño oxidativo de los radicales libres que pueden provocar un aspecto poco cuidado de la piel.",
     "CIENCIA- Proteína de arroz, ayuda a prevenir los daños en el sistema de soporte de la piel y a protegerla de los signos de la edad. Dermatológicamente probado. No comedogénico. Registrado ante La Sociedad Vegana."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123798V",
+  "amwayId": "123798",
+  "presentation": "50 g",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt49aedc1f592bf8a5/67ecfb0215cd5b7934676415/123798_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

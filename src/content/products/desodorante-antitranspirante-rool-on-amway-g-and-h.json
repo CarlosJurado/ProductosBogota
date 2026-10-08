@@ -3,7 +3,7 @@
   "name": "Desodorante y Antitranspirante Roll-On G&H",
   "brand": "g-h",
   "category": "cuerpo",
-  "price": 39250,
+  "price": 41000,
   "currency": "COP",
   "image": "/desodorante-antitranspirante-rool-on-amway-g&h.jpg",
   "description": "Desodorante Roll-On G&H. Roll-on antitranspirante de secado rápido con complejo cica agua, romero y té verde que aporta protección contra el olor y la humedad de las axilas sin dejar manchas blancas.",
@@ -12,5 +12,13 @@
     "Contiene bisabolol y jengibre para ayudar a mantener el equilibrio de la piel de tus axilas. Con extracto de romero para ayudar a suavizar la piel.",
     "Adecuado para todo tipo de piel. Fragancia de larga duración con notas de bergamota, limón, salvia y eucalipto. Fórmula vegana registrada en la Sociedad Vegana."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "125896SP",
+  "amwayId": "125896",
+  "presentation": "100 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltc6c014079cc92381/67eba80f15aa33aaba5c0ba0/125896_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

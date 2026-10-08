@@ -3,7 +3,7 @@
   "name": "Crema Hidratante para Contorno de Ojos Artistry",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 172100,
+  "price": 179850,
   "currency": "COP",
   "image": "/crema-hidratante-contorno-ojos-amway-artistry.jpg",
   "description": "Ayuda a disminuir la apariencia de ojeras, bolsas y signos visibles de la edad. Gel hidratante y de textura ligera que ayuda a disminuir el aspecto de los signos visibles de la edad, como las líneas de expresión y la falta de luminosidad, así como de la apariencia de ojeras y bolsas.",
@@ -12,5 +12,13 @@
     "Seguro para los usuarios de lentes de contacto y área de ojos. Difusores ópticos, micropartículas difusoras de la luz que proporcionan una iluminación instantánea. Contiene Semilla de Chía Blanca que con sus potentes fitonutrientes ayudan a nutrir y proteger visiblemente la belleza de tu piel. Semilla de quinoa, extracto de grano que ayuda a reducir la apariencia de las ojeras.",
     "Dermatológicamente probado. No comedogénico. Registrado ante La Sociedad Vegana. Protege contra la irritación causada por la contaminación."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123796V",
+  "amwayId": "123796",
+  "presentation": "15 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt0b23d2045c4b365f/67ecfad68d6c0c63df7dea50/123796_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

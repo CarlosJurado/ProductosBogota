@@ -3,7 +3,7 @@
   "name": "HSN Colageno Hidrolizado con Biotina Nutrilite",
   "brand": "nutrilite",
   "category": "suplementos",
-  "price": 79500,
+  "price": 83100,
   "currency": "COP",
   "image": "/hsn-colageno-hidrolizado-biotina-amway-nutrilite.jpg",
   "description": "HSN Colágeno Hidrolizado con Biotina Nutrilite. Nutrición para cabello, piel y uñas. Su fórmula contiene L-cisteína, un aminoácido que promueve la formación de queratina. Además contiene colágeno hidrolizado, biotina, extracto de semilla de uva y vitamina C que participan en la humectación de la piel. Es una combinación única de ingredientes que ayudan a nutrir el cabello, la piel y las uñas.",
@@ -12,5 +12,18 @@
     "Con el paso del tiempo tu cuerpo disminuye la producción natural de los aminoácidos y proteínas que conforman tu cabello, piel y uñas. Incrementa la ingesta de colágeno, L-cisteína con Nutrilite HSN.",
     "Belleza de adentro hacia afuera. No contiene lactosa, derivados de leche ni azúcares. Libre de colorantes y saborizantes."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "106678CO",
+  "amwayId": "106678",
+  "presentation": "60 tabletas",
+  "tagline": "Complementa tu nutrición de adentro hacia afuera",
+  "officialDescription": "Suplemento elaborado a base de L-cisteína, Vitamina C, biotina, extracto de semilla de uva y colágeno hidrolizado. La Vitamina C contribuye a la formación de colágeno para el funcionamiento normal de la piel. Nutrilite HSN contiene 30 mg de Vitamina C. No contiene colorantes, saborizantes ni conservadores artificiales.",
+  "usage": "1 tableta x día",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt247a27f29f76b1ba/67e4c51e5167128f2aacd949/106678_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltde5644e4d90b3c0f/67ecf94a63666df1ceae9623/106678_03.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt197c7c0ff83d72e1/680b94a1b5716c5ae5363521/106678_02.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

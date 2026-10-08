@@ -3,7 +3,7 @@
   "name": "Lápiz & Gel de Cejas a Prueba de Agua Artistry",
   "brand": "artistry",
   "category": "maquillaje",
-  "price": 85000,
+  "price": 90750,
   "currency": "COP",
   "image": "/lapiz-gel-cejas-prueba-agua-amway-artistry.jpg",
   "description": "¡Tenlo todo! Con el lápiz da color y perfila las cejas, mientras que con el gel las fijas con un aspecto natural hasta por 10 horas. La fórmula sin negro de carbono es a prueba de agua, manchas y transferencias.",
@@ -12,5 +12,13 @@
     "La fórmula en gel se seca rápidamente, dejando un tono natural y fijando las cejas en su lugar. Suave con la piel de alrededor de los ojos.",
     "El cepillo corto en el extremo del gel tiene un ángulo para lograr una aplicación con mayor precisión. Dermatológicamente probado."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "126747D",
+  "amwayId": "126747",
+  "presentation": "Lápiz 0.18 g + Gel 2,5 g",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt5198392c43c77ce2/67ecfd250ac21c2551d78ec1/126747_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

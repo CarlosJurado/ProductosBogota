@@ -3,7 +3,7 @@
   "name": "Tónico Suavizante Renovador Artistry",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 176400,
+  "price": 184350,
   "currency": "COP",
   "image": "/tonico-suavizante-renovador-amway-artistry.jpg",
   "description": "Tónico especialmente formulado para ayudar a tratar los signos visibles de una piel seca, el cual fortalece el sistema de soporte de la piel y ayuda a minimizar las líneas visibles de expresión. Ayuda a estabilizar y fortalecer el microbioma de la piel manteniéndola en equilibrio al mismo tiempo que mantiene y fortalece la barrera de humectación de la piel. Contiene ingredientes relajantes que suavizan y ayudan a recuperar una piel con apariencia más juvenil.",
@@ -12,5 +12,13 @@
     "NATURALEZA - Contiene proteína de avena, una proteína rica en nutrientes, exfoliante natural que suaviza la superficie de la piel.",
     "CIENCIA - Contiene prebióticos, un extracto que equilibra el microbioma que ayuda a mantener la función de barrera de la piel."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123783V",
+  "amwayId": "123783",
+  "presentation": "200 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltbc3b36632d3a2dc4/67ecfa2da947f8ce0ad3e38e/123783_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

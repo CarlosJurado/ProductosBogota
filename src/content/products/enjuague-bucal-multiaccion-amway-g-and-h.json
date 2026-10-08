@@ -3,7 +3,7 @@
   "name": "Enjuague Bucal Multiacción G&H",
   "brand": "g-h",
   "category": "higiene-bucal",
-  "price": 51250,
+  "price": 53550,
   "currency": "COP",
   "image": "/enjuague-bucal-multiaccion-amway-g&h.jpg",
   "description": "Nuestro mejorado Enjuague bucal concentrado de acción múltiple ahora sin alcohol, sin colorantes y con una mezcla mejorada de sabor a menta certificada por Nutrilite™ ayuda a reducir la placa, refresca el aliento y ayuda a limpiar entre los dientes como parte esencial de tu rutina diaria de cuidado bucal.",
@@ -12,5 +12,13 @@
     "Fórmula actualizada con Plant-Based Goodness que incluye una mezcla mejorada de sabor a menta certificada por Nutrilite que proporciona un aliento fresco y duradero con un atractivo sabor a menta.",
     "La fórmula del Enjuague bucal de acción múltiple de Glister ahora es libre de parabenos, SLS (Lauril Sulfato de Sodio),colores artificiales y de ingredientes derivados de animales, sin alcohol y sin azúcar."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "124108SP",
+  "amwayId": "124108",
+  "presentation": "72 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt6dcf912af8c074d2/67eba79ffe3460725d12f662/124108_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

@@ -3,7 +3,7 @@
   "name": "Loción Hidratante de Día FPS30",
   "brand": "artistry",
   "category": "proteccion-solar",
-  "price": 189200,
+  "price": 197700,
   "currency": "COP",
   "image": "/locion-hidratante-dia-fps30-amway-artistry.jpg",
   "description": "Artistry. Humectación hasta por 24 horas, ayudando a prevenir los signos visibles de la edad. Loción que ayuda a prevenir los signos visibles de la edad, como las líneas de expresión, la falta de brillo, la falta de textura y el tono desigual de la piel.",
@@ -12,5 +12,13 @@
     "Contiene nuestro Phyto-powered Prevent Complex, el cual refuerza el sistema de defensa natural de la piel.",
     "Ayuda al ecosistema, formulado sin oxibenzona ni octinoxato."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123800V",
+  "amwayId": "123800",
+  "presentation": "50 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltc2e3a9a3680bba06/67ecfb2a9fc11111c64e9871/123800_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

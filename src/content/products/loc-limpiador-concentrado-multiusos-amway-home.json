@@ -12,5 +12,10 @@
     "Fórmula concentrada que rinde hasta 18 botellas de 500 ml diluido (1:8). Funciona en todos los objetos y superficies lavables con agua.",
     "Quita manchas difíciles. No se necesita enjuagar y se retira fácilmente. Dermatológicamente probado."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "E0001S",
+  "amwayId": "E0001",
+  "presentation": "1 Litro",
+  "lastPriceCheck": "2026-10-08"
 }

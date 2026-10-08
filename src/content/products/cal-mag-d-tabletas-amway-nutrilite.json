@@ -3,7 +3,7 @@
   "name": "Cal Mag D Tabletas Nutrilite",
   "brand": "nutrilite",
   "category": "suplementos",
-  "price": 72600,
+  "price": 76700,
   "currency": "COP",
   "image": "/cal-mag-d-tabletas-amway-nutrilite.jpg",
   "description": "Aporta dos tipos de Calcio, carbonato de calcio y el obtenido de las algas marinas calcificadas, una de las fuentes más ricas de calcio, además contiene Vitamina D y Magnesio. Enriquecido con Zinc.",
@@ -12,5 +12,18 @@
     "Adicionado con Magnesio y vitamina D",
     "No contiene lactosa, derivados de leche, azucares simples, gluten, cafeína, y es libre de colorantes, saborizantes, preservantes artificiales."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "110609CO",
+  "amwayId": "110609",
+  "presentation": "90 tabletas",
+  "tagline": "Contiene calcio proveniente de algas marinas calcificadas y carbonato de calcio",
+  "officialDescription": "Cal Mag D contiene 3 nutrientes: calcio, magnesio y vitamina D. Su fórmula contiene dos fuentes de calcio: carbonato de calcio y alga marina calcificada, además contiene vitamina D, zinc y manganeso. No contiene lactosa, derivados de leche ni azúcares. Libre de colorantes, saborizantes y preservantes artificiales.",
+  "usage": "De 1 a 2 tabletas diarias con los alimentos",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt7809cf15d335d7f5/69d5216c384bf711a1eb3a78/110609_CO.png",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltb3bc04e3a1b442d8/67ecf95ee4cb3c3f7347f59a/110609_03.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltb95f4c39e6f4e760/6aa2e57c37d7f3b62d8ec014/110609_02_tabla_nutricional.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

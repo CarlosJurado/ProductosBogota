@@ -3,7 +3,7 @@
   "name": "Artistry Signature Select Mascarilla Iluminadora",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 221800,
+  "price": 231800,
   "currency": "COP",
   "image": "/artistry-signature-select-mascarilla-iluminadora-amway.jpg",
   "description": "Aumenta la luminosidad con Artistry Signature Select Mascarilla Iluminadora. La fórmula revitalizante de esta mascarilla facial energiza la piel que se ha opacado por los agresores ambientales. Al instante la piel luce más radiante, fresca y luminosa, con renovada vitalidad.",
@@ -12,5 +12,17 @@
     "Con perlas de jojoba que remueven suavemente las células muertas que causan apariencia de piel opaca.",
     "Con sedosa textura en color blanco aperlado. Dermatológicamente probada. Ayuda a reducir la opacidad, las visibles marcas oscuras e imperfecciones."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "122340V",
+  "amwayId": "122340",
+  "presentation": "100 g",
+  "tagline": "La piel opaca luce y se siente más radiante y llena de energía",
+  "officialDescription": "Con perlas de jojoba y fórmula enriquecida con extracto de semilla de chía proveniente de Nutrilite™, ayuda a mejorar la luminosidad de la piel. Con fragancia que combina notas cálidas de miel, té y suave aroma floral y sedosa textura en color blanco aperlado. Dermatológicamente probada. Las personas que la probaron dicen que deja la piel radiante, luminosa y energizada.",
+  "usage": "Aplicar con los dedos secos sobre piel limpia y húmeda. Evita el área de ojos y labios. Masajea suavemente de 1 a 2 minutos. Deja actuar durante 7 minutos",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blta81b0fd212266b6e/67ecf9f05aabf77bea4cdc55/122340_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt5b3e4a7835d19a7c/67ecf9f55a47dd10174dce7a/122340_02.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

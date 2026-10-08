@@ -3,7 +3,7 @@
   "name": "L.O.C. Limpiador Concentrado Cocina",
   "brand": "amway-home",
   "category": "superficies",
-  "price": 61050,
+  "price": 49950,
   "currency": "COP",
   "image": "/loc-limpiador-concentrado-cocina-amway-home.jpg",
   "description": "Limpiador de superficies que elimina fácilmente residuos de grasa acumulada y aceite de cocina. Limpia tu cocina de una manera rápida, práctica y segura. Elimina efectivamente la suciedad difícil como la grasa o el aceite para cocinar, dejando las superficies higiénicamente limpias y con aroma fresco.",
@@ -12,5 +12,17 @@
     "Fórmula concentrada que rinde 4 Botellas con Pistola Rociadora de 500 ml.",
     "Contiene la avanzada tecnología BIOQUEST FORMULA que incluye ingredientes derivados de fuentes naturales y provee un alto desempeño."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "109857S",
+  "amwayId": "109857",
+  "presentation": "500 ml",
+  "tagline": "Elimina fácilmente residuos de grasa acumulada y aceite de cocina",
+  "officialDescription": "500 ml rinde hasta 4 botellas rociadoras de 500 ml. Remueve la suciedad difícil y deja las superficies de tu cocina limpias, brillantes y con aroma a cítricos. Puede utilizarse en superficies no porosas, incluyendo barras o mostradores, refrigeradores, microondas, estufas, fregaderos o lavaplatos. Biodegradable, Concentrado y Dermatológicamente probado. Sin blanqueador, cloro, fosfatos y otros ácidos abrasivos.",
+  "usage": "Para limpieza en general: 1 tapa = 20 ml en botella rociadora. Agrega 375 ml de agua",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blte1c3095fd1df8b18/67eba6bfd1debb4c48bdd1f0/109857_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt0cdf1ac230b73400/68103de5775c2d441926e713/109857.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

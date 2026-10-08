@@ -3,7 +3,7 @@
   "name": "Té Bodykey Herbal Mix Nutrilite",
   "brand": "nutrilite",
   "category": "alimentos-y-bebidas",
-  "price": 101100,
+  "price": 105650,
   "currency": "COP",
   "image": "/te-bodykey-herbal-mix-amway-nutrilite.jpg",
   "description": "Herbal Mix contiene una mezcla de Té negro y Té verde. Su exclusiva fórmula contiene vitaminas del complejo B y vitamina C, además contiene guaraná, jengibre y canela. Delicioso sabor a limón y endulzado con Stevia.",
@@ -12,5 +12,13 @@
     "Polvo de té negro y té verde & Semillas de guaraná: ricos en antioxidantes, té estimulante por su contenido de cafeína.",
     "Polvo de jengibre: le da un delicioso sabor (contenido 3%, como saborizante). Canela en polvo: rica en antioxidantes, le da un delicioso sabor (contenido 3%, como saborizante)."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "286169CO",
+  "amwayId": "286169",
+  "presentation": "Tarro con 51 g",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt5f2c5d2978eb9dee/67e4c58942fd7c3b574088bc/286169_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

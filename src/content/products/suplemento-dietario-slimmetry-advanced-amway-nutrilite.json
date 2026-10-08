@@ -3,7 +3,7 @@
   "name": "Suplemento Dietario Slimmetry Advanced Nutrilite",
   "brand": "nutrilite",
   "category": "suplementos",
-  "price": 138650,
+  "price": 144900,
   "currency": "COP",
   "image": "/suplemento-dietario-slimmetry-advanced-amway-nutrilite.jpg",
   "description": "Slimmetry Advanced Nutrilite. Este suplemento nutricional con un extracto de té verde sin cafeína es ideal para complementar la dieta. Provee 300 mg de té verde, aportando 40 mg del fitonutriente EGCG (epigalocatequina-3-galato) en dos tabletas diarias.",
@@ -12,5 +12,18 @@
     "Contiene el fitonutriente EGCG (epigalocatequina-3-galato). Contiene una tecnología especial que favorece la absorcion del té verde.",
     "Producto apto para vegetarianos. No contiene lactosa, derivados de leche, azúcares simples, gluten ni cafeína."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "117085CO",
+  "amwayId": "117085",
+  "presentation": "60 tabletas",
+  "tagline": "Con extracto de té verde, sin cafeína, es ideal para complementar la alimentación balanceada",
+  "officialDescription": "Dos tabletas proveen 100 mg de té verde y 200 mg de lecitina de soya. Su fórmula contiene ingredientes de origen natural como el extracto de té verde descafeinado y algas pardas. Producto apto para vegetarianos. No contiene lactosa, derivados de leche, azúcares, gluten, ni cafeína. Libre de colorantes, saborizantes y preservantes artificiales.",
+  "usage": "Tomar una tableta dos veces al día",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltc63e93b3eb3450fa/67e4c53ca5408c41532e1f72/117085_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt8ae48784d0340eb1/67ecf962020e29214169e5fe/117085_03.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt223db35e5deb12e1/680b8fd4c39b0fa174cbcf41/117085_02.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

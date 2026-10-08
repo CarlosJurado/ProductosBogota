@@ -3,7 +3,7 @@
   "name": "Shake Plus Sabor Vainilla Bodykey Nutrilite",
   "brand": "nutrilite",
   "category": "alimentos-y-bebidas",
-  "price": 167650,
+  "price": 176050,
   "currency": "COP",
   "image": "/shake-plus-sabor-vainilla-bodykey-amway-nutrilite.jpg",
   "description": "Nuestra fórmula exclusiva fue desarrollada bajo la filosofía BodyKey by Nutrilite™, dando como resultado un delicioso y nutritivo polvo sabor a chocolate para crear una bebida nutricional al mezclar con agua o con leche baja en grasa, que proporciona proteína, fibra, vitaminas y minerales.",
@@ -12,5 +12,13 @@
     "Contiene ingredientes que aportan fibra y carbohidratos simples y complejos, con grasas esenciales, lo que lo hace una bebida que complementa tu alimentación.",
     "Cuenta con ingredientes de origen natural. No contiene cafeína, y es libre de colorantes, saborizantes ni preservantes artificiales."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "286148CO",
+  "amwayId": "286148",
+  "presentation": "Tarro con 520 g",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt3c06890e15668302/67e4c57dda82529d3ee495f8/286148_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }

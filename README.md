@@ -25,6 +25,19 @@ src/
 2. Añade la imagen 1200×1200 en `src/assets/products/<slug>.jpg`.
 3. `npm run build`. La URL será `/<slug>/`; el sitemap, breadcrumbs, schema y enlazado interno se generan solos.
 
+## Datos de Amway (precios, SKU, galería)
+- `scripts/data/amway-map.json`: slug → id de producto en amway.com.co (67 mapeados; los 21 sin equivalente quedan `status: "consultar"`).
+- `scripts/data/amway-catalog.json`: snapshot de la API de Amway Colombia (precio, SKU, presentación, descripción, modo de uso, imágenes).
+- `node scripts/import-amway.mjs`: aplica el snapshot a los JSON de productos.
+- `npm run images`: descarga la galería remota a `src/assets/products/gallery/` (hazlo una vez desde tu PC; el build las optimiza y deja de depender del CDN de Amway).
+
+## Publicar con un solo comando
+```
+npm run ship                 # build → commit → push → firebase deploy
+npm run ship -- "mensaje"    # con mensaje de commit propio
+```
+Requisito único la primera vez: `npm i -g firebase-tools && firebase login`.
+
 ## Comandos
 ```
 npm install

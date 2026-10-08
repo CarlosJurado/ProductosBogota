@@ -3,7 +3,7 @@
   "name": "Tónico Nivelador Artistry Skin Nutrition",
   "brand": "artistry",
   "category": "cuidado-de-la-piel",
-  "price": 88800,
+  "price": 92800,
   "currency": "COP",
   "image": "/tonico-nivelador-skin-nutrition-amway-artistry.jpg",
   "description": "El Tónico Nivelador aporta todos los beneficios tonificantes tradicionales.Refresca y prepara la piel para recibir los cuidados posteriores. Este tónico provee a la piel de una fresca descarga de hidratación después de la limpieza. La piel queda tersa y limpia, sintiéndose fresca, suave y sin ningún residuo pegajoso.",
@@ -12,5 +12,13 @@
     "NATURALEZA- Con Hamamelis que ayuda a liberar los poros y a equilibrar la grasa de la piel de forma natural.",
     "CIENCIA- Prebióticos, extracto en gel de chía blanca que nivela el microbioma y ayuda a la función de la barrera de la piel."
   ],
-  "featured": false
+  "featured": false,
+  "status": "disponible",
+  "sku": "123794V",
+  "amwayId": "123794",
+  "presentation": "200 ml",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt88c3b98d65af2242/67ecfaabe24bac43830c5661/123794_01.jpg"
+  ],
+  "lastPriceCheck": "2026-10-08"
 }
