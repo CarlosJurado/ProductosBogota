@@ -1,0 +1,16 @@
+{
+  "slug": "loc-limpiador-concentrado-baños-amway-home",
+  "name": "L.O.C. Limpiador Concentrado Baños",
+  "brand": "amway-home",
+  "category": "superficies",
+  "price": 49950,
+  "currency": "COP",
+  "image": "/loc-limpiador-concentrado-baños-amway-home.jpg",
+  "description": "Producto formulado para limpiar eficazmente la mayoría de las superficies del baño, removiendo las manchas difíciles de suciedad y sarro, dejándolas brillantes, higiénicamente limpias y con un aroma agradable a cítricos.",
+  "benefits": [
+    "Biodegradabilidad demostrada. Fórmula concentrada que rinde 4 Botellas con Pistola Rociadora de 500 ml.",
+    "Limpiador multiusos efectivo en la limpieza de azulejo, cerámica, fibra de vidrio, porcelana, acero inoxidable, plástico y vinilo.",
+    "Dermatológicamente probado. No expide vapores tóxicos ni deja residuos. Protege las superficies de tus baños sin dañarlas."
+  ],
+  "featured": false
+}

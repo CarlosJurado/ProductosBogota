@@ -1,0 +1,16 @@
+{
+  "slug": "base-maquillaje-serum-amway-artistry",
+  "name": "Base de Maquillaje Sérum Artistry",
+  "brand": "artistry",
+  "category": "maquillaje",
+  "price": 210000,
+  "currency": "COP",
+  "image": "/base-maquillaje-serum-amway-artistry.jpg",
+  "description": "Base tipo serum de cobertura ligera que brinda luminosidad, hidratación y un glow a tu piel hasta por 10 horas. Gracias al sistema Glow Fit notarás la diferencia todos los días. No comedogénico.",
+  "benefits": [
+    "Enriquecida con la tecnología del suero de los liposomas fito-lamelares que encapsulan nutrientes de origen vegetal, usados por primera vez en un producto de maquillaje Artistry, para ofrecer beneficios clave para la superficie de la piel.",
+    "Contiene una mezcla especial de aceites beneficiosos para la piel con alta refracción, por lo que es muy eficaz para reflejar la luz. La tecnología de color y textura utilizada en la fórmula funciona con el color natural de la piel, que ayudan a crear una apariencia luminosa e impecable.",
+    "Con su cobertura ajustable de suave a mediana, quita el énfasis de las imperfecciones mientras deja lucir la belleza natural de tu piel. No obstruye los poros, al mismo tiempo que es resistente al sudor y a la humedad."
+  ],
+  "featured": false
+}

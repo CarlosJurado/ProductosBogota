@@ -1,16 +1,62 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import SEO from '../components/seo/SEO.astro';
+import Schema from '../components/seo/Schema.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import WhatsAppFab from '../components/ui/WhatsAppFab.astro';
+import { organizationSchema, websiteSchema } from '../utils/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: 'website' | 'product' | 'article';
+  noindex?: boolean;
+  schema?: Record<string, unknown>[];
+  waMessage?: string;
+}
+
+const { schema = [], waMessage, ...seo } = Astro.props;
+const graph = [organizationSchema(), websiteSchema(), ...schema];
 ---
 
-<html
-  lang="es"
-  class="scroll-smooth selection:bg-accent-500 selection:text-white no-touchevents hydrated"
->
+<!doctype html>
+<html lang="es-CO">
   <head>
-    <BaseHead />
-  </head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b2a4a" />
+    <meta name="author" content="Productos Amway Bogotá" />
+    <meta name="geo.region" content="CO-DC" />
+    <meta name="geo.placename" content="Bogotá" />
 
-  <body class="bg-white">
-    <slot />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/images/favicons/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
+    />
+
+    <SEO {...seo} />
+    <Schema data={graph} />
+    <ClientRouter />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-white">Saltar al contenido</a>
+    <Header />
+    <main id="contenido" class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+    <WhatsAppFab message={waMessage} />
   </body>
 </html>

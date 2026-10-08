@@ -1,0 +1,174 @@
+---
+import { Image, getImage } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import ProductCard from '../../components/ui/ProductCard.astro';
+import TrustBar from '../../components/sections/TrustBar.astro';
+import HowToBuy from '../../components/sections/HowToBuy.astro';
+import FAQ from '../../components/sections/FAQ.astro';
+import { related, brandName, productMeta, productUrl, type Product } from '../../utils/products';
+import { productImage } from '../../utils/images';
+import { BRANDS, CATEGORY_NAMES, type BrandSlug } from '../../data/brands';
+import { SITE, formatCOP, waLink } from '../../data/site';
+import { productSchema, breadcrumbSchema, faqSchema } from '../../utils/schema';
+
+interface Props { product: Product; products: Product[] }
+const { product, products } = Astro.props;
+const { data } = product;
+const brand = BRANDS[data.brand as Exclude<BrandSlug, 'amway'>];
+const bName = brandName(data.brand);
+const url = `${SITE.url}${productUrl(product)}`;
+const canonical = data.canonicalTo ? `${SITE.url}/${data.canonicalTo}/` : url;
+const price = formatCOP(data.price);
+const title = data.name.length > 44 ? `${data.name}: precio ${price}` : `${data.name}: precio en Bogotá ${price}`;
+const description = productMeta(product, bName, price);
+const img = productImage(data.image);
+const og = img ? await getImage({ src: img, width: 1200, height: 1200, format: 'jpeg' }) : null;
+const ogUrl = og ? og.src : SITE.ogImage;
+const rel = related(product, products, 4);
+const catName = CATEGORY_NAMES[data.category] ?? data.category;
+const wa = waLink(`Hola, quiero pedir ${data.name} (${price}). ¿Está disponible para entrega en Bogotá?`);
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  ...(brand ? [{ name: brand.name, url: `/${brand.slug}/` }] : []),
+  { name: data.name, url: productUrl(product) },
+];
+
+const faq = [
+  { q: `¿Cuánto cuesta ${data.name} en Colombia?`, a: `El precio de lista de ${data.name} es ${price} (COP). Es el precio público sugerido por Amway Colombia; si te registras como Cliente Amway accedes a descuentos adicionales.` },
+  { q: `¿Dónde comprar ${data.name} en Bogotá?`, a: `Pídelo por WhatsApp al ${SITE.phoneDisplay}. Lo entregamos a domicilio en Bogotá en 1 a 2 días hábiles o lo enviamos a cualquier ciudad de Colombia.` },
+  { q: `¿${data.name} es original?`, a: `Sí. Es producto original de la línea ${bName} de Amway, sellado y proveniente del inventario oficial de Amway Colombia.` },
+  ...(brand?.faq.slice(0, 1) ?? []),
+];
+
+const sentences = data.description.split(/(?<=\.)\s(?=[A-ZÁÉÍÓÚÑ¿¡])/);
+const paragraphs: string[] = [];
+for (let i = 0; i < sentences.length; i += 2) paragraphs.push(sentences.slice(i, i + 2).join(' '));
+
+const schema = [
+  productSchema({ ...data, image: ogUrl.startsWith('http') ? ogUrl.replace(SITE.url, '') : ogUrl }, bName, url),
+  breadcrumbSchema(crumbs),
+  faqSchema(faq),
+];
+---
+
+<BaseLayout {title} {description} canonical={canonical} image={ogUrl} imageAlt={data.name} type="product" schema={schema} waMessage={`Hola, quiero pedir ${data.name}.`}>
+  <div class="container-x pt-6">
+    <Breadcrumbs items={crumbs} />
+  </div>
+
+  <!-- Product hero -->
+  <section class="container-x grid gap-10 py-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-12">
+    <div class="animate-fade-up">
+      <div class="relative overflow-hidden rounded-3xl border border-line bg-surface">
+        {img ? (
+          <Image src={img} alt={`${data.name} de ${bName}, producto Amway disponible en Bogotá`} width={900} height={900} format="webp" quality={82} loading="eager" fetchpriority="high" class="aspect-square w-full object-cover" />
+        ) : (
+          <img src={data.image} alt={data.name} width="900" height="900" class="aspect-square w-full object-cover" />
+        )}
+        <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink shadow-sm backdrop-blur">Original Amway</span>
+      </div>
+    </div>
+
+    <div class="animate-fade-up-2 flex flex-col">
+      <p class="eyebrow">
+        <a href={brand ? `/${brand.slug}/` : '/'} class="hover:text-ink">{bName}</a> · {catName}
+      </p>
+      <h1 class="mt-2 text-3xl font-extrabold leading-tight sm:text-4xl">{data.name}</h1>
+      <p class="mt-4 text-lg text-ink-soft">{data.description.split(/(?<=\.)\s/)[0]}</p>
+
+      <div class="mt-6 rounded-2xl border border-line bg-surface p-5">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="text-xs font-medium text-muted">Precio de lista Amway Colombia</p>
+            <p class="font-display text-4xl font-extrabold text-ink">{price}</p>
+            <p class="mt-1 text-xs text-muted">IVA incluido · Clientes registrados obtienen descuento</p>
+          </div>
+          <p class="inline-flex items-center gap-1.5 rounded-full bg-cta-50 px-3 py-1 text-xs font-semibold text-cta-700">
+            <span class="h-2 w-2 rounded-full bg-cta"></span> Disponible en Bogotá
+          </p>
+        </div>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2">
+          <a href={wa} target="_blank" rel="noopener" class="btn-cta h-12 text-base">Pedir por WhatsApp</a>
+          <a href={`tel:${SITE.phoneE164}`} class="btn-outline h-12 text-base">Llamar {SITE.phoneDisplay}</a>
+        </div>
+        <p class="mt-3 text-center text-xs text-muted">Entrega a domicilio en Bogotá en 1–2 días hábiles · Envío nacional</p>
+      </div>
+
+      <ul class="mt-6 grid gap-2 text-sm text-ink-soft sm:grid-cols-2">
+        <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Pago contra entrega o transferencia</li>
+        <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Producto sellado con registro INVIMA</li>
+        <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Garantía de satisfacción Amway</li>
+        <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Asesoría de un Empresario Amway</li>
+      </ul>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <!-- Details -->
+  <section class="container-x grid gap-12 py-16 lg:grid-cols-[1fr_380px]">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl font-extrabold">Descripción de {data.name}</h2>
+      <div class="prose-product mt-4 space-y-4">
+        {paragraphs.map((par) => <p>{par}</p>)}
+      </div>
+
+      <h2 class="mt-12 text-2xl font-extrabold">Beneficios</h2>
+      <ul class="mt-5 grid gap-4 sm:grid-cols-1">
+        {data.benefits.map((b) => (
+          <li class="flex gap-3 rounded-2xl border border-line p-4">
+            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary">
+              <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </span>
+            <p class="text-ink-soft">{b}</p>
+          </li>
+        ))}
+      </ul>
+
+      {data.usage && (
+        <>
+          <h2 class="mt-12 text-2xl font-extrabold">Modo de uso</h2>
+          <p class="mt-4 text-ink-soft leading-relaxed">{data.usage}</p>
+        </>
+      )}
+    </div>
+
+    <aside class="lg:sticky lg:top-32 lg:self-start">
+      <div class="card p-6">
+        <p class="eyebrow">Ficha rápida</p>
+        <dl class="mt-4 divide-y divide-line text-sm">
+          <div class="flex justify-between py-2.5"><dt class="text-muted">Marca</dt><dd class="font-semibold">{bName}</dd></div>
+          <div class="flex justify-between py-2.5"><dt class="text-muted">Categoría</dt><dd class="font-semibold">{catName}</dd></div>
+          <div class="flex justify-between py-2.5"><dt class="text-muted">Precio</dt><dd class="font-semibold">{price}</dd></div>
+          <div class="flex justify-between py-2.5"><dt class="text-muted">Fabricante</dt><dd class="font-semibold">Amway</dd></div>
+          <div class="flex justify-between py-2.5"><dt class="text-muted">Entrega</dt><dd class="font-semibold">Bogotá y Colombia</dd></div>
+        </dl>
+        <a href={wa} target="_blank" rel="noopener" class="btn-cta mt-5 w-full">Pedir {data.name.split(' ').slice(0, 3).join(' ')}</a>
+      </div>
+      {brand && (
+        <div class="mt-4 rounded-2xl bg-surface p-6">
+          <p class="text-sm font-semibold">Más de {brand.name}</p>
+          <p class="mt-1 text-sm text-muted">{brand.intro.split(/(?<=\.)\s/)[0]}</p>
+          <a href={`/${brand.slug}/`} class="mt-3 inline-block text-sm font-semibold text-primary hover:underline">Ver todo {brand.name} →</a>
+        </div>
+      )}
+    </aside>
+  </section>
+
+  {rel.length > 0 && (
+    <section class="container-x py-4" aria-labelledby="rel-title">
+      <div class="flex items-end justify-between gap-4">
+        <h2 id="rel-title" class="text-2xl font-extrabold">También en {bName}</h2>
+        {brand && <a href={`/${brand.slug}/`} class="text-sm font-semibold text-primary hover:underline">Ver todos</a>}
+      </div>
+      <div class="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        {rel.map((p) => <ProductCard product={p} showBrand={false} />)}
+      </div>
+    </section>
+  )}
+
+  <FAQ items={faq} title={`Preguntas sobre ${data.name}`} />
+  <HowToBuy productName={data.name} />
+</BaseLayout>

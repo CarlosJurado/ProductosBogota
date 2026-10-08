@@ -1,0 +1,16 @@
+{
+  "slug": "cal-mag-d-tabletas-amway-nutrilite",
+  "name": "Cal Mag D Tabletas Nutrilite",
+  "brand": "nutrilite",
+  "category": "suplementos",
+  "price": 72600,
+  "currency": "COP",
+  "image": "/cal-mag-d-tabletas-amway-nutrilite.jpg",
+  "description": "Aporta dos tipos de Calcio, carbonato de calcio y el obtenido de las algas marinas calcificadas, una de las fuentes más ricas de calcio, además contiene Vitamina D y Magnesio. Enriquecido con Zinc.",
+  "benefits": [
+    "Fuente natural y renovable de calcio proveniente de algas de los Fiordos de Islandia, ahí las algas estan expuestas a corrientes extremas que causan la ruptura de su esqueleto de forma natural. El esqueleto es recolectado para la fabricación de calcio y no la planta, garantizando un proceso sustentable para el medio ambiente.",
+    "Adicionado con Magnesio y vitamina D",
+    "No contiene lactosa, derivados de leche, azucares simples, gluten, cafeína, y es libre de colorantes, saborizantes, preservantes artificiales."
+  ],
+  "featured": false
+}

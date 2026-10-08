@@ -1,0 +1,16 @@
+{
+  "slug": "phytopowder-sabor-naranja-amway-nutrilite",
+  "name": "Phytopowder Sabor Naranja",
+  "brand": "nutrilite",
+  "category": "alimentos-y-bebidas",
+  "price": 165200,
+  "currency": "COP",
+  "image": "/phytopowder-sabor-naranja-amway-nutrilite.jpg",
+  "description": "Nutrilite. Hidrátate con una deliciosa bebida baja en calorías sabor naranja. Es una mezcla en polvo para preparar una bebida con electrolitos, vitaminas y fitonutrientes, diseñada para ser añadida al agua.",
+  "benefits": [
+    "Cada bebida ofrece 50 mg de Red Orange Complex, desarrollado utilizando las naranjas rojas cultivadas exclusivamente en la región fértil del Monte Etna en Sicilia.",
+    "Contiene potasio, cloruro y sodio, importantes electrolitos que facilitan la absorción de líquidos y contribuyen a una hidratación más completa.",
+    "Con el exclusivo extracto de jugo de naranja roja, rico en fitonutrientes y antioxidantes que combaten el estrés oxidativo durante la actividad física."
+  ],
+  "featured": false
+}

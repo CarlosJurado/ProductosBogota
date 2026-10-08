@@ -1,0 +1,16 @@
+{
+  "slug": "sa8-detergente-liquido-concentrado-ropa-amway-home",
+  "name": "SA8 Detergente Líquido Concentrado para Ropa",
+  "brand": "amway-home",
+  "category": "lavanderia",
+  "price": 94400,
+  "currency": "COP",
+  "image": "/sa8-detergente-liquido-concentrado-ropa-amway-home.jpg",
+  "description": "Su fórmula quitamanchas y el delicioso aroma floral se unen para dejar tu ropa limpia y suave. La fórmula concentrada de triple acción te ayuda a usar menos detergente, y sus ingredientes no dañan tus prendas ni el planeta.",
+  "benefits": [
+    "Fórmula concentrada que rinde 5 envases de detergente líquido convencional de 1 litro.",
+    "Se enjuaga bien a cualquier temperatura, incluso en agua fría.",
+    "Dermatológicamente probado; no deja residuos que pueden irritar la piel sensible."
+  ],
+  "featured": false
+}

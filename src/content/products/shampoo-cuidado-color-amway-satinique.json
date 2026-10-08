@@ -1,0 +1,16 @@
+{
+  "slug": "shampoo-cuidado-color-amway-satinique",
+  "name": "Shampoo Cuidado Color Satinique",
+  "brand": "satinique",
+  "category": "cabello",
+  "price": 52850,
+  "currency": "COP",
+  "image": "/shampoo-cuidado-color-amway-satinique.jpg",
+  "description": "Este sistema de shampoo y acondicionador ofrece una limpieza delicada y un acondicionamiento suave para proteger, fortalecer y reparar el cabello, mientras ayuda a mantener el color e intensificar el brillo. El cabello se siente suave y sedoso.",
+  "benefits": [
+    "El cabello maltratado se revitaliza y el color se mantiene por más tiempo, ya que este shampoo fue diseñado para el cabello dañado o teñido. Contiene compuestos botánicos como extracto de granada y extracto de semilla de uva.",
+    "Fórmula libre de sulfatos, lo cual ayuda a proteger el color contra el desvanecimiento. Ayuda a fortalecer el cabello hasta 9 veces. Reduce la decoloración, ayudando a mantener el color hasta 45 lavadas.",
+    "Cuenta con el exclusivo Complejo Enerjuve que ayuda a restaurar el estado natural del cabello y su apariencia saludable. Mantiene el color original por más tiempo. Ayuda a reparar el cabello y a prevenir las puntas abiertas."
+  ],
+  "featured": false
+}

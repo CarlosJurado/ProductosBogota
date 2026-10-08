@@ -1,19 +1,35 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Navigation from "../components/global/Navigation.astro";
-import Privacy from "../components/infopages/privacy.astro";
-import Footer from "../components/global/Footer.astro";
-
-import { AstroSeo } from "@astrolib/seo";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../data/site';
 ---
 
-<AstroSeo
-  title="Productos Bogota"
-  description="Política de Privacidad"
-  canonical="https://productosbogota.com/politica-privacidad/"
-/>
-<BaseLayout>
-  <Navigation />
-  <Privacy />
-  <Footer />
+<BaseLayout title="Política de privacidad y tratamiento de datos" description="Política de tratamiento de datos personales de Productos Amway Bogotá conforme a la Ley 1581 de 2012 de Colombia." noindex={true}>
+  <article class="container-x max-w-3xl py-16">
+    <p class="eyebrow">Legal</p>
+    <h1 class="mt-2 text-4xl font-extrabold">Política de privacidad</h1>
+    <p class="mt-2 text-sm text-muted">Última actualización: octubre de 2026</p>
+
+    <div class="prose-product mt-8 space-y-6">
+      <section>
+        <h2 class="text-xl font-bold">1. Responsable del tratamiento</h2>
+        <p>{SITE.legalName}, Empresario Independiente Amway, con domicilio en {SITE.address.street}, {SITE.address.city}, Colombia. Contacto: {SITE.phoneDisplay}.</p>
+      </section>
+      <section>
+        <h2 class="text-xl font-bold">2. Datos que recopilamos</h2>
+        <p>Únicamente los datos que nos entregas voluntariamente al escribirnos por WhatsApp o llamarnos para hacer un pedido: nombre, teléfono, dirección de entrega y productos de interés. Este sitio web no usa formularios ni cookies de seguimiento propias.</p>
+      </section>
+      <section>
+        <h2 class="text-xl font-bold">3. Finalidad</h2>
+        <p>Gestionar tu pedido, coordinar la entrega, resolver dudas sobre productos y, si lo autorizas, informarte sobre promociones. No vendemos ni cedemos tus datos a terceros distintos de la transportadora necesaria para la entrega.</p>
+      </section>
+      <section>
+        <h2 class="text-xl font-bold">4. Tus derechos (Ley 1581 de 2012)</h2>
+        <p>Puedes conocer, actualizar, rectificar y solicitar la supresión de tus datos, así como revocar la autorización, escribiendo al {SITE.phoneDisplay}. Atenderemos tu solicitud en los plazos previstos por la ley colombiana.</p>
+      </section>
+      <section>
+        <h2 class="text-xl font-bold">5. Enlaces externos</h2>
+        <p>Los enlaces de registro como Cliente o Empresario dirigen a plataformas de Amway Colombia, que se rigen por sus propias políticas de privacidad.</p>
+      </section>
+    </div>
+  </article>
 </BaseLayout>

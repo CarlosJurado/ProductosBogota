@@ -1,0 +1,16 @@
+{
+  "slug": "daily-plus-90-tabletas-amway-nutrilite",
+  "name": "Daily Plus 90 Tabletas Nutrilite",
+  "brand": "nutrilite",
+  "category": "suplementos",
+  "price": 129300,
+  "currency": "COP",
+  "image": "/daily-plus-90-tabletas-amway-nutrilite.jpg",
+  "description": "Suplemento alimenticio de uso diario que contiene 12 vitaminas, 10 minerales y concentrados de plantas que juegan un importante papel en el funcionamiento diario de nuestro cuerpo. Ideal para personas que quieran comenzar una suplementación alimenticia.",
+  "benefits": [
+    "Nutrilite Daily Plus aporta 12 vitaminas y 10 minerales esenciales.",
+    "Fórmula con exclusivo jugo de acerola deshidratada, zanahoria morada y bayas de sauco, adicionada con luteína.",
+    "No contiene saborizantes, colorantes, ni preservantes artificiales, azúcares simples, gluten ni cafeína."
+  ],
+  "featured": false
+}

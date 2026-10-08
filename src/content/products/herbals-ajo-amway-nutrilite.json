@@ -1,0 +1,16 @@
+{
+  "slug": "herbals-ajo-amway-nutrilite",
+  "name": "Herbals Ajo Nutrilite",
+  "brand": "nutrilite",
+  "category": "suplementos",
+  "price": 89600,
+  "currency": "COP",
+  "image": "/herbals-ajo-amway-nutrilite.jpg",
+  "description": "Las cualidades del ajo en una tableta adicionada con extracto de hierbabuena, que contrarresta el sabor y el olor característicos de este vegetal. Una exclusiva fórmula de NUTRILITE que ofrece sólo lo mejor del ajo.",
+  "benefits": [
+    "El ajo te ayuda a manejar la hipertensión y, en general, favorece el buen funcionamiento del sistema cardiovascular.",
+    "No posee efectos desagradables de aroma y sabor gracias a que contiene menta y hierbabuena para suavizar el aliento.",
+    "Estas tabletas se obtienen a partir del ajo cultivado en las altas montañas de California y Oregón, bajos altos estándares de calidad. Contiene alicina y quercetina de manera natural."
+  ],
+  "featured": false
+}

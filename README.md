@@ -1,11 +1,34 @@
-# Productos Bogota Website
+# Productos Bogotá — productosbogota.com
 
-by https://productosbogota.com/
+Catálogo Astro 5 de productos Amway (Nutrilite, Artistry, Satinique, G&H, Glister, Amway Home) para Bogotá.
 
-## Template Integrations
+## Stack
+- Astro 5 (static, `trailingSlash: always`) · Tailwind CSS 4 (`@tailwindcss/vite`) · `@astrojs/sitemap` · `sharp`
+- Hosting: Firebase Hosting (`firebase.json` con cache headers)
 
-- @astrojs/tailwind - https://docs.astro.build/en/guides/integrations-guide/tailwind/
-- @astrojs/image - https://docs.astro.build/en/guides/integrations-guide/image/
-- @astrojs/sitemap - https://docs.astro.build/en/guides/integrations-guide/sitemap/
-- Astrolib SEO - https://github.com/onwidget/astrolib/tree/main/packages/seo
-- Astro compress - https://github.com/NikolaRHristov/astro-compress#readme
+## Estructura
+```
+src/
+├── content/products/*.json   ← 1 archivo por producto (fuente única de verdad)
+├── content.config.ts         ← schema zod de la colección
+├── data/site.ts              ← datos del negocio, WhatsApp, formato COP
+├── data/brands.ts            ← marcas, categorías, FAQs por marca
+├── pages/[slug].astro        ← ruta única: hubs de marca (/nutrilite/) y fichas (/producto/)
+├── components/pages/         ← ProductPage.astro, BrandPage.astro
+├── components/seo/           ← SEO.astro (meta/OG), Schema.astro (JSON-LD)
+├── utils/schema.ts           ← Organization, Product+Offer, BreadcrumbList, FAQPage, ItemList
+└── assets/products/*.jpg     ← imágenes optimizadas por Astro (webp)
+```
+
+## Añadir o editar un producto
+1. Crea/edita `src/content/products/<slug>.json` (ver un ejemplo existente). Campos: `slug, name, brand, category, price, image, description, benefits[]`, opcionales `usage, sku, featured, canonicalTo`.
+2. Añade la imagen 1200×1200 en `src/assets/products/<slug>.jpg`.
+3. `npm run build`. La URL será `/<slug>/`; el sitemap, breadcrumbs, schema y enlazado interno se generan solos.
+
+## Comandos
+```
+npm install
+npm run dev
+npm run build && npm run preview
+firebase deploy
+```

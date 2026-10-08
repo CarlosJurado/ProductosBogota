@@ -1,0 +1,10 @@
+---
+/** Renders one or more JSON-LD blocks. Pass an array to emit a @graph. */
+interface Props {
+  data: Record<string, unknown> | Record<string, unknown>[];
+}
+const { data } = Astro.props;
+const payload = Array.isArray(data) ? { '@context': 'https://schema.org', '@graph': data } : { '@context': 'https://schema.org', ...data };
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(payload)} />

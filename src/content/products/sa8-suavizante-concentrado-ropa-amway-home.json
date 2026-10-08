@@ -1,0 +1,16 @@
+{
+  "slug": "sa8-suavizante-concentrado-ropa-amway-home",
+  "name": "SA8 Suavizante Concentrado para Ropa",
+  "brand": "amway-home",
+  "category": "lavanderia",
+  "price": 60050,
+  "currency": "COP",
+  "image": "/sa8-suavizante-concentrado-ropa-amway-home.jpg",
+  "description": "Suavizante de alto desempeño. Suaviza naturalmente, reduce la estática y deja la ropa suave y con olor fresco.",
+  "benefits": [
+    "No deja residuos en la ropa que puedan irritar la piel sensible. Hace más fácil el planchado de las telas, pues deja menos arrugas.",
+    "Ayuda al cuidado de la ropa y prolonga la vida de las prendas de color, ya que acondiciona las fibras minimizando el desgaste.",
+    "Reduce la estática. Fórmula concentrada que rinde 3 envases de suavizante convencional de 1 litro."
+  ],
+  "featured": false
+}

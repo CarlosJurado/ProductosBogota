@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import ProductCard from '../../components/ui/ProductCard.astro';
+import TrustBar from '../../components/sections/TrustBar.astro';
+import HowToBuy from '../../components/sections/HowToBuy.astro';
+import FAQ from '../../components/sections/FAQ.astro';
+import type { Brand } from '../../data/brands';
+import { SITE, formatCOP } from '../../data/site';
+import { priceRange, productUrl, type Product } from '../../utils/products';
+import { breadcrumbSchema, faqSchema, itemListSchema } from '../../utils/schema';
+
+interface Props { brand: Brand; items: Product[] }
+const { brand, items } = Astro.props;
+const { min, max } = priceRange(items);
+const groups = Object.entries(brand.categories)
+  .map(([slug, name]) => ({ slug, name, items: items.filter((p) => p.data.category === slug) }))
+  .filter((g) => g.items.length > 0);
+const crumbs = [{ name: 'Inicio', url: '/' }, { name: brand.name, url: `/${brand.slug}/` }];
+const schema = [
+  breadcrumbSchema(crumbs),
+  itemListSchema(`Productos ${brand.name} en Bogotá`, items.map((p) => ({ name: p.data.name, url: productUrl(p) }))),
+  faqSchema(brand.faq),
+];
+const accent: Record<string, string> = {
+  nutrilite: 'from-nutrilite-50', artistry: 'from-artistry-50', satinique: 'from-satinique-50', 'g-h': 'from-gh-50', 'amway-home': 'from-home-50', glister: 'from-glister-50',
+};
+---
+
+<BaseLayout title={brand.title} description={brand.description} schema={schema} waMessage={`Hola, quiero información sobre productos ${brand.name} en Bogotá.`}>
+  <section class:list={['bg-gradient-to-b to-white', accent[brand.slug]]}>
+    <div class="container-x pt-6">
+      <Breadcrumbs items={crumbs} />
+    </div>
+    <div class="container-x grid gap-8 py-12 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:py-16">
+      <div class="animate-fade-up">
+        <p class="eyebrow">Amway · {brand.short}</p>
+        <h1 class="mt-2 text-4xl font-extrabold sm:text-5xl">Productos {brand.name} en Bogotá</h1>
+        <p class="mt-5 max-w-2xl text-lg text-ink-soft">{brand.intro}</p>
+      </div>
+      <dl class="animate-fade-up-2 grid grid-cols-3 gap-3">
+        <div class="rounded-2xl border border-line bg-white p-4"><dt class="text-xs text-muted">Productos</dt><dd class="font-display text-2xl font-extrabold">{items.length}</dd></div>
+        <div class="rounded-2xl border border-line bg-white p-4"><dt class="text-xs text-muted">Desde</dt><dd class="font-display text-2xl font-extrabold">{formatCOP(min)}</dd></div>
+        <div class="rounded-2xl border border-line bg-white p-4"><dt class="text-xs text-muted">Hasta</dt><dd class="font-display text-2xl font-extrabold">{formatCOP(max)}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  {groups.length > 1 && (
+    <nav aria-label="Categorías" class="container-x -mb-4 mt-10 flex flex-wrap gap-2">
+      {groups.map((g) => (
+        <a href={`#${g.slug}`} class="rounded-full border border-line px-4 py-2 text-sm font-medium hover:border-ink">{g.name} <span class="text-muted">({g.items.length})</span></a>
+      ))}
+    </nav>
+  )}
+
+  {groups.map((g, gi) => (
+    <section id={g.slug} class="container-x scroll-mt-32 py-14" aria-labelledby={`h-${g.slug}`}>
+      <h2 id={`h-${g.slug}`} class="text-2xl font-extrabold sm:text-3xl">{g.name} {brand.name}</h2>
+      <div class="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+        {g.items.map((p, i) => <ProductCard product={p} showBrand={false} eager={gi === 0 && i < 4} />)}
+      </div>
+    </section>
+  ))}
+
+  <FAQ items={brand.faq} title={`Preguntas frecuentes sobre ${brand.name}`} />
+  <HowToBuy />
+</BaseLayout>

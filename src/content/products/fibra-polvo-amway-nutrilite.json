@@ -1,0 +1,16 @@
+{
+  "slug": "fibra-polvo-amway-nutrilite",
+  "name": "Fibra en Polvo Nutrilite",
+  "brand": "nutrilite",
+  "category": "alimentos-y-bebidas",
+  "price": 114000,
+  "currency": "COP",
+  "image": "/fibra-polvo-amway-nutrilite.jpg",
+  "description": "Práctica forma de aportar fibra a tu día. Mezcla única de 3 fuentes de fibra soluble: maltodextrina, raíz de chicoria y goma guar. Práctica presentación en sobres individuales que aporta 4 gramos de fibra.",
+  "benefits": [
+    "Polvo fácil de disolver, sin color ni sabor puede rociarse sobre los alimentos o mezclarse con líquidos.",
+    "No contiene lactosa, derivados de leche, azucares simples, gluten, cafeína, y es libre de colorantes, saborizantes, preservantes artificiales.",
+    "Producto apto para vegetarianos. Al ser soluble, es fácil de incorporar en tu alimentación diaria sin modificar la textura de tus alimentos."
+  ],
+  "featured": false
+}

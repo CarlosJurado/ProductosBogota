@@ -1,0 +1,16 @@
+{
+  "slug": "proteina-vegetal-polvo-amway-nutrilite",
+  "name": "Proteína Vegetal en Polvo",
+  "brand": "nutrilite",
+  "category": "alimentos-y-bebidas",
+  "price": 138700,
+  "currency": "COP",
+  "image": "/proteina-vegetal-polvo-amway-nutrilite.jpg",
+  "description": "Nutrilite. Proteína 100% de origen vegetal que contiene proteína aislada de soya, trigo y chícharos. La proteína es un macronutriente que nuestro cuerpo necesita diariamente. Cada porción contiene 8 gramos de proteína y 9 aminoácidos esenciales.",
+  "benefits": [
+    "Por su origen vegetal es bajo en grasa y libre de colesterol, no contiene lactosa, derivados de leche, azúcares simples, cafeína, saborizantes, preservantes artificiales.",
+    "Nuestra proteína cuenta con el índice más alto de digestibilidad de acuerdo a la Organización Mundial de la Salud.",
+    "Proteína en polvo sin sabor. Producto apto para vegetarianos."
+  ],
+  "featured": false
+}

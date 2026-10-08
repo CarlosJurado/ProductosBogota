@@ -1,0 +1,16 @@
+{
+  "slug": "lecitina-e-tabletas-amway-nutrilite",
+  "name": "Lecitina E Tabletas Nutrilite",
+  "brand": "nutrilite",
+  "category": "suplementos",
+  "price": 84200,
+  "currency": "COP",
+  "image": "/lecitina-e-tabletas-amway-nutrilite.jpg",
+  "description": "Vitamina E con Lecitina en una deliciosa tableta masticable.",
+  "benefits": [
+    "Fuente rica de Vitamina E con Lecitina de aceite de soya. Contiene ingredientes del frijol de soya.",
+    "Su tableta masticable está endulzada con miel y saborizada con algarrobo y nuez de arce que le dan un delicioso sabor.",
+    "No contiene lactosa, derivados de leche, gluten, cafeína, y es libre de colorantes, saborizantes."
+  ],
+  "featured": false
+}

@@ -1,110 +1,164 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Navigation from "../components/global/Navigation.astro";
-import WhatsApp from "../components/global/Whatsapp.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ui/ProductCard.astro';
+import TrustBar from '../components/sections/TrustBar.astro';
+import HowToBuy from '../components/sections/HowToBuy.astro';
+import FAQ from '../components/sections/FAQ.astro';
+import { BRANDS } from '../data/brands';
+import { SITE, waLink, formatCOP } from '../data/site';
+import { allProducts, productUrl } from '../utils/products';
+import { faqSchema, itemListSchema } from '../utils/schema';
 
-import Hero from "../components/landing/Hero.astro";
-import SectionOne from "../components/landing/SectionOne.astro";
-import Testimonial from "../components/global/Testimonial.astro";
-import Cta from "../components/global/Cta.astro";
-import Boton from "../components/global/Boton.astro";
-import Boton1 from "../components/global/Boton1.astro";
-import Boton2 from "../components/global/Boton2.astro";
-import Footer from "../components/global/Footer.astro";
-import { AstroSeo } from "@astrolib/seo";
-import Seo from "../components/Seo.astro";
+const products = (await allProducts()).filter((p) => !p.data.canonicalTo);
+// Featured: the pages with real search demand (GSC) — one per brand family.
+const featuredSlugs = [
+  'fibra-polvo-amway-nutrilite',
+  'protector-solar-fps-50-amway-ertia',
+  'shampoo-hidratacion-suavidad-amway-satinique',
+  'loc-limpiador-concentrado-multiusos-amway-home',
+  'brillo-labial-luz-amway-artistry',
+  'daily-plus-90-tabletas-amway-nutrilite',
+  'pursue-limpiador-desinfectante-amway-home',
+  'crema-iluminadora-correctora-color-ideal-radiance-amway-artistry',
+];
+const featured = featuredSlugs.map((s) => products.find((p) => p.data.slug === s)).filter(Boolean) as typeof products;
+const brands = Object.values(BRANDS).map((b) => ({ ...b, count: products.filter((p) => p.data.brand === b.slug).length }));
 
-import { getLinksForPage } from '../components/data/distributeLinks';
-const currentPageUrl = Astro.url.pathname;
-const { navigationLinks, footerLinks } = getLinksForPage(currentPageUrl);
+const faq = [
+  { q: '¿Cómo compro productos Amway en Bogotá sin ser distribuidor?', a: `Escríbenos por WhatsApp al ${SITE.phoneDisplay} con el producto que quieres. Un Empresario Independiente Amway te confirma precio y disponibilidad y te lo entrega a domicilio. No necesitas registro.` },
+  { q: '¿Los precios publicados son los oficiales de Amway Colombia?', a: 'Sí. Mostramos el precio de lista vigente de Amway Colombia en pesos (IVA incluido). Los clientes registrados acceden a descuentos y promociones adicionales.' },
+  { q: '¿Cuánto tarda la entrega?', a: 'En Bogotá entregamos a domicilio en 1 a 2 días hábiles. Para otras ciudades de Colombia el envío por transportadora tarda 2 a 5 días hábiles.' },
+  { q: '¿Qué formas de pago aceptan?', a: 'Efectivo contra entrega en Bogotá, transferencia bancaria, Nequi y Daviplata.' },
+  { q: '¿Puedo devolver un producto?', a: 'Amway ofrece garantía de satisfacción en todos sus productos. Si no quedas conforme, escríbenos y gestionamos el cambio o la devolución según la política vigente de Amway Colombia.' },
+  { q: '¿Qué diferencia hay entre Cliente Amway y Empresario Amway?', a: 'El Cliente registrado compra para consumo propio con descuentos. El Empresario Independiente puede además comercializar los productos y construir un negocio. Te ayudamos con cualquiera de los dos registros.' },
+];
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Productos Amway Bogota",
-  image: "https://productosbogota.com/ProductosAmwayBogota.jpg",
-  "@id": "https://productosbogota.com",
-  url: "https://productosbogota.com",
-  telephone: "573223461713",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Cra 62 #164 - 40",
-    addressLocality: "Bogota",
-    postalCode: "111156",
-    addressCountry: "CO",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 4.7479476,
-    longitude: -74.0642513,
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
-    opens: "08:00",
-    closes: "18:00",
-  },
-  sameAs: [
-    "https://facebook.com/ProductosAmwayBogota",
-    "https://instagram.com/ProductosAmwayBogota",
-  ],
+const schema = [
+  itemListSchema('Catálogo de productos Amway en Bogotá', products.map((p) => ({ name: p.data.name, url: productUrl(p) }))),
+  faqSchema(faq),
+];
+const badge: Record<string, string> = {
+  nutrilite: 'bg-nutrilite-50 text-nutrilite', artistry: 'bg-artistry-50 text-artistry', satinique: 'bg-satinique-50 text-satinique',
+  'g-h': 'bg-gh-50 text-gh', 'amway-home': 'bg-home-50 text-home', glister: 'bg-glister-50 text-glister',
 };
+const total = products.length;
 ---
 
-<Seo schemaMarkup={schema} />
-<AstroSeo
-  title="Productos Amway Bogota - Celular 322 346 1713"
-  description="🌟 Productos Amway Bogotá: Descubre la mejor selección de suplementos Nutrilite, cosméticos Artistry, cuidado capilar Satinique, y productos de higiene G&H y Amway Home. 🌿 ¡Promoción exclusiva por tiempo limitado! Llama al 📞 322 346 1713."
-  canonical="https://productosbogota.com/"
-  openGraph={{
-    url: "https://productosbogota.com/",
-    title: "Productos Amway Bogota - Celular 322 346 1713",
-    description:"🌟 Productos Amway Bogotá: Descubre la mejor selección de suplementos Nutrilite, cosméticos Artistry, cuidado capilar Satinique, y productos de higiene G&H y Amway Home. 🌿 ¡Promoción exclusiva por tiempo limitado! Llama al 📞 322 346 1713.",
-    images: [
-      {
-        url: "https://productosbogota.com/ProductosAmwayBogota.jpg",
-        width: 1200,
-        height: 1200,
-        alt: "Productos Amway Bogota",
-        type: "image/jpeg",
-      },
-    ],
-    site_name: "Productos Amway Bogota",
-  }}
-/>
-<BaseLayout>
-  <Navigation
-    servicio="Productos Amway Bogota"
-    links={navigationLinks} 
-  />
-  <Cta />
-  <Hero />
+<BaseLayout
+  title="Productos Amway en Bogotá: catálogo y precios 2026 | Productos Bogotá"
+  description={SITE.description}
+  canonical={`${SITE.url}/`}
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,_var(--color-primary-50),_transparent_55%),radial-gradient(ellipse_at_bottom_right,_var(--color-nutrilite-50),_transparent_50%)]"></div>
+    <div class="container-x grid gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-24">
+      <div>
+        <p class="eyebrow animate-fade-up">Empresario Independiente Amway · Bogotá</p>
+        <h1 class="animate-fade-up mt-3 text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
+          Productos Amway en Bogotá con <span class="text-primary">precios claros</span> y entrega a domicilio
+        </h1>
+        <p class="animate-fade-up-2 mt-6 max-w-xl text-lg text-ink-soft">
+          {total} productos de Nutrilite, Artistry, Satinique, G&amp;H, Glister y Amway Home con precio de lista en pesos. Pides por WhatsApp, recibes en casa.
+        </p>
+        <div class="animate-fade-up-3 mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="#catalogo" class="btn-primary h-12 px-6 text-base">Ver catálogo completo</a>
+          <a href={waLink('Hola, quiero hacer un pedido de productos Amway en Bogotá.')} target="_blank" rel="noopener" class="btn-cta h-12 px-6 text-base">Pedir por WhatsApp</a>
+        </div>
+        <dl class="animate-fade-up-3 mt-10 grid grid-cols-3 gap-6 border-t border-line pt-6">
+          <div><dt class="text-xs text-muted">Productos</dt><dd class="font-display text-2xl font-extrabold">{total}</dd></div>
+          <div><dt class="text-xs text-muted">Marcas Amway</dt><dd class="font-display text-2xl font-extrabold">6</dd></div>
+          <div><dt class="text-xs text-muted">Entrega Bogotá</dt><dd class="font-display text-2xl font-extrabold">1–2 días</dd></div>
+        </dl>
+      </div>
+      <div class="animate-fade-up-2 relative">
+        <img src="/ProductosAmwayBogota.jpg" alt="Productos Amway disponibles en Bogotá: Nutrilite, Artistry, Satinique, G&H y Amway Home" width="1200" height="1200" fetchpriority="high" class="aspect-square w-full rounded-3xl border border-line object-cover shadow-card" />
+        <div class="absolute -bottom-4 -left-4 hidden rounded-2xl border border-line bg-white p-4 shadow-card sm:block">
+          <p class="text-xs text-muted">Desde</p>
+          <p class="font-display text-xl font-extrabold">{formatCOP(Math.min(...products.map((p) => p.data.price)))}</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <Boton2/>
-  <SectionOne />
+  <TrustBar />
 
-  <Boton1/>
+  <!-- Brands -->
+  <section class="container-x py-16" aria-labelledby="marcas-title">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <p class="eyebrow">Marcas</p>
+        <h2 id="marcas-title" class="mt-2 text-3xl font-extrabold sm:text-4xl">Explora por marca Amway</h2>
+      </div>
+    </div>
+    <div class="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+      {brands.map((b) => (
+        <a href={`/${b.slug}/`} class="card group p-5">
+          <span class:list={['inline-flex rounded-full px-2.5 py-1 text-[11px] font-semibold', badge[b.slug]]}>{b.short}</span>
+          <h3 class="mt-4 text-lg font-extrabold group-hover:text-primary">{b.name}</h3>
+          <p class="mt-1 text-sm text-muted">{b.count} productos</p>
+        </a>
+      ))}
+    </div>
+  </section>
 
-  <Testimonial
-    servicio="Productos Amway Bogota"
-    cliente1="Fredy Zapata"
-    cliente2="Andrea Herrera"
-    cliente3="Francisco Mendoza"
-    servicio1="La mejor calidad en Productos de Nutrición la tiene sin duda Amway"
-    servicio2="Ahora soy empresario imdependiente gracias a Amway."
-    servicio3="La línea Hogar de Amway me permite ahorrar mucho dinero."
-  />
-  <Boton servicio="los Productos Amway y sus Beneficios" />
-  <WhatsApp url="https://linkeo.click/ProductosAmwayBogota" />
-  <Footer
-    serviciof="Productos Amway Bogota"
-    links={navigationLinks} 
-  />
+  <!-- Featured -->
+  <section class="bg-surface py-16" aria-labelledby="dest-title">
+    <div class="container-x">
+      <p class="eyebrow">Los más buscados</p>
+      <h2 id="dest-title" class="mt-2 text-3xl font-extrabold sm:text-4xl">Productos Amway más pedidos en Bogotá</h2>
+      <div class="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+        {featured.map((p, i) => <ProductCard product={p} eager={i < 4} />)}
+      </div>
+    </div>
+  </section>
+
+  <HowToBuy />
+
+  <!-- Full catalogue by brand -->
+  <section id="catalogo" class="container-x scroll-mt-32 py-16" aria-labelledby="cat-title">
+    <p class="eyebrow">Catálogo completo</p>
+    <h2 id="cat-title" class="mt-2 text-3xl font-extrabold sm:text-4xl">Todos los productos Amway disponibles</h2>
+    <p class="mt-3 max-w-2xl text-ink-soft">Precios de lista de Amway Colombia, actualizados. Haz clic en cualquier producto para ver beneficios, descripción y pedirlo por WhatsApp.</p>
+    {brands.map((b) => {
+      const items = products.filter((p) => p.data.brand === b.slug);
+      return (
+        <div class="mt-12">
+          <div class="flex items-end justify-between gap-4 border-b border-line pb-3">
+            <h3 class="text-2xl font-extrabold">{b.name}</h3>
+            <a href={`/${b.slug}/`} class="text-sm font-semibold text-primary hover:underline">Ver página de {b.name} →</a>
+          </div>
+          <ul class="mt-4 grid gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
+            {items.map((p) => (
+              <li class="flex items-baseline justify-between gap-3 border-b border-dashed border-line py-2 text-sm">
+                <a href={productUrl(p)} class="font-medium hover:text-primary">{p.data.name}</a>
+                <span class="shrink-0 tabular-nums text-muted">{formatCOP(p.data.price)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    })}
+  </section>
+
+  <!-- Business CTA -->
+  <section class="container-x py-8">
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="rounded-3xl border border-line p-8">
+        <p class="eyebrow">Cliente Amway</p>
+        <h2 class="mt-2 text-2xl font-extrabold">Compra con descuento permanente</h2>
+        <p class="mt-3 text-ink-soft">Regístrate gratis como Cliente Amway y accede a descuentos, promociones y acumulación de puntos en cada compra.</p>
+        <a href={SITE.registerClient} target="_blank" rel="noopener nofollow" class="btn-primary mt-6">Registrarme como Cliente</a>
+      </div>
+      <div class="rounded-3xl bg-ink p-8 text-white">
+        <p class="eyebrow text-white/60">Negocio propio</p>
+        <h2 class="mt-2 text-2xl font-extrabold text-white">Conviértete en Empresario Amway</h2>
+        <p class="mt-3 text-white/75">Maneja tu tiempo, compra con precio de empresario y comercializa los productos. Te acompañamos en el registro y los primeros pasos.</p>
+        <a href={SITE.registerBusiness} target="_blank" rel="noopener nofollow" class="btn mt-6 bg-white text-ink hover:bg-surface">Quiero mi negocio Amway</a>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faq} />
 </BaseLayout>

@@ -1,8 +1,73 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* CSS */
-:root { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  :root { font-family: 'Inter var', sans-serif; }
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Ink & surfaces */
+  --color-ink: #0b1b2b;
+  --color-ink-soft: #3b4a5a;
+  --color-muted: #6b7786;
+  --color-line: #e5e9ee;
+  --color-surface: #f6f8fa;
+  --color-surface-2: #eef2f6;
+
+  /* Primary (Amway navy) + CTA (WhatsApp green) */
+  --color-primary: #0b2a4a;
+  --color-primary-700: #0a3a6b;
+  --color-primary-50: #e9f0f8;
+  --color-cta: #1fa855;
+  --color-cta-700: #178a45;
+  --color-cta-50: #e8f7ee;
+  --color-gold: #c9a227;
+
+  /* Brand accents */
+  --color-nutrilite: #1b8a3c;
+  --color-nutrilite-50: #e8f5ec;
+  --color-artistry: #a3426c;
+  --color-artistry-50: #f8ecf2;
+  --color-satinique: #6b4fbb;
+  --color-satinique-50: #efeaf9;
+  --color-gh: #1a8c8c;
+  --color-gh-50: #e6f4f4;
+  --color-home: #1d6fd1;
+  --color-home-50: #e8f0fb;
+  --color-glister: #0e9fb5;
+  --color-glister-50: #e6f6f9;
+
+  --radius-xl2: 1.25rem;
+  --shadow-card: 0 1px 2px rgb(11 27 43 / 0.04), 0 8px 24px -12px rgb(11 27 43 / 0.18);
+  --shadow-card-hover: 0 2px 4px rgb(11 27 43 / 0.06), 0 20px 40px -16px rgb(11 27 43 / 0.28);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white text-ink font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-display tracking-tight text-ink; text-wrap: balance; }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--color-primary); color: #fff; }
+  :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-colors duration-200 focus:outline-none; }
+  .btn-cta { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-colors duration-200 focus:outline-none bg-cta text-white hover:bg-cta-700 shadow-sm; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-colors duration-200 focus:outline-none bg-primary text-white hover:bg-primary-700; }
+  .btn-outline { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-colors duration-200 focus:outline-none border border-line bg-white text-ink hover:border-ink; }
+  .card { @apply rounded-2xl border border-line bg-white shadow-card transition-shadow duration-300 hover:shadow-card-hover; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.18em] text-muted; }
+  .prose-product p { @apply text-ink-soft leading-relaxed; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.6s ease both; }
+.animate-fade-up-2 { animation: fadeUp 0.6s 0.12s ease both; }
+.animate-fade-up-3 { animation: fadeUp 0.6s 0.24s ease both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up, .animate-fade-up-2, .animate-fade-up-3 { animation: none; }
 }

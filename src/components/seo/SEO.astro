@@ -1,0 +1,40 @@
+---
+import { SITE } from '../../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: 'website' | 'product' | 'article';
+  noindex?: boolean;
+}
+
+const { title, description, canonical, image = SITE.ogImage, imageAlt = SITE.legalName, type = 'website', noindex = false } = Astro.props;
+
+const siteUrl = SITE.url;
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+const suffix = ` | ${SITE.name}`;
+const fullTitle = title.includes(SITE.name) || title.length + suffix.length > 65 ? title : `${title}${suffix}`;
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
+
+<meta property="og:type" content={type === 'product' ? 'product' : type} />
+<meta property="og:site_name" content={SITE.legalName} />
+<meta property="og:locale" content={SITE.locale} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:alt" content={imageAlt} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />

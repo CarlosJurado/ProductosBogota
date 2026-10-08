@@ -1,0 +1,16 @@
+{
+  "slug": "nutrilite-drops-amway",
+  "name": "Nutrilite Drops",
+  "brand": "nutrilite",
+  "category": "suplementos",
+  "price": 33300,
+  "currency": "COP",
+  "image": "/nutrilite-drops-amway.jpg",
+  "description": "es un líquido concentrado en una práctica presentación. Solo ábrelo y agrega un chorrito (aprox 2mL) al agua para disfrutar de un delicioso sabor de frutos mixtos y los beneficios de la vitamina C.",
+  "benefits": [
+    "Solo 8 calorías por porción. Cada porción te aporta 60 mg de vitamina C, como antioxidante.",
+    "Contiene saborizantes naturales como mango, limón y fresa. Zanahoria y arándanos le dan su color característico.",
+    "No contiene azúcar, endulzado con stevia. Libre de colorantes, saborizantes y preservantes artificiales."
+  ],
+  "featured": false
+}

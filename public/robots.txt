@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://productosbogota.com/sitemap-index.xml

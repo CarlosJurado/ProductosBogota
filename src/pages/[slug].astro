@@ -1,0 +1,27 @@
+---
+import ProductPage from '../components/pages/ProductPage.astro';
+import BrandPage from '../components/pages/BrandPage.astro';
+import { BRANDS } from '../data/brands';
+import { allProducts } from '../utils/products';
+
+/**
+ * One dynamic route serves both brand hubs (/nutrilite/) and product pages (/daily-plus-.../),
+ * so there is never a priority conflict between two [param] routes.
+ */
+export async function getStaticPaths() {
+  const products = await allProducts();
+  const brandPaths = Object.values(BRANDS).map((b) => ({
+    params: { slug: b.slug },
+    props: { kind: 'brand' as const, brand: b, items: products.filter((p) => p.data.brand === b.slug && !p.data.canonicalTo) },
+  }));
+  const productPaths = products.map((p) => ({
+    params: { slug: p.data.slug },
+    props: { kind: 'product' as const, product: p, products },
+  }));
+  return [...brandPaths, ...productPaths];
+}
+
+const props = Astro.props;
+---
+
+{props.kind === 'brand' ? <BrandPage brand={props.brand} items={props.items} /> : <ProductPage product={props.product} products={props.products} />}
