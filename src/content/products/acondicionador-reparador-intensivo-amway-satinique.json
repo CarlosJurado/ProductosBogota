@@ -17,7 +17,11 @@
   "amwayId": "126454",
   "presentation": "280 ml",
   "tagline": "Nutrición profunda para cabello dañado y quebradizo",
-  "gallery": [],
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt2a8cca94529fdafe/68f4258263be963a4a52f658/PDP_ACONDICIONADORREPARADOR_BLANCO.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt70d37e72e97e4ef7/68f425bf2ec47c69db0d33d9/PDP_ACONDICIONADORREPARADOR_CLAIM.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt617c71b7ba48eb6d/68f425daeae693191c161639/PDP_ACONDICIONADORREPARACI%C3%93N_SELLOS.jpg"
+  ],
   "status": "disponible",
   "lastPriceCheck": "2026-10-08",
   "featured": false

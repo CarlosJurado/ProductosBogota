@@ -26,8 +26,28 @@ const img = productImage(data.image);
 const og = img ? await getImage({ src: img, width: 1200, height: 1200, format: 'jpeg' }) : null;
 const ogUrl = og ? og.src : data.image.startsWith('http') ? data.image : SITE.ogImage;
 const rel = related(product, products, 4);
+// Gallery slides: main image + up to 3 extra (local files from `npm run images` win over remote CDN URLs)
+type Slide = { full: string; thumb: string; alt: string; remote: boolean };
+const slides: Slide[] = [];
+if (img) {
+  const full = await getImage({ src: img, width: 900, height: 900, format: 'webp', quality: 82 });
+  const thumb = await getImage({ src: img, width: 200, height: 200, format: 'webp', quality: 70 });
+  slides.push({ full: full.src, thumb: thumb.src, alt: `${data.name} de ${bName}, producto Amway disponible en Bogotá`, remote: false });
+} else {
+  slides.push({ full: data.image, thumb: data.image, alt: `${data.name} de ${bName}, producto Amway disponible en Bogotá`, remote: true });
+}
 const localGal = localGallery(data.slug);
-const remoteGal = localGal.length ? [] : data.gallery.filter((u) => u !== data.image && !/_0?1[._]|PDP-|_CO\.png$/.test(u.split('/').pop() ?? '')).slice(0, 3);
+if (localGal.length) {
+  for (const [i, g] of localGal.slice(0, 3).entries()) {
+    const full = await getImage({ src: g, width: 900, height: 900, format: 'webp', quality: 82 });
+    const thumb = await getImage({ src: g, width: 200, height: 200, format: 'webp', quality: 70 });
+    slides.push({ full: full.src, thumb: thumb.src, alt: `${data.name}: imagen ${i + 2}`, remote: false });
+  }
+} else {
+  for (const [i, u] of data.gallery.filter((u) => u !== data.image).slice(0, 3).entries()) {
+    slides.push({ full: u, thumb: u, alt: `${data.name}: imagen ${i + 2}`, remote: true });
+  }
+}
 const available = data.status !== 'consultar';
 const intro = data.tagline ?? data.description.split(/(?<=\.)\s/)[0];
 const catName = CATEGORY_NAMES[data.category] ?? data.category;
@@ -64,25 +84,35 @@ const schema = [
 
   <!-- Product hero -->
   <section class="container-x grid gap-10 py-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-12">
-    <div class="animate-fade-up">
+    <div class="animate-fade-up" data-gallery>
       <div class="relative overflow-hidden rounded-3xl border border-line bg-surface">
-        {img ? (
-          <Image src={img} alt={`${data.name} de ${bName}, producto Amway disponible en Bogotá`} width={900} height={900} format="webp" quality={82} loading="eager" fetchpriority="high" class="aspect-square w-full object-cover" />
-        ) : (
-          <img src={data.image} alt={data.name} width="900" height="900" referrerpolicy="no-referrer" fetchpriority="high" class="aspect-square w-full object-cover" />
-        )}
+        <img
+          id="gallery-main"
+          src={slides[0].full}
+          alt={slides[0].alt}
+          width="900"
+          height="900"
+          fetchpriority="high"
+          decoding="async"
+          referrerpolicy="no-referrer"
+          class="aspect-square w-full object-cover transition-opacity duration-200"
+        />
         <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink shadow-sm backdrop-blur">Original Amway</span>
       </div>
-      {(localGal.length > 0 || remoteGal.length > 0) && (
-        <ul class="mt-3 grid grid-cols-3 gap-3" aria-label="Más imágenes del producto">
-          {localGal.slice(0, 3).map((g, i) => (
-            <li class="overflow-hidden rounded-2xl border border-line bg-surface">
-              <Image src={g} alt={`${data.name}: imagen ${i + 2}`} width={320} height={320} format="webp" quality={75} loading="lazy" class="aspect-square w-full object-cover" />
-            </li>
-          ))}
-          {remoteGal.map((u, i) => (
-            <li class="overflow-hidden rounded-2xl border border-line bg-surface">
-              <img src={u} alt={`${data.name}: imagen ${i + 2}`} width="320" height="320" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('li').remove()" class="aspect-square w-full object-cover" />
+      {slides.length > 1 && (
+        <ul class="mt-3 grid grid-cols-4 gap-3" aria-label="Imágenes del producto">
+          {slides.map((sl, i) => (
+            <li>
+              <button
+                type="button"
+                data-full={sl.full}
+                data-alt={sl.alt}
+                aria-label={`Ver imagen ${i + 1}`}
+                aria-current={i === 0 ? 'true' : undefined}
+                class="group block w-full overflow-hidden rounded-2xl border-2 border-line bg-surface transition-colors hover:border-primary aria-[current=true]:border-primary"
+              >
+                <img src={sl.thumb} alt="" width="200" height="200" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" referrerpolicy="no-referrer" onerror="this.closest('li').remove()" class="aspect-square w-full object-cover" />
+              </button>
             </li>
           ))}
         </ul>
@@ -204,4 +234,31 @@ const schema = [
 
   <FAQ items={faq} title={`Preguntas sobre ${data.name}`} />
   <HowToBuy productName={data.name} />
+<script>
+  function initGallery() {
+    const root = document.querySelector('[data-gallery]');
+    const main = document.getElementById('gallery-main') as HTMLImageElement | null;
+    if (!root || !main) return;
+    root.querySelectorAll<HTMLButtonElement>('button[data-full]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const full = btn.dataset.full!;
+        if (main.src === full) return;
+        main.style.opacity = '0';
+        const swap = () => {
+          main.src = full;
+          main.alt = btn.dataset.alt ?? main.alt;
+          main.style.opacity = '1';
+        };
+        const pre = new Image();
+        pre.onload = swap;
+        pre.onerror = swap;
+        pre.src = full;
+        root.querySelectorAll('button[aria-current]').forEach((b) => b.removeAttribute('aria-current'));
+        btn.setAttribute('aria-current', 'true');
+      });
+    });
+  }
+  initGallery();
+  document.addEventListener('astro:after-swap', initGallery);
+</script>
 </BaseLayout>

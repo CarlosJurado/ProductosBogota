@@ -17,7 +17,11 @@
   "amwayId": "127828",
   "presentation": "6,5 ml · tonos Medio Claro 101, Medio 201, Medio Oscuro 301",
   "tagline": "Corrige ojeras e imperfecciones mientras cuida la piel",
-  "gallery": [],
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt66b41f882b5e6b3f/6a9aef47a163360ddc3733c7/SC-127828-202-Abierto.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltffe5cdadc38abfba/6a9aef8f32b53053f76d259c/SC-127828-202-Cerrado.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt67a96a06f012a68d/6a9aefb18406d979cfca87b0/SC-127828-202-Swatch.jpg"
+  ],
   "status": "disponible",
   "lastPriceCheck": "2026-10-08",
   "featured": false

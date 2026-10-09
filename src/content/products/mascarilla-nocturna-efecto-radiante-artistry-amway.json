@@ -17,7 +17,11 @@
   "amwayId": "125575",
   "presentation": "80 ml",
   "tagline": "Mascarilla de noche que despierta la piel luminosa y descansada",
-  "gallery": [],
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt5a7e6753a5a957d0/67e3e6162070486213100f34/125575_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt68439e0e39ad6f15/68224c233fe843aac20540b8/125575_04.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltf5c8bb7c8872a42c/68214d5000517797a1b78ac9/125575_03.jpg"
+  ],
   "status": "disponible",
   "lastPriceCheck": "2026-10-08",
   "featured": false

@@ -17,7 +17,11 @@
   "amwayId": "126452",
   "presentation": "280 ml",
   "tagline": "Repara el cabello dañado por tintura, calor y químicos",
-  "gallery": [],
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt2fd56d1016fcb658/68f41e19bd84275a922a81dd/PDP_SHAMPOOREPARADOR_BLANCO.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltaed40b52a1eaf44a/68f421f9fae7da31363dfc00/PDP_SHAMPOOREPARADOR_CLAIM.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt76721a458d41fba7/68f42122e0a12624f9358d8b/PDP_SHAMPOOREPARACI%C3%93N_SELLOS.jpg"
+  ],
   "status": "disponible",
   "lastPriceCheck": "2026-10-08",
   "featured": false

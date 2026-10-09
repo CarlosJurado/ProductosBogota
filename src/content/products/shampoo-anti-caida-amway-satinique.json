@@ -17,5 +17,10 @@
   "sku": "126457SP",
   "amwayId": "126457",
   "presentation": "280 ml",
-  "lastPriceCheck": "2026-10-08"
+  "lastPriceCheck": "2026-10-08",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltb91f0e3d80707128/68f3ad2d1ecf8219ac28a848/PDP_SHAMPOOANTICAIDA_BLANCO.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt17bf74bba74632ae/68f3ad52fae7da54cb3dfbe2/PDP_ANTICAIDA_PATENTE_1.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt769b7d8400a1de30/68f3ad835263575f8435d420/PDP_ANTICAIDA_PATENTE_2.jpg"
+  ]
 }

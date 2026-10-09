@@ -17,7 +17,11 @@
   "amwayId": "128047",
   "presentation": "20 ml",
   "tagline": "Gotas concentradas con omegas para nutrir y reconfortar la piel",
-  "gallery": [],
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt91054c9ec02aa978/69d6e8855344ac5e84fd3007/128047-OmegaDrops-1.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltcbd58c6edc19596e/69d6e8f79c8fb247b8938b85/128047-OmegaDrops.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltb05322521596b8c1/69d6e919f1c0f62660c271f4/128047-OmegaDrops-3.jpg"
+  ],
   "status": "disponible",
   "lastPriceCheck": "2026-10-08",
   "featured": false

@@ -17,7 +17,11 @@
   "amwayId": "124823",
   "presentation": "50 g",
   "tagline": "Protección UVA/UVB de amplio espectro con cuidado antiedad",
-  "gallery": [],
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt055e6a55c4a90957/67ecfc61098b5f858f4c84be/124823_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blte8b583c6d1f7abe8/67ecfc659edf33459cc43213/124823_02.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt40afb066f8a3d3ee/67ecfc69bdea6f3dad3e88e4/124823_04.jpg"
+  ],
   "status": "disponible",
   "lastPriceCheck": "2026-10-08",
   "featured": false

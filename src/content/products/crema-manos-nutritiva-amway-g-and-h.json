@@ -17,5 +17,10 @@
   "sku": "125902SP",
   "amwayId": "125902",
   "presentation": "75 ml",
-  "lastPriceCheck": "2026-10-08"
+  "lastPriceCheck": "2026-10-08",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltb3ce504025151c7b/691636f8c53e5b002fcb686d/125902_crema_manos_GYH.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt1e71982bfa584ad6/67eba81f97b99902f02cef4b/125902_02.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltf92c06e1730da38b/67eba8232f87720c58efbbb3/125902_03.jpg"
+  ]
 }

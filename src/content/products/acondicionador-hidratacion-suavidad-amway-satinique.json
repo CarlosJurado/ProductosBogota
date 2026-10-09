@@ -17,5 +17,10 @@
   "sku": "126451SP",
   "amwayId": "126451",
   "presentation": "280 ml",
-  "lastPriceCheck": "2026-10-08"
+  "lastPriceCheck": "2026-10-08",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltec1d7d701fdcc44b/68f41820cc5b6943a84e1514/PDP_ACONDICIONADORHIDRATACI%C3%93N_BLANCO.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blte5f6d2e91cdcafaa/68f41866e0a1267249358d86/PDP_ACONDICIONADORHIDRATACI%C3%93N_SELLOS.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt8bcb222e359ff939/68f418931ecf8231ff28a881/PDP_ACONDICIONADOR_COMO_UTILIZARLO.jpg"
+  ]
 }

@@ -17,7 +17,11 @@
   "amwayId": "126463",
   "presentation": "280 ml",
   "tagline": "Controla la caspa y calma el cuero cabelludo",
-  "gallery": [],
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt8c536b13f09d8df1/68f3e71a7b4dd41c265c90d4/PDP_SHAMPOOANTICASPA_BLANCO.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt9ff516d1fdebc8c6/68f3e7416df588a562b3d39b/PDP_ANTICASPA_PATENTE_1.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt5a0f0409cd867214/68f3e7eba6c7da11a655980b/PDP_SHAMPOOANTICASPA_CLAIM.jpg"
+  ],
   "status": "disponible",
   "lastPriceCheck": "2026-10-08",
   "featured": false

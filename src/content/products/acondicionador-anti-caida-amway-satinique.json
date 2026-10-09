@@ -17,5 +17,10 @@
   "sku": "126459SP",
   "amwayId": "126459",
   "presentation": "280 ml",
-  "lastPriceCheck": "2026-10-08"
+  "lastPriceCheck": "2026-10-08",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt1db0ddce71def8dc/68f3ce0475b413c4d2757807/PDP_ACONDICIONADORANTICAIDA_BLANCO.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltb8f132c1df2978c9/68f3ce252ec47ce9320d33a1/PDP_ANTICAIDA_PATENTE_1.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt5704c8f159dac0ce/68f3ce56eae693223c16161e/PDP_ANTICAIDA_PATENTE_2.jpg"
+  ]
 }

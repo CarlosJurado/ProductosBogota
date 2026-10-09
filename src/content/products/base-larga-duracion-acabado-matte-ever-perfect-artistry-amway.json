@@ -17,7 +17,11 @@
   "amwayId": "127453",
   "presentation": "30 ml · tonos Shell 101, Ivory 103, Beige 201, Honey 203, Biscotti 301, Chestnut 303, Nutmeg 402",
   "tagline": "Cobertura media a alta con acabado matte hasta por 24 horas",
-  "gallery": [],
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blte40135e1429bcdea/68c1d3814dc9472a7a0b5163/127453_Beige_201_1080x1080.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blta539b35df000a4a1/68c2f2bae2fb9a38ef918d44/base_larga_duracion_sellos_copy.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/bltc005b648c2521e2d/699e2f987e22a93949fabfc9/Base_Larga_Duracion_ingredientes_MX.jpg"
+  ],
   "status": "disponible",
   "lastPriceCheck": "2026-10-08",
   "featured": false

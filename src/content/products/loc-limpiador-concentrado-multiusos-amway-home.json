@@ -17,5 +17,9 @@
   "sku": "E0001S",
   "amwayId": "E0001",
   "presentation": "1 Litro",
-  "lastPriceCheck": "2026-10-08"
+  "lastPriceCheck": "2026-10-08",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt1f54013c2e5ea035/67ddb044986725ca1f888d1c/0001_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt69c49cc5498733ae/67ddb044c9b8d42b96d14582/0001_02.jpg"
+  ]
 }

@@ -17,5 +17,10 @@
   "sku": "A8914CO",
   "amwayId": "A8914",
   "presentation": "90 cápsulas",
-  "lastPriceCheck": "2026-10-08"
+  "lastPriceCheck": "2026-10-08",
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt1e3e1f4d32f24426/67ecf8b346c6e930898406f6/8914_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt1381759b939baf7e/6838a12c98bc4e8481814fce/8914_tabla.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt127c8c616e32834e/67ecf9a076632258565a2439/8914_03.jpg"
+  ]
 }

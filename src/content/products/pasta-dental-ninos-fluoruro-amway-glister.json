@@ -17,7 +17,10 @@
   "amwayId": "120519",
   "presentation": "85 g",
   "tagline": "Protección contra caries con sabor suave para los más pequeños",
-  "gallery": [],
+  "gallery": [
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blta2ee1831f3508d6b/67eba769fe346060db12f65e/120519_01.jpg",
+    "https://www.amway.com.co/assets/amshop/v3/assets/blt61e661dff490fa0d/blt8bc8494aae9ccbe7/67eba76e2f87721714efbba1/120519_02.jpg"
+  ],
   "status": "disponible",
   "lastPriceCheck": "2026-10-08",
   "featured": false
