@@ -1,6 +1,6 @@
 ---
 import { BRANDS } from '../../data/brands';
-import { SITE } from '../../data/site';
+import { SITE, waLink } from '../../data/site';
 const year = new Date().getFullYear();
 ---
 
@@ -14,7 +14,7 @@ const year = new Date().getFullYear();
       </p>
       <address class="mt-5 not-italic text-sm text-ink-soft">
         <p>{SITE.address.street}, {SITE.address.city}</p>
-        <p><a href={`tel:${SITE.phoneE164}`} class="font-semibold text-ink hover:underline">Cel: {SITE.phoneDisplay}</a></p>
+        <p><a href={waLink('Hola, quiero información sobre productos Amway en Bogotá.')} target="_blank" rel="noopener" class="font-semibold text-ink hover:underline">WhatsApp: {SITE.phoneDisplay}</a></p>
         <p class="mt-1 text-muted">Lunes a sábado, 8:00 a. m. – 6:00 p. m.</p>
       </address>
     </div>
